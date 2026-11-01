@@ -92,3 +92,11 @@
 .club-logo.detail-crest{width:76px;height:76px;margin-inline:auto}
 .club-logo.club-banner-mark{width:65px;height:65px;border-radius:14px;background:#fff}
 @media(max-width:600px){.club-logo.schedule-crest{width:55px;height:55px}.club-logo.detail-crest{width:64px;height:64px}.club-logo.club-banner-mark{width:54px;height:54px}}
+
+/* PNG crests in all match cards and site header */
+.club-logo.team-emblem{display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:50%;background:#fff;border:1px solid #dce4ef;overflow:hidden;margin-inline:auto}
+.club-logo.team-emblem img{width:100%;height:100%;object-fit:contain;padding:4px}
+.club-logo.crest{display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;flex-shrink:0;border-radius:12px;background:#fff;border:1px solid #ffffff44;overflow:hidden}
+.club-logo.crest img{width:100%;height:100%;object-fit:contain;padding:4px}
+.club-logo.crest .club-logo-fallback{color:#173b7c;font-weight:900}
+@media(max-width:600px){.club-logo.team-emblem{width:44px;height:44px}.club-logo.crest{width:49px;height:49px}}
