@@ -18,6 +18,10 @@ jobs:
           mkdir -p assets/logos
           curl -fLsS --retry 3 --max-time 40 -A 'Mozilla/5.0' 'https://img.wh.sportingpulseinternational.com/abc3a087b75aaf4a66b35b680c4555dbT1.png' -o assets/logos/sabah-fc.png
           curl -fLsS --retry 3 --max-time 40 -A 'Mozilla/5.0' 'https://images.statsengine.playbyplay.api.geniussports.com/9bea79e68b1acf201c9cd33b43c5fc29T1.png' -o assets/logos/star-city-fc.png
+          curl -fLsS --retry 3 --max-time 40 -A 'Mozilla/5.0' 'https://img.wh.sportingpulseinternational.com/890eb8b4b847c81bf384716e95f5ccbaS1.png' -o assets/logos/johor-darul-tazim.png
+          curl -fLsS --retry 3 --max-time 40 -A 'Mozilla/5.0' 'https://img.wh.sportingpulseinternational.com/9ce673be0b491f95f3b6077962503ca7S1.png' -o assets/logos/kuching-city-fc.png
+          curl -fLsS --retry 3 --max-time 40 -A 'Mozilla/5.0' 'https://img.wh.sportingpulseinternational.com/0fa110f3396e16423e0374d4971384dcS1.png' -o assets/logos/negeri-sembilan-fc.png
+          curl -fLsS --retry 3 --max-time 40 -A 'Mozilla/5.0' 'https://images.statsengine.playbyplay.api.geniussports.com/d30ee7d204ad9059c6984d5169ebc9e3S1.png' -o assets/logos/kuala-lumpur-city-fc.png
           python3 - <<'PY'
           from pathlib import Path
           for f in Path('assets/logos').glob('*.png'):
@@ -41,8 +45,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/logos/sabah-fc.png assets/logos/star-city-fc.png app.js index.html
+          git add assets/logos/sabah-fc.png assets/logos/star-city-fc.png assets/logos/johor-darul-tazim.png assets/logos/kuching-city-fc.png assets/logos/negeri-sembilan-fc.png assets/logos/kuala-lumpur-city-fc.png app.js index.html
           if ! git diff --cached --quiet; then
-            git commit -m "Store Sabah FC and Star City FC logos as local PNG assets"
+            git commit -m "Store six club logos as local PNG assets"
             git push
           fi
