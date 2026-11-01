@@ -1,34 +1,31 @@
 # Logo Pasukan — Sabah FC Fan Portal
 
-Semua logo pasukan untuk portal ini disimpan di folder `assets/logos/` dalam format **PNG**.
+Logo dipaparkan daripada folder `assets/logos/` dalam format PNG, bukan daripada pautan luaran semasa webapp dibuka.
 
-## Nama fail yang digunakan oleh webapp
+## Fail yang telah dimuat naik
 
-| Pasukan | Nama fail |
+| Pasukan | Fail |
 |---|---|
 | Sabah FC | `sabah-fc.png` |
 | Star City FC | `star-city-fc.png` |
-| Penang FC | `penang-fc.png` |
-| Kuching City FC | `kuching-city-fc.png` |
-| DPMM FC | `dpmm-fc.png` |
-| Negeri Sembilan FC | `negeri-sembilan-fc.png` |
-| Terengganu FC | `terengganu-fc.png` |
-| Kelantan Red Warrior FC | `kelantan-red-warrior-fc.png` |
-| Selangor FC | `selangor-fc.png` |
-| Melaka FC | `melaka-fc.png` |
-| Kuala Lumpur City FC | `kuala-lumpur-city-fc.png` |
 | Johor Darul Ta'zim | `johor-darul-tazim.png` |
+| Kuching City FC (Kuching FC) | `kuching-city-fc.png` |
+| Negeri Sembilan FC | `negeri-sembilan-fc.png` |
+| Kuala Lumpur City FC | `kuala-lumpur-city-fc.png` |
 
-**Sudah tersedia:** `sabah-fc.png` dan `star-city-fc.png`.
+Empat logo terakhir menggunakan pautan PNG yang diberikan untuk Johor Darul Ta'zim, Kuching FC, Negeri Sembilan FC dan Kuala Lumpur City FC. Fail PNG disimpan dalam repository oleh GitHub Actions.
 
-**Belum dimuat naik:** Logo pasukan lain dalam jadual di atas. Portal memaparkan ikon teks sementara apabila fail PNG belum wujud.
+## Fail yang masih diperlukan
 
-## Cara kemas kini
-1. Buka folder ini dalam GitHub.
-2. Pilih **Add file → Upload files**.
-3. Namakan fail PNG tepat seperti jadual.
-4. Tekan **Commit changes** dan tunggu GitHub Pages selesai deploy.
+- `penang-fc.png`
+- `dpmm-fc.png`
+- `terengganu-fc.png`
+- `kelantan-red-warrior-fc.png`
+- `selangor-fc.png`
+- `melaka-fc.png`
 
-Gunakan PNG latar lutsinar dan resolusi sekitar 256 × 256 atau 512 × 512. Pastikan anda mempunyai hak untuk menerbitkan imej tersebut.
+## Menambah atau menggantikan logo
 
-**Penting:** Jangan tukar nama fail sesuka hati kerana kod webapp merujuk kepada nama fail di atas.
+Muat naik fail PNG ke folder ini menggunakan **Add file → Upload files** di GitHub, kemudian **Commit changes**. Nama fail mesti sepadan dengan rujukan dalam `app.js`. Jika fail tidak wujud, portal akan memaparkan ikon teks sementara.
+
+Gunakan fail yang anda berhak terbitkan. Logo kelab adalah tanda dagangan pemilik masing-masing.
