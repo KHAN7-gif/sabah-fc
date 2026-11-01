@@ -22,6 +22,12 @@ jobs:
           curl -fLsS --retry 3 --max-time 40 -A 'Mozilla/5.0' 'https://img.wh.sportingpulseinternational.com/9ce673be0b491f95f3b6077962503ca7S1.png' -o assets/logos/kuching-city-fc.png
           curl -fLsS --retry 3 --max-time 40 -A 'Mozilla/5.0' 'https://img.wh.sportingpulseinternational.com/0fa110f3396e16423e0374d4971384dcS1.png' -o assets/logos/negeri-sembilan-fc.png
           curl -fLsS --retry 3 --max-time 40 -A 'Mozilla/5.0' 'https://images.statsengine.playbyplay.api.geniussports.com/d30ee7d204ad9059c6984d5169ebc9e3S1.png' -o assets/logos/kuala-lumpur-city-fc.png
+          curl -fLsS --retry 3 --max-time 40 -A 'Mozilla/5.0' 'https://img.wh.sportingpulseinternational.com/7563506f40c4d5d4bf0c10725375456bS1.png' -o assets/logos/terengganu-fc.png
+          curl -fLsS --retry 3 --max-time 40 -A 'Mozilla/5.0' 'https://images.statsengine.playbyplay.api.geniussports.com/9487fb69f7c90e3d11e9b9b35917f604S1.png' -o assets/logos/melaka-fc.png
+          curl -fLsS --retry 3 --max-time 40 -A 'Mozilla/5.0' 'https://images.statsengine.playbyplay.api.geniussports.com/fb1cb1e2d38c83b27bf87abedf1d4729S1.png' -o assets/logos/kelantan-red-warrior-fc.png
+          curl -fLsS --retry 3 --max-time 40 -A 'Mozilla/5.0' 'https://img.wh.sportingpulseinternational.com/c479d3abd4aeddd69b4b00f9c2f2a1f7S1.png' -o assets/logos/selangor-fc.png
+          curl -fLsS --retry 3 --max-time 40 -A 'Mozilla/5.0' 'https://img.wh.sportingpulseinternational.com/453cbede387d27df529743d3933d0620S1.png' -o assets/logos/penang-fc.png
+          curl -fLsS --retry 3 --max-time 40 -A 'Mozilla/5.0' 'https://images.statsengine.playbyplay.api.geniussports.com/6c8a92ad650a441193992f5c8e9f604dS1.png' -o assets/logos/dpmm-fc.png
           python3 - <<'PY'
           from pathlib import Path
           for f in Path('assets/logos').glob('*.png'):
@@ -45,8 +51,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/logos/sabah-fc.png assets/logos/star-city-fc.png assets/logos/johor-darul-tazim.png assets/logos/kuching-city-fc.png assets/logos/negeri-sembilan-fc.png assets/logos/kuala-lumpur-city-fc.png app.js index.html
+          git add assets/logos/sabah-fc.png assets/logos/star-city-fc.png assets/logos/johor-darul-tazim.png assets/logos/kuching-city-fc.png assets/logos/negeri-sembilan-fc.png assets/logos/kuala-lumpur-city-fc.png assets/logos/terengganu-fc.png assets/logos/melaka-fc.png assets/logos/kelantan-red-warrior-fc.png assets/logos/selangor-fc.png assets/logos/penang-fc.png assets/logos/dpmm-fc.png app.js index.html
           if ! git diff --cached --quiet; then
-            git commit -m "Store six club logos as local PNG assets"
+            git commit -m "Store twelve club logos as local PNG assets"
             git push
           fi
