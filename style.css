@@ -4,3 +4,40 @@
 /* LEL-inspired Sabah FC mobile-first interface */
 :root{--navy:#071a36;--blue:#123c7a;--red:#df293b;--surface:#fff;--line:#e6ebf3}body{background:#eef2f8;color:#15243d}header{background:linear-gradient(120deg,#081c3d,#133e7b);box-shadow:0 8px 28px #071b3b24;position:sticky;top:0;z-index:20}.brand .crest{background:#e52d44;color:white;border-radius:10px;box-shadow:0 3px 10px #0002}.brand strong{letter-spacing:.07em}nav button{font-weight:700;font-size:13px}nav button.active,nav button:hover{background:#df293b;color:#fff}main{max-width:1100px}.hero{background:linear-gradient(115deg,#071a36 10%,#15417f 70%,#df293b 160%);border-radius:20px;min-height:190px;box-shadow:0 14px 35px #071b3b1c;position:relative;overflow:hidden}.hero:after{content:'';position:absolute;right:-40px;top:-75px;width:240px;height:240px;border:32px solid #ffffff12;border-radius:50%}.hero h1{text-transform:uppercase;letter-spacing:.08em}.panel{border:1px solid var(--line);box-shadow:0 6px 20px #122b4d0a;border-radius:17px}.panel h2{letter-spacing:.01em}.kpi{color:#0c3674}.match{border:1px solid #e5ebf3;border-left:4px solid #df293b;border-radius:12px;padding:15px;margin:11px 0;background:linear-gradient(90deg,#f8faff,#fff)}.match:last-child{border-bottom:1px solid #e5ebf3}.match .score{color:#0d3270}.tag{background:#e9eef8;color:#173d7b;border:1px solid #d7e2f2}.primary{background:#df293b;color:white}.secondary{background:#eaf0f8;color:#153e77}.secondary.active{background:#123c7a;color:#fff}button{transition:background .2s ease,transform .2s ease}button:hover{transform:translateY(-1px)}.sabah-highlight{background:#e8f0fd!important}.sabah-highlight td:first-child{box-shadow:inset 4px 0 #df293b}footer{padding-bottom:32px}@media(max-width:800px){header{padding:12px 14px 0;position:sticky;top:0}.brand .crest{width:38px;height:38px}.brand strong{font-size:18px}.brand small{font-size:10px}nav{position:fixed;bottom:0;left:0;right:0;z-index:30;margin:0;padding:7px 5px max(8px,env(safe-area-inset-bottom));background:#fff;border-top:1px solid #dce5f1;box-shadow:0 -7px 24px #0a25421a;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;overflow:visible}nav button{white-space:normal;padding:10px 1px;font-size:10px;border-radius:9px;color:#5d6c82;min-width:0}nav button:nth-child(n+6){display:none}nav button.active{background:#eaf1fc;color:#d7263d}main{padding:0 12px;margin:16px auto 100px}.hero{min-height:145px;padding:25px 20px}.hero h1{font-size:32px}.panel{padding:16px}.grid{gap:10px}.match{padding:12px}.match strong{font-size:13px}footer{padding-bottom:105px}.form{grid-template-columns:1fr}}
 .competition-tabs{display:flex;gap:8px;overflow-x:auto;padding:6px 0 16px;margin:4px 0 10px;scrollbar-width:thin}.competition-tab{border:1px solid #dce5f1;background:#f2f6fc;color:#1b3b68;border-radius:11px;padding:12px 15px;white-space:nowrap;font-weight:750;font-size:13px}.competition-tab.active{background:#113e7c;border-color:#113e7c;color:white;box-shadow:0 5px 14px #123d7a24}@media(max-width:800px){.competition-tabs{margin-left:-4px;margin-right:-4px}.competition-tab{font-size:12px;padding:11px 12px}}
+
+/* Match Centre V2 — professional mobile-first layout */
+.match-centre{background:#fff;border:1px solid #e8ecf2;border-radius:18px;padding:22px;box-shadow:0 5px 24px #102d4b0b}
+.match-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:20px}
+.match-heading h2{font-size:26px;letter-spacing:-.035em;margin:3px 0 0;color:#101e33}
+.eyebrow{font-size:10px;letter-spacing:.16em;color:#d12e45;font-weight:850}
+.season-label{font-size:12px;font-weight:800;color:#728098;background:#f2f5fa;padding:7px 10px;border-radius:7px}
+.match-centre .competition-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;overflow:visible;padding:4px;background:#f2f5fa;border-radius:11px;margin:0}
+.match-centre .competition-tab{white-space:normal;min-width:0;border:0;border-radius:8px;background:transparent;padding:12px 5px;color:#65748b;font-size:12px;font-weight:800;box-shadow:none}
+.match-centre .competition-tab.active{background:#fff;color:#102f61;box-shadow:0 2px 9px #142e4c12}
+.competition-caption{font-size:12px;color:#7a8799;margin:12px 2px 20px}
+.match-toolbar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0 0 14px}
+.match-filters{display:flex;align-items:center;gap:16px}
+.match-filters .secondary{border:0;border-radius:0;background:transparent;color:#778397;font-size:13px;font-weight:750;padding:8px 0;position:relative}
+.match-filters .secondary.active{color:#123b76;background:transparent}
+.match-filters .secondary.active:after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:#e13047;border-radius:2px}
+.match-count{font-size:11px;color:#98a1ae;white-space:nowrap}
+.fixture-list{display:grid;gap:10px}
+.fixture-card{background:#fff;border:1px solid #e8ecf1;border-radius:12px;padding:15px 17px;box-shadow:0 2px 8px #101c3210}
+.fixture-meta{display:flex;justify-content:space-between;align-items:center;gap:12px;color:#8390a2;font-size:10px;letter-spacing:.045em;font-weight:800}
+.meta-dot{padding:0 3px;color:#a9b2c0}
+.fixture-status{font-size:9px;font-weight:850;letter-spacing:.07em;padding:5px 7px;border-radius:5px;white-space:nowrap}
+.fixture-status.is-ft{background:#f0f2f5;color:#6c7686}
+.fixture-status.is-upcoming{background:#eaf1fd;color:#1b4e8b}
+.fixture-status.is-live{background:#ffe7eb;color:#c81936}
+.fixture-teams{display:grid;grid-template-columns:minmax(0,1fr) 90px minmax(0,1fr);gap:8px;align-items:center;padding:15px 0 12px}
+.fixture-team{display:flex;align-items:center;gap:8px;min-width:0}
+.fixture-team strong{font-size:13px;line-height:1.3;color:#18273e;font-weight:780;overflow-wrap:anywhere}
+.fixture-away{flex-direction:row-reverse;text-align:right}
+.team-emblem{flex:none;width:28px;height:28px;display:grid;place-items:center;background:#f0f4f9;border:1px solid #e3e9f1;color:#285083;font-size:9px;font-weight:900;border-radius:7px}
+.fixture-centre{display:flex;flex-direction:column;align-items:center;gap:5px}
+.fixture-score{font-size:23px;font-weight:900;color:#0d2d5d;letter-spacing:-.04em;white-space:nowrap}
+.fixture-kickoff{font-size:9px;color:#8c98a9;font-weight:750;white-space:nowrap}
+.fixture-venue{border-top:1px solid #f0f2f5;padding-top:10px;color:#8995a5;font-size:11px}
+.venue-mark{font-size:15px;color:#b0b8c4}
+.match-disclaimer{font-size:11px;color:#99a4b2;margin:18px 2px 0;line-height:1.6}
+@media(max-width:800px){.match-centre{padding:15px 12px;border-radius:12px}.match-heading h2{font-size:24px}.match-centre .competition-tabs{margin:0}.match-centre .competition-tab{font-size:11px;padding:11px 3px}.fixture-card{padding:13px 12px}.fixture-teams{grid-template-columns:minmax(0,1fr) 72px minmax(0,1fr);gap:5px}.fixture-team{flex-direction:column;align-items:flex-start;gap:5px}.fixture-away{align-items:flex-end;text-align:right}.fixture-team strong{font-size:12px}.team-emblem{width:25px;height:25px}.fixture-score{font-size:22px}.match-filters{gap:13px}.match-filters .secondary{font-size:12px}.match-count{font-size:10px}}
