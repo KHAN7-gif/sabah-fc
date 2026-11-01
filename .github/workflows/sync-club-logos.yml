@@ -1,0 +1,48 @@
+name: Sync club PNG logos
+on:
+  push:
+    paths:
+      - '.github/workflows/sync-club-logos.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  sync-logos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download and validate PNG assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p assets/logos
+          curl -fLsS --retry 3 --max-time 40 -A 'Mozilla/5.0' 'https://img.wh.sportingpulseinternational.com/abc3a087b75aaf4a66b35b680c4555dbT1.png' -o assets/logos/sabah-fc.png
+          curl -fLsS --retry 3 --max-time 40 -A 'Mozilla/5.0' 'https://images.statsengine.playbyplay.api.geniussports.com/9bea79e68b1acf201c9cd33b43c5fc29T1.png' -o assets/logos/star-city-fc.png
+          python3 - <<'PY'
+          from pathlib import Path
+          for f in Path('assets/logos').glob('*.png'):
+              assert f.read_bytes().startswith(b'\x89PNG\r\n\x1a\n'), f'{f} is not a valid PNG'
+              print(f, f.stat().st_size, 'bytes')
+          PY
+      - name: Update app to use local PNG files
+        shell: python
+        run: |
+          from pathlib import Path
+          p=Path('app.js')
+          s=p.read_text()
+          s=s.replace('https://img.wh.sportingpulseinternational.com/abc3a087b75aaf4a66b35b680c4555dbT1.png','assets/logos/sabah-fc.png')
+          s=s.replace('https://images.statsengine.playbyplay.api.geniussports.com/9bea79e68b1acf201c9cd33b43c5fc29T1.png','assets/logos/star-city-fc.png')
+          p.write_text(s)
+          p=Path('index.html')
+          s=p.read_text().replace('club-crests-20261101','local-png-crests-20261101')
+          p.write_text(s)
+      - name: Commit local PNG assets and references
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/logos/sabah-fc.png assets/logos/star-city-fc.png app.js index.html
+          if ! git diff --cached --quiet; then
+            git commit -m "Store Sabah FC and Star City FC logos as local PNG assets"
+            git push
+          fi
