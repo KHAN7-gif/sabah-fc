@@ -152,3 +152,10 @@ header{position:relative}.header-season{flex:0 0 auto;font-weight:850;font-size:
 
 /* Matchday 6 standings form */
 .standing-form{display:flex;align-items:center;gap:4px;white-space:nowrap;min-width:125px}.standing-form-dot{width:20px;height:20px;display:inline-flex;align-items:center;justify-content:center;border-radius:50%;font-size:12px;font-weight:800;color:#fff;flex:0 0 20px}.standing-form-dot.form-w{background:#1eaf64}.standing-form-dot.form-d{background:#9299a5}.standing-form-dot.form-l{background:#e64043}.standing-table th:last-child,.standing-table td:last-child{white-space:nowrap}.standing-table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+/* Home header, match cards and calendar refinements */
+@media(max-width:800px){header{display:flex!important;align-items:center!important;justify-content:space-between!important;flex-wrap:nowrap!important;padding:12px 15px!important;gap:8px!important}.brand{min-width:0;flex:1}.brand strong{font-size:17px}.brand small{font-size:9px}.header-season{position:static!important;margin:0!important;align-self:flex-start;flex:0 0 auto;font-size:11px;padding:7px 9px;border-radius:10px}}
+.portal-page--home .schedule-title h2{color:#fff!important;text-shadow:0 1px 2px #071b3b50}.portal-page--home .schedule-title button{color:#fff!important}.portal-page--home .schedule-title{min-height:80px;align-items:center}
+.home-calendar .cal-crest{width:38px;height:38px;min-width:38px;display:inline-flex;align-items:center;justify-content:center}.home-calendar .cal-crest img{width:100%;height:100%;object-fit:contain}
+@media(max-width:600px){.home-calendar .cal-crest{width:29px;height:29px;min-width:29px}.home-calendar .cal-day{min-height:70px}.home-calendar .cal-badges{gap:1px}}
+@media(max-width:360px){.home-calendar .cal-crest{width:26px;height:26px;min-width:26px}}
