@@ -248,3 +248,5 @@ main{padding:20px 14px 110px}.portal-page--matches .match-centre{padding:14px}
 @media(min-width:651px) and (max-width:850px){
 .squad-page--roster .squad-list{grid-template-columns:1fr}
 }
+
+.citizenship-item{display:inline-flex;align-items:center;gap:7px;margin:4px 16px 4px 0}.citizenship-item [role=img]{font-size:23px;line-height:1}.main-position h2{background:#d3e4ee;padding:12px 18px;margin:-1px -1px 0}.main-position-body{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px}.main-position-body p{font-size:18px;color:#183353}.main-position-body strong{display:block;margin-top:8px}.position-pitch{display:block;width:min(100%,310px);height:auto;flex-shrink:0}@media(max-width:520px){.main-position-body{flex-direction:column;align-items:stretch;padding:18px}.position-pitch{align-self:center;width:min(100%,270px)}}
