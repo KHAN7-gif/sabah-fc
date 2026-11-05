@@ -286,3 +286,13 @@ main{padding:20px 14px 110px}.portal-page--matches .match-centre{padding:14px}
 @media(max-width:1000px){.squad-page--roster .squad-list{grid-template-columns:repeat(4,minmax(0,1fr))}}
 @media(max-width:760px){.squad-page--roster .squad-list{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}}
 @media(max-width:520px){.squad-page--roster .squad-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.squad-page--roster .squad-player--portrait{aspect-ratio:3/5;border-radius:14px}.squad-page--roster .squad-player--portrait .squad-number{font-size:30px;left:11px}.squad-player--portrait .squad-player-copy{left:11px;right:10px;bottom:13px}.squad-page--roster .squad-player--portrait .squad-player-copy strong{font-size:12px}.squad-player--portrait .squad-player-copy small{font-size:10px}}
+
+/* Use the available desktop width consistently across every page. */
+@media(min-width:1001px){
+#app>header{padding-left:clamp(24px,3vw,56px);padding-right:clamp(24px,3vw,56px)}
+#app>main{width:100%;max-width:none;padding-left:clamp(24px,3vw,56px);padding-right:clamp(24px,3vw,56px)}
+.portal-page{width:100%;min-width:0}
+.portal-page :is(.club-home,.match-detail,.squad-page,.squad-profile,.squad-profile--showcase,.squad-stats,.stats-dashboard,.club-honours-page){width:100%;max-width:none;margin-left:0;margin-right:0}
+.squad-page--roster .squad-player--portrait .squad-player-copy strong{font-size:clamp(12px,.9vw,17px)}
+.squad-player--portrait .squad-player-copy small{font-size:clamp(10px,.72vw,13px)}
+}
