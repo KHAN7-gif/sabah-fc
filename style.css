@@ -269,3 +269,5 @@ main{padding:20px 14px 110px}.portal-page--matches .match-centre{padding:14px}
 .profile-detail-tabs button{scroll-margin-block:110px}
 
 .profile-overview-heading{font-size:25px;color:#102b50;letter-spacing:-.03em;margin:28px 0 0}.profile-history-panel{scroll-margin-top:24px}.squad-profile--showcase [data-profile-panel]{display:block}
+
+.profile-career-row{align-items:center}.profile-career-club{display:flex;align-items:center;gap:12px;min-width:0}.profile-career-club>span:last-child{overflow-wrap:anywhere}.profile-career-club .career-club-logo{width:34px;height:38px;min-width:34px;background:transparent;border:0;border-radius:0}
