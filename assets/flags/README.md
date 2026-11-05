@@ -1,1 +1,1 @@
-Flag SVGs from https://github.com/lipis/flag-icons (MIT license, see LICENSE). Stored locally for consistent rendering without emoji-font dependencies.
+Local flag SVGs from https://github.com/lipis/flag-icons (MIT license, see LICENSE). The Citizenship catalogue includes all 249 ISO 3166-1 entries plus Kosovo. Names and filenames follow upstream country.json, with familiar display labels preserved. Files are served locally, independently of emoji font support.
