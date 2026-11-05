@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": "initial-e19a042",
+  "revision": "c155f3d1-594c-4725-af51-25068f2fe0ef",
   "players": [
     {
       "name": "Mohammad Ramzi bin Mustakim",
@@ -192,6 +192,76 @@
         "https://nokomen.com/event/selangor-vs-sabah-r16-2-2026-27/"
       ],
       "refIndex": 23
+    },
+    {
+      "round": 2,
+      "date": "2026-08-28",
+      "home": "Sabah FC",
+      "away": "Penang FC",
+      "homeScore": 2,
+      "awayScore": 0,
+      "time": "19:30",
+      "venue": "Stadium Likas",
+      "status": "FULL TIME",
+      "source": "Rujukan jadual MFL dan keputusan silang semak; tertakluk pindaan",
+      "refIndex": 1,
+      "videoUrl": "https://youtu.be/zHm3saz0vYI?si=_mhzUGQOlwGqb-jd"
+    },
+    {
+      "round": 3,
+      "date": "2026-09-05",
+      "home": "Sabah FC",
+      "away": "Kuching City FC",
+      "homeScore": 0,
+      "awayScore": 2,
+      "time": "19:30",
+      "venue": "Stadium Likas",
+      "status": "FULL TIME",
+      "source": "Rujukan jadual MFL dan keputusan silang semak; tertakluk pindaan",
+      "refIndex": 2,
+      "videoUrl": "https://youtu.be/iq5ETYFM22E"
+    },
+    {
+      "round": 4,
+      "date": "2026-09-13",
+      "home": "Sabah FC",
+      "away": "DPMM FC",
+      "homeScore": 1,
+      "awayScore": 2,
+      "time": "",
+      "venue": "",
+      "status": "FULL TIME",
+      "source": "Rujukan jadual MFL dan keputusan silang semak; tertakluk pindaan",
+      "refIndex": 3,
+      "videoUrl": "https://youtu.be/TSLfQQb5OUg"
+    },
+    {
+      "round": 5,
+      "date": "2026-10-17",
+      "home": "Negeri Sembilan FC",
+      "away": "Sabah FC",
+      "homeScore": 1,
+      "awayScore": 1,
+      "time": "",
+      "venue": "",
+      "status": "FULL TIME",
+      "source": "Rujukan jadual MFL dan keputusan silang semak; tertakluk pindaan",
+      "refIndex": 4,
+      "videoUrl": "https://youtu.be/3MHH1DYVKPA"
+    },
+    {
+      "round": 6,
+      "date": "2026-10-31",
+      "home": "Sabah FC",
+      "away": "Terengganu FC",
+      "homeScore": 2,
+      "awayScore": 0,
+      "time": "19:30",
+      "venue": "Stadium Likas",
+      "status": "FULL TIME",
+      "source": "Rujukan jadual MFL dan keputusan silang semak; tertakluk pindaan",
+      "refIndex": 5,
+      "videoUrl": "https://youtu.be/svudv8nftVk"
     }
   ],
   "teams": [
@@ -207,5 +277,6 @@
     }
   ],
   "about": "Portal komuniti Sabah FC. Bukan laman rasmi kelab.",
-  "playerProfiles": {}
+  "playerProfiles": {},
+  "updatedAt": "2026-11-05T15:37:12.459756Z"
 }
