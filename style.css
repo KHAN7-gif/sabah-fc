@@ -296,3 +296,5 @@ main{padding:20px 14px 110px}.portal-page--matches .match-centre{padding:14px}
 .squad-page--roster .squad-player--portrait .squad-player-copy strong{font-size:clamp(12px,.9vw,17px)}
 .squad-player--portrait .squad-player-copy small{font-size:clamp(10px,.72vw,13px)}
 }
+
+.publish-status{margin:0 clamp(14px,3vw,56px) 25px;padding:16px 20px;border:1px solid #d5e1ef;border-radius:12px;background:#fff;color:#25486f;font-size:13px}.publish-status p{margin:0 0 12px;line-height:1.6}.publish-status p[data-state=error]{color:#b3233e}.publish-status p[data-state=success]{color:#1a7045}.publish-status>div{display:flex;align-items:center;gap:16px;flex-wrap:wrap}.publish-status a{color:#214c82}.publish-status button{border:0;border-radius:8px;padding:10px 14px;background:#14365e;color:#fff;font-weight:750}.publish-status button:disabled{opacity:.55;cursor:wait}@media(max-width:1000px){.publish-status{margin-bottom:100px}}

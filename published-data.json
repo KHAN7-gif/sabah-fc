@@ -1,0 +1,211 @@
+{
+  "schemaVersion": 1,
+  "revision": "initial-e19a042",
+  "players": [
+    {
+      "name": "Mohammad Ramzi bin Mustakim",
+      "number": "1",
+      "position": "GK",
+      "nationality": "Malaysia",
+      "goals": "0",
+      "assists": "0",
+      "yellow": "0",
+      "red": "0"
+    }
+  ],
+  "matches": [
+    {
+      "competition": "fa",
+      "home": "Sabah FC",
+      "away": "Selangor FC",
+      "date": "2026-09-02",
+      "time": "19:30",
+      "venue": "Stadium Likas, Kota Kinabalu",
+      "round": 1,
+      "status": "FULL TIME",
+      "homeScore": 2,
+      "awayScore": 2,
+      "videoUrl": "https://youtu.be/u7g5brbvwXI?si=3kbMS_LlTjGSh-un",
+      "events": [
+        {
+          "type": "goal",
+          "minute": "33′",
+          "player": "DANE JAMES INGHAM",
+          "team": "Sabah FC"
+        },
+        {
+          "type": "goal",
+          "minute": "35′",
+          "player": "Kay Sheku Tejan",
+          "team": "Selangor FC"
+        },
+        {
+          "type": "goal",
+          "minute": "50′",
+          "player": "Chrigor Moraes",
+          "team": "Selangor FC"
+        },
+        {
+          "type": "goal",
+          "minute": "58′",
+          "player": "ABDUL HALIM BIN SAARI",
+          "team": "Sabah FC"
+        },
+        {
+          "type": "assist",
+          "minute": "33′",
+          "player": "JUNGBIN PARK",
+          "team": "Sabah FC"
+        },
+        {
+          "type": "yellow",
+          "minute": "72′",
+          "player": "Safuwan Baharudin",
+          "team": "Selangor FC"
+        },
+        {
+          "type": "yellow",
+          "minute": "—",
+          "player": "Safuwan Baharudin",
+          "team": "Selangor FC"
+        },
+        {
+          "type": "red",
+          "minute": "—",
+          "player": "Safuwan Baharudin",
+          "team": "Selangor FC"
+        },
+        {
+          "type": "yellow",
+          "minute": "—",
+          "player": "HANAFIE TOKYO",
+          "team": "Sabah FC"
+        }
+      ],
+      "stage": "Round of 16",
+      "leg": 1,
+      "matchStats": {
+        "corners": [
+          6,
+          4
+        ],
+        "offsides": [
+          1,
+          1
+        ],
+        "shots": [
+          4,
+          4
+        ],
+        "shotsOnTarget": [
+          4,
+          4
+        ]
+      },
+      "source": "Gambar rujukan rasmi MFL yang dibekalkan pengguna. Ringkasan gol 33′, 35′, 50′, 58′; kad kuning Sabah: Hanafie Tokyo. Data acara lain masih berdasarkan sumber terdahulu.",
+      "eventSources": [
+        "https://bernama.com/en/news.php?id=2602326",
+        "https://berita.rtm.gov.my/arena/senarai-berita-arena/senarai-artikel/selangor-mara-ke-suku-akhir-piala-fa/",
+        "https://nokomen.com/event/sabah-vs-selangor-r16-1-2026-27/",
+        "https://nokomen.com/event/selangor-vs-sabah-r16-2-2026-27/"
+      ],
+      "statsNote": "Statistik pasukan dan kad kuning Sabah berdasarkan gambar MFL. Rekod assist dan kad Selangor berdasarkan rujukan terdahulu.",
+      "refIndex": 22
+    },
+    {
+      "competition": "fa",
+      "home": "Selangor FC",
+      "away": "Sabah FC",
+      "date": "2026-09-09",
+      "time": "21:00",
+      "venue": "Stadium MBPJ",
+      "round": 2,
+      "status": "FULL TIME",
+      "homeScore": 2,
+      "awayScore": 1,
+      "videoUrl": "https://youtu.be/ntoDccYN_Is?si=E7z8rU70Vh6_w2By",
+      "events": [
+        {
+          "type": "goal",
+          "minute": "36′",
+          "player": "Eduardo Sosa",
+          "team": "Selangor FC"
+        },
+        {
+          "type": "goal",
+          "minute": "49′",
+          "player": "JUNGBIN PARK",
+          "team": "Sabah FC"
+        },
+        {
+          "type": "goal",
+          "minute": "56′",
+          "player": "Chrigor Moraes",
+          "team": "Selangor FC"
+        },
+        {
+          "type": "assist",
+          "minute": "36′",
+          "player": "Kay Sheku Tejan",
+          "team": "Selangor FC"
+        },
+        {
+          "type": "yellow",
+          "minute": "14′",
+          "player": "JUNGBIN PARK",
+          "team": "Sabah FC"
+        },
+        {
+          "type": "yellow",
+          "minute": "19′",
+          "player": "MOHD FADZRUL DANIEL BIN MOHD NIZAM",
+          "team": "Sabah FC"
+        },
+        {
+          "type": "yellow",
+          "minute": "47′",
+          "player": "HANAFIE TOKYO",
+          "team": "Sabah FC"
+        },
+        {
+          "type": "yellow",
+          "minute": "—",
+          "player": "Chrigor Moraes",
+          "team": "Selangor FC"
+        },
+        {
+          "type": "yellow",
+          "minute": "89′",
+          "player": "Hugo Boumous",
+          "team": "Selangor FC"
+        }
+      ],
+      "stage": "Round of 16",
+      "leg": 2,
+      "aggregateHome": 4,
+      "aggregateAway": 3,
+      "source": "Bernama; Sabah Media; Sofascore; Nokomen. Minit kad yang bercanggah antara sumber tidak dipaparkan.",
+      "eventSources": [
+        "https://bernama.com/en/news.php?id=2602326",
+        "https://berita.rtm.gov.my/arena/senarai-berita-arena/senarai-artikel/selangor-mara-ke-suku-akhir-piala-fa/",
+        "https://nokomen.com/event/sabah-vs-selangor-r16-1-2026-27/",
+        "https://nokomen.com/event/selangor-vs-sabah-r16-2-2026-27/"
+      ],
+      "refIndex": 23
+    }
+  ],
+  "teams": [
+    {
+      "name": "Sabah FC",
+      "played": 0,
+      "won": 0,
+      "drawn": 0,
+      "lost": 0,
+      "gf": 0,
+      "ga": 0,
+      "points": 0
+    }
+  ],
+  "about": "Portal komuniti Sabah FC. Bukan laman rasmi kelab.",
+  "playerProfiles": {}
+}
