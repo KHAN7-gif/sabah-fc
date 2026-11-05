@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": "c155f3d1-594c-4725-af51-25068f2fe0ef",
+  "revision": "a2d5ea4f-758e-41b8-8d80-f09dd11fb89d",
   "players": [
     {
       "name": "Mohammad Ramzi bin Mustakim",
@@ -277,6 +277,67 @@
     }
   ],
   "about": "Portal komuniti Sabah FC. Bukan laman rasmi kelab.",
-  "playerProfiles": {},
-  "updatedAt": "2026-11-05T15:37:12.459756Z"
+  "playerProfiles": {
+    "7": {
+      "career": [
+        {
+          "club": "Sabah FC",
+          "years": "23 Jul 2026"
+        },
+        {
+          "club": "CF Talavera",
+          "years": "1 Jul 2025"
+        },
+        {
+          "club": "Ourense CF",
+          "years": "23 Feb 2024"
+        },
+        {
+          "club": "UD Lanzarote",
+          "years": "1 Jan 2022"
+        },
+        {
+          "club": "Estudiantes de Buenos Aires",
+          "years": "1 Feb 2021"
+        },
+        {
+          "club": "Lanús Reserve",
+          "years": "30 Nov 2020"
+        },
+        {
+          "club": "San Antonio FC",
+          "years": "23 Jan 2020"
+        },
+        {
+          "club": "Lanús Reserve",
+          "years": "31 Dec 2019"
+        },
+        {
+          "club": "Deportivo Lara",
+          "years": "4 Jan 2019"
+        },
+        {
+          "club": "Lanús Reserve",
+          "years": "10 Jan 2018"
+        },
+        {
+          "club": "Patronato",
+          "years": "20 Jul 2017"
+        },
+        {
+          "club": "Lanús Reserve",
+          "years": "30 Jun 2017"
+        },
+        {
+          "club": "Sarmiento",
+          "years": "10 Aug 2016"
+        },
+        {
+          "club": "Lanús Reserve",
+          "years": "1 Jan 2015 · From Lanús U20"
+        }
+      ]
+    }
+  },
+  "updatedAt": "2026-11-05T16:22:28.391957Z"
 }
