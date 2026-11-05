@@ -236,3 +236,15 @@ main{padding:20px 14px 110px}.portal-page--matches .match-centre{padding:14px}
 .mobile-bottom-nav{box-shadow:0 -3px 15px #132e5008}.mobile-tab-label{font-size:10px}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* Larger portraits in the Players roster. */
+.squad-page--roster .squad-player{grid-template-columns:32px 112px minmax(0,1fr) 14px;min-height:172px}
+.squad-page--roster .squad-avatar{width:112px;height:140px;border-radius:12px}
+.squad-page--roster .squad-avatar svg{left:10%;width:80%;height:80%}
+@media(max-width:650px){
+.squad-page--roster .squad-player{grid-template-columns:30px 88px minmax(0,1fr) 12px;min-height:134px}
+.squad-page--roster .squad-avatar{width:88px;height:110px}
+}
+@media(min-width:651px) and (max-width:850px){
+.squad-page--roster .squad-list{grid-template-columns:1fr}
+}
