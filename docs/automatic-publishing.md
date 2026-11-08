@@ -71,3 +71,22 @@ only on the Cloudflare hostname with its Functions and Access configuration.
 
 Player photos stored as files in `assets/players/` still require a file upload/commit.
 The automatic editor publishes metadata and photo **URLs**, not binary photo uploads.
+
+## Public data refresh and local draft recovery
+
+Viewers load the current `published-data.json` rather than merging old browser
+caches over it. Requests disable caching and include a timestamp; Pages static
+headers also disable caching for the JSON. The app checks for a new revision on
+window focus, when returning to a visible tab, and every 60 seconds. A Cloudflare
+deployment must finish before a new static revision can be fetched.
+
+An admin draft resumes only if its base revision matches the published revision.
+If public data has advanced, the current public version is displayed and the old
+local snapshot is retained in recovery storage. Admin mode offers **Export draf
+lama** for that backup. Up to three distinct old snapshots are retained locally.
+An active editor is not rerendered by background refresh. Unsaved/pending local
+changes are kept when another admin publishes; the conflict is shown for review.
+After a successful commit, the admin's local snapshot remains visible while the
+preceding static deployment is still being served.
+
+`node tests/portal-data-sync.test.mjs` verifies these revision-selection rules.

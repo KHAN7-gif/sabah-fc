@@ -13,6 +13,6 @@ test('all 24 supplied players have the exact names, jersey numbers, positions an
   assert.deepEqual(['GK','DEF','MID','FOR'].map(pos => players.filter(p => p.position === pos).length), [3,9,10,2]);
 });
 test('published match links and existing Gonzalo career history are preserved', () => {
-  assert.equal(published.matches.filter(m => m.videoUrl).length, 7);
+  assert.equal(published.matches.filter(m => m.videoUrl).length, 8);
   assert.equal(published.playerProfiles['7'].career.length, 14);
 });

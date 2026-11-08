@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": "4fda92ca-2421-44c1-9fb9-7c9610823067",
+  "revision": "ec1d4ffd-45ce-48d3-a918-184f3a7a31a1",
   "players": [
     {
       "name": "MOHAMAD RAMZI MUSTAKIM",
@@ -53,12 +53,6 @@
           "team": "Sabah FC"
         },
         {
-          "type": "assist",
-          "minute": "33′",
-          "player": "JUNGBIN PARK",
-          "team": "Sabah FC"
-        },
-        {
           "type": "yellow",
           "minute": "72′",
           "player": "Safuwan Baharudin",
@@ -66,20 +60,20 @@
         },
         {
           "type": "yellow",
-          "minute": "—",
+          "minute": "80'",
           "player": "Safuwan Baharudin",
           "team": "Selangor FC"
         },
         {
           "type": "red",
-          "minute": "—",
+          "minute": "80'",
           "player": "Safuwan Baharudin",
           "team": "Selangor FC"
         },
         {
           "type": "yellow",
-          "minute": "—",
-          "player": "HANAFIE TOKYO",
+          "minute": "90+1'",
+          "player": "ABDUL HANAFIE BIN TOKYO ABDUL HASIM",
           "team": "Sabah FC"
         }
       ],
@@ -145,12 +139,6 @@
           "team": "Selangor FC"
         },
         {
-          "type": "assist",
-          "minute": "36′",
-          "player": "Kay Sheku Tejan",
-          "team": "Selangor FC"
-        },
-        {
           "type": "yellow",
           "minute": "14′",
           "player": "JUNGBIN PARK",
@@ -165,7 +153,7 @@
         {
           "type": "yellow",
           "minute": "47′",
-          "player": "HANAFIE TOKYO",
+          "player": "ABDUL HANAFIE BIN TOKYO ABDUL HASIM",
           "team": "Sabah FC"
         },
         {
@@ -178,6 +166,12 @@
           "type": "yellow",
           "minute": "89′",
           "player": "Hugo Boumous",
+          "team": "Selangor FC"
+        },
+        {
+          "type": "assist",
+          "minute": "36′",
+          "player": "Kay Sheku Tejan",
           "team": "Selangor FC"
         }
       ],
@@ -206,7 +200,52 @@
       "status": "FULL TIME",
       "source": "Rujukan jadual MFL dan keputusan silang semak; tertakluk pindaan",
       "refIndex": 1,
-      "videoUrl": "https://youtu.be/zHm3saz0vYI?si=_mhzUGQOlwGqb-jd"
+      "videoUrl": "https://youtu.be/zHm3saz0vYI?si=_mhzUGQOlwGqb-jd",
+      "competition": "league",
+      "events": [
+        {
+          "type": "goal",
+          "minute": "40'",
+          "player": "GONZALO IGNACIO DI RENZO",
+          "team": "Sabah FC"
+        },
+        {
+          "type": "yellow",
+          "minute": "46'",
+          "player": "MUHAMMAD IZZAT ZIKRI IZIRUDDIN",
+          "team": "Penang FC"
+        },
+        {
+          "type": "goal",
+          "minute": "53'",
+          "player": "ABDUL HANAFIE BIN TOKYO ABDUL HASIM",
+          "team": "Sabah FC"
+        },
+        {
+          "type": "yellow",
+          "minute": "80'",
+          "player": "DINESH A/L RAJASINGAM",
+          "team": "Sabah FC"
+        },
+        {
+          "type": "yellow",
+          "minute": "90+1'",
+          "player": "KOSIMOV BAKHTIYORJON MUZAFFAR UGLI",
+          "team": "Sabah FC"
+        },
+        {
+          "type": "assist",
+          "minute": "",
+          "player": "MOHAMMAD FAYADH BIN MOHD ZULKIFLI AMIN",
+          "team": "Sabah FC"
+        },
+        {
+          "type": "assist",
+          "minute": "",
+          "player": "MIGUEL ANGEL GARRIDO CIFUENTES",
+          "team": "Sabah FC"
+        }
+      ]
     },
     {
       "round": 3,
@@ -220,7 +259,46 @@
       "status": "FULL TIME",
       "source": "Rujukan jadual MFL dan keputusan silang semak; tertakluk pindaan",
       "refIndex": 2,
-      "videoUrl": "https://youtu.be/iq5ETYFM22E"
+      "videoUrl": "https://youtu.be/iq5ETYFM22E",
+      "competition": "league",
+      "events": [
+        {
+          "type": "goal",
+          "minute": "5'",
+          "player": "AJDIN MUJAGIC",
+          "team": "Kuching City FC"
+        },
+        {
+          "type": "goal",
+          "minute": "21'",
+          "player": "AJDIN MUJAGIC",
+          "team": "Kuching City FC"
+        },
+        {
+          "type": "yellow",
+          "minute": "49'",
+          "player": "AJDIN MUJAGIC",
+          "team": "Kuching City FC"
+        },
+        {
+          "type": "yellow",
+          "minute": "55'",
+          "player": "MOHD FADZRUL DANEL BIN MOHD NIZAM",
+          "team": "Sabah FC"
+        },
+        {
+          "type": "yellow",
+          "minute": "59'",
+          "player": "MUHAMMAD RAMADHAN SAIFULLAH USMAN",
+          "team": "Kuching City FC"
+        },
+        {
+          "type": "yellow",
+          "minute": "90+4'",
+          "player": "JEROME MPACKO ETAME",
+          "team": "Kuching City FC"
+        }
+      ]
     },
     {
       "round": 4,
@@ -248,7 +326,46 @@
       "status": "FULL TIME",
       "source": "Rujukan jadual MFL dan keputusan silang semak; tertakluk pindaan",
       "refIndex": 4,
-      "videoUrl": "https://youtu.be/3MHH1DYVKPA"
+      "videoUrl": "https://youtu.be/3MHH1DYVKPA",
+      "competition": "league",
+      "events": [
+        {
+          "type": "goal",
+          "minute": "12'",
+          "player": "EBENEZER ABBAN",
+          "team": "Negeri Sembilan FC"
+        },
+        {
+          "type": "goal",
+          "minute": "25'",
+          "player": "GONZALO IGNACIO DI RENZO",
+          "team": "Sabah FC"
+        },
+        {
+          "type": "yellow",
+          "minute": "41'",
+          "player": "ABDUL HALIM BIN SAARI",
+          "team": "Sabah FC"
+        },
+        {
+          "type": "yellow",
+          "minute": "58'",
+          "player": "ANDRES FELIPE ASPEGREN",
+          "team": "Sabah FC"
+        },
+        {
+          "type": "yellow",
+          "minute": "55'",
+          "player": "JORDAN DAVID MURRAY",
+          "team": "Negeri Sembilan FC"
+        },
+        {
+          "type": "assist",
+          "minute": "",
+          "player": "MIGUEL ANGEL GARRIDO CIFUENTES",
+          "team": "Sabah FC"
+        }
+      ]
     },
     {
       "round": 6,
@@ -262,7 +379,141 @@
       "status": "FULL TIME",
       "source": "Rujukan jadual MFL dan keputusan silang semak; tertakluk pindaan",
       "refIndex": 5,
-      "videoUrl": "https://youtu.be/svudv8nftVk"
+      "videoUrl": "https://youtu.be/svudv8nftVk",
+      "competition": "league",
+      "events": [
+        {
+          "type": "goal",
+          "minute": "20'",
+          "player": "ENRIQUE LOPEZ FERNANDEZ",
+          "team": "Sabah FC"
+        },
+        {
+          "type": "goal",
+          "minute": "25'",
+          "player": "GONZALO IGNACIO DI RENZO",
+          "team": "Sabah FC"
+        },
+        {
+          "type": "red",
+          "minute": "42'",
+          "player": "ROMEL OSWALDO MORALES RAMIREZ",
+          "team": "Terengganu FC"
+        },
+        {
+          "type": "yellow",
+          "minute": "51'",
+          "player": "OSKARI JOHANNES KEKKONEN",
+          "team": "Sabah FC"
+        },
+        {
+          "type": "yellow",
+          "minute": "58'",
+          "player": "KASTANEER GERVANE ZJANDRIC ADONNIS",
+          "team": "Sabah FC"
+        },
+        {
+          "type": "yellow",
+          "minute": "80'",
+          "player": "ENRIQUE LOPEZ FERNANDEZ",
+          "team": "Sabah FC"
+        },
+        {
+          "type": "yellow",
+          "minute": "87'",
+          "player": "MOHD FADZRUL DANEL BIN MOHD NIZAM",
+          "team": "Sabah FC"
+        },
+        {
+          "type": "assist",
+          "minute": "",
+          "player": "DARREN YEE DENG LOK",
+          "team": "Sabah FC"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "date": "2026-08-24",
+      "home": "Sabah FC",
+      "away": "Star City FC",
+      "homeScore": 3,
+      "awayScore": 1,
+      "time": "20:15",
+      "venue": "Stadium Likas",
+      "status": "FULL TIME",
+      "source": "Rujukan jadual MFL dan keputusan silang semak; tertakluk pindaan",
+      "competition": "league",
+      "videoUrl": "https://youtu.be/omGVkNQH4Hs",
+      "events": [
+        {
+          "type": "goal",
+          "minute": "26′",
+          "player": "DANE JAMES INGHAM",
+          "team": "Sabah FC"
+        },
+        {
+          "type": "goal",
+          "minute": "17'",
+          "player": "RAFAEL VITOR SANTOS DE FREITAS",
+          "team": "Star City FC"
+        },
+        {
+          "type": "yellow",
+          "minute": "39'",
+          "player": "DANE JAMES INGHAM",
+          "team": "Sabah FC"
+        },
+        {
+          "type": "yellow",
+          "minute": "45+1′",
+          "player": "DINESH A/L RAJASINGAM",
+          "team": "Sabah FC"
+        },
+        {
+          "type": "yellow",
+          "minute": "61'",
+          "player": "ABDUL HALIM BIN SAARI",
+          "team": "Sabah FC"
+        },
+        {
+          "type": "yellow",
+          "minute": "77'",
+          "player": "NOAH RIVER LEDDEL",
+          "team": "Star City FC"
+        },
+        {
+          "type": "goal",
+          "minute": "89'",
+          "player": "DARREN YEE DENG LOK",
+          "team": "Sabah FC"
+        },
+        {
+          "type": "goal",
+          "minute": "90+4′",
+          "player": "JUNGBIN PARK",
+          "team": "Sabah FC"
+        },
+        {
+          "type": "assist",
+          "minute": "",
+          "player": "MOHAMMAD FAYADH BIN MOHD ZULKIFLI AMIN",
+          "team": "Sabah FC"
+        },
+        {
+          "type": "assist",
+          "minute": "",
+          "player": "MOHAMMAD FAYADH BIN MOHD ZULKIFLI AMIN",
+          "team": "Sabah FC"
+        },
+        {
+          "type": "assist",
+          "minute": "",
+          "player": "MOHD FADZRUL DANEL BIN MOHD NIZAM",
+          "team": "Sabah FC"
+        }
+      ],
+      "refIndex": 0
     }
   ],
   "teams": [
@@ -477,5 +728,5 @@
       "age": 24
     }
   },
-  "updatedAt": "2026-11-08T16:48:57.725829Z"
+  "updatedAt": "2026-11-08T18:47:55.126260Z"
 }
