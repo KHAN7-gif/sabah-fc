@@ -318,3 +318,75 @@ main{padding:20px 14px 110px}.portal-page--matches .match-centre{padding:14px}
 .event-editor-tabs button,.match-editor-actions button{scroll-margin-block:110px}
 
 .player-competition-breakdown{margin-top:22px;overflow-x:auto;border:1px solid #ffffff20;border-radius:12px}.player-competition-breakdown table{width:100%;min-width:440px;color:#fff}.player-competition-breakdown caption{text-align:left;padding:14px;font-size:13px;font-weight:800;color:#d6e4f6}.player-competition-breakdown th,.player-competition-breakdown td{padding:13px 12px;border-bottom:1px solid #ffffff16;font-size:12px;color:#e2ecfa}.player-competition-breakdown td{text-align:center;font-weight:750}.player-competition-breakdown thead th{text-align:center;background:#ffffff09}.player-competition-breakdown thead th:first-child{text-align:left}.player-competition-breakdown tr[data-player-competition=all]{background:#ffffff0d;font-weight:850}
+
+.stats-goal-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.stats-goal-row {
+  display: grid;
+  grid-template-columns: 3.5rem minmax(0, 1fr) auto minmax(0, .85fr);
+  align-items: center;
+  gap: .65rem;
+  padding: .8rem .6rem;
+  border-bottom: 1px solid #e8edf4;
+}
+.stats-goal-row:last-child { border-bottom: 0; }
+.stats-goal-minute {
+  color: #245cba;
+  font-weight: 850;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.stats-goal-scorer,
+.stats-goal-opponent { overflow-wrap: anywhere; }
+.stats-goal-vs {
+  color: #65748f;
+  font-size: .75rem;
+}
+.stats-goal-opponent {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  min-width: 0;
+  color: #1b2a44;
+  font-size: .82rem;
+  font-weight: 750;
+}
+.stats-goal-opponent small {
+  display: block;
+  margin-top: .15rem;
+  color: #586882;
+  font-size: .7rem;
+  font-weight: 500;
+}
+.club-logo.stats-goal-crest {
+  width: 2rem;
+  height: 2rem;
+  border-radius: .35rem;
+}
+.stats-goal-empty {
+  padding: .7rem .6rem;
+  color: #586882;
+}
+@media (max-width: 600px) {
+  .portal-page--stats .stats-category-tabs {
+    flex-wrap: wrap;
+    gap: 0 .65rem;
+  }
+  .stats-goal-row {
+    grid-template-columns: 2.7rem minmax(0, 1fr) auto minmax(0, 1fr);
+    gap: .35rem;
+    padding-inline: .15rem;
+    font-size: .8rem;
+  }
+  .stats-goal-opponent {
+    gap: .3rem;
+    font-size: .73rem;
+  }
+  .club-logo.stats-goal-crest {
+    width: 1.55rem;
+    height: 1.55rem;
+  }
+}
