@@ -1,0 +1,19 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.sabahfc.tv">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-feature android:name="android.software.leanback" android:required="true" />
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+    <application android:label="Sabah FC TV" android:icon="@drawable/club_crest"
+        android:banner="@drawable/tv_banner" android:theme="@android:style/Theme.Material.NoActionBar"
+        android:hardwareAccelerated="true" android:usesCleartextTraffic="false"
+        android:allowBackup="false" android:debuggable="false" android:enableOnBackInvokedCallback="false">
+        <activity android:name=".MainActivity" android:exported="true" android:label="Sabah FC TV" android:banner="@drawable/tv_banner" android:icon="@drawable/club_crest"
+            android:screenOrientation="landscape"
+            android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

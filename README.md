@@ -14,3 +14,7 @@ GitHub Pages: Settings > Pages > Deploy from a branch > main > /(root).
 
 ## Penting
 Tiada pengesahan pengguna sebenar atau pangkalan data bersama. Data contoh tidak boleh dianggap rasmi. Jangan simpan kata laluan dalam fail frontend.
+
+## Android TV / Google TV
+
+Aplikasi paparan TV dan APK pemasangan terus tersedia dalam [android-tv](android-tv/README.md). Kawalan remote disokong; data portal dimuatkan daripada Cloudflare.
