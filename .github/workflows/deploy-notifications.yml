@@ -19,6 +19,8 @@ jobs:
         with:
           node-version: '22'
       - name: Test schedule and push encryption
-        run: node tests/notifications.test.mjs
+        run: |
+          node tests/notifications.test.mjs
+          node tests/deployment-account.test.mjs
       - name: Install Worker, private signing keys, scheduler and Pages binding
         run: node tools/deploy-notifications.mjs

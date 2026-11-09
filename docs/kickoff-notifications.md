@@ -27,7 +27,7 @@ sebenar ke telefon belum diuji sebelum servis dipasang dan telefon didaftarkan.
 Simpan token di GitHub sahaja pada langkah seterusnya. Jangan masukkan token dalam
 chat, fail JSON portal, kod frontend atau Variables yang boleh dibaca pelayar.
 
-## 2. Masukkan dua GitHub Secrets
+## 2. Masukkan GitHub Secrets
 
 Buka [sabah-fc → Settings → Secrets and variables → Actions](https://github.com/KHAN7-gif/sabah-fc/settings/secrets/actions).
 Pilih **New repository secret**, kemudian tambah:
@@ -35,10 +35,14 @@ Pilih **New repository secret**, kemudian tambah:
 | Name | Secret |
 | --- | --- |
 | `CLOUDFLARE_API_TOKEN` | Token yang dicipta pada langkah 1 |
-| `CLOUDFLARE_ACCOUNT_ID` | Account ID projek Pages Sabah FC |
+| `CLOUDFLARE_ACCOUNT_ID` | Pilihan: Account ID projek Pages Sabah FC |
+
+Jika token terhad kepada **satu akaun**, pemasang mengesan Account ID secara
+automatik: anda hanya perlu memasukkan `CLOUDFLARE_API_TOKEN`. Jika token mempunyai
+akses kepada beberapa akaun, isi `CLOUDFLARE_ACCOUNT_ID` juga.
 
 Tetapan penerbitan admin sedia ada (`GITHUB_PUBLISH_TOKEN`, `CF_ACCESS_TEAM_DOMAIN`,
-`CF_ACCESS_AUD`, `ADMIN_EMAILS`) kekal pada Pages. Dua secret baharu ini untuk
+`CF_ACCESS_AUD`, `ADMIN_EMAILS`) kekal pada Pages. Secret pemasangan ini untuk
 pemasangan servis push melalui GitHub Actions.
 
 ## 3. Jalankan pemasangan
@@ -157,3 +161,13 @@ langganan tamat, enkripsi yang dinyahsulit menggunakan implementasi HKDF Node ya
 berasingan, tandatangan VAPID, origin/CORS, pautan perlawanan kedua-dua domain,
 service worker dan aliran UI. Langganan push dalam ujian pelayar disimulasikan;
 penghantaran sebenar memerlukan pemasangan Cloudflare dan telefon sebenar.
+
+## Jika pemasangan diuruskan melalui pembantu
+
+Token juga boleh dimasukkan pada medan **Secrets → CLOUDFLARE_API_TOKEN** dalam
+tetapan persekitaran Codex yang disediakan untuk sesi ini. Semak dan simpan
+perubahan, kemudian pilih **Publish** untuk mengaktifkan konfigurasi. Draf sahaja
+belum memberikan akses. Account ID dikesan secara automatik jika hanya satu akaun
+dibenarkan oleh token. Pembantu boleh menjalankan pemasang dari persekitaran itu;
+anda tidak perlu menjalankan workflow GitHub sendiri. Jangan masukkan token dalam
+chat. GitHub Secrets hanya diperlukan jika anda memilih pemasangan melalui Actions.

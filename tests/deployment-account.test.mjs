@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {resolveCloudflareAccount} from '../notifications/deployment-account.mjs';
+const id='a'.repeat(32);let calls=0;
+const one=async(url,options)=>{calls++;assert.equal(new URL(url).hostname,'api.cloudflare.com');assert.equal(options.headers.Authorization,'Bearer test-only-token');return new Response(JSON.stringify({success:true,result:[{id}],result_info:{total_count:1}}))};
+assert.equal(await resolveCloudflareAccount('test-only-token',undefined,one),id);assert.equal(calls,1);
+assert.equal(await resolveCloudflareAccount('test-only-token',id,one),id);assert.equal(calls,1);
+await assert.rejects(resolveCloudflareAccount(null,id,one),/CLOUDFLARE_API_TOKEN/);
+await assert.rejects(resolveCloudflareAccount('test-only-token','invalid',one),/Account ID/);
+for(const result of [[],[{id},{id:'b'.repeat(32)}],[{id:'invalid'}]])await assert.rejects(resolveCloudflareAccount('test-only-token',undefined,async()=>new Response(JSON.stringify({success:true,result}))));
+await assert.rejects(resolveCloudflareAccount('test-only-token',undefined,async()=>new Response('{"success":false}',{status:403})),/Account Settings/);
+await assert.rejects(resolveCloudflareAccount('test-only-token',undefined,async()=>new Response(JSON.stringify({success:true,result:[{id}],result_info:{total_count:2}}))),/beberapa akaun/);
+console.log('PASS: account discovery, explicit account selection, missing credentials, invalid ID, API failure and ambiguous accounts');

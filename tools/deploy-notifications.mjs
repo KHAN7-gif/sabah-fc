@@ -1,9 +1,10 @@
 // Run in GitHub Actions after adding Cloudflare credentials as repository secrets.
 // Existing VAPID signing keys are preserved so enrolled phones keep working.
 import {spawn} from 'node:child_process';
-const account=process.env.CLOUDFLARE_ACCOUNT_ID,token=process.env.CLOUDFLARE_API_TOKEN;
-if(!account||!token)throw new Error('Tambah CLOUDFLARE_ACCOUNT_ID dan CLOUDFLARE_API_TOKEN pada GitHub Actions Secrets dahulu.');
-if(!/^[a-f0-9]{32}$/i.test(account))throw new Error('Cloudflare Account ID tidak sah.');
+import {resolveCloudflareAccount} from '../notifications/deployment-account.mjs';
+const token=process.env.CLOUDFLARE_API_TOKEN;
+const account=await resolveCloudflareAccount(token,process.env.CLOUDFLARE_ACCOUNT_ID);
+process.env.CLOUDFLARE_ACCOUNT_ID=account;
 const base=`https://api.cloudflare.com/client/v4/accounts/${account}`;
 async function api(path,options={}){
   const response=await fetch(base+path,{...options,headers:{Authorization:`Bearer ${token}`,'Content-Type':'application/json'},signal:AbortSignal.timeout(30000)});
