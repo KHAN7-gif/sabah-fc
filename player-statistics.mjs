@@ -35,3 +35,16 @@ export function calculatePlayerStats(roster, matches) {
   }
   return { players: result, unmatched };
 }
+
+export function parseGoalMinute(value) {
+  const parts = String(value ?? '').trim().match(/^(\d{1,2})(?:\s*\+\s*(\d{1,2}))?\s*['′’]?$/);
+  if (!parts) return null;
+  const minute = Number(parts[1]);
+  if (minute < 1 || minute > 90) return null;
+  return { minute, added: Number(parts[2] || 0), half: minute <= 45 ? 'first' : 'second' };
+}
+export function matchesGoalFilters(record, { player = '', matchday = 'all', half = 'all' } = {}) {
+  return (!player.trim() || normalizeName(record.searchText).includes(normalizeName(player))) &&
+    (matchday === 'all' || String(record.matchday) === String(matchday)) &&
+    (half === 'all' || record.half === half);
+}

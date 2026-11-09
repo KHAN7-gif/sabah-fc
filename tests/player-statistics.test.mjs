@@ -27,3 +27,19 @@ test('does not guess ambiguous names, supports explicit jersey numbers and track
   const result=calculatePlayerStats(same,[match(0,'fa',[event('goal','Halim Saari'),event('goal','Unknown player'),event('assist','Nickname','Sabah FC',{playerNumber:18}),event('yellow','Abdul Halim bin Saari')])]);
   assert.equal(result.unmatched,2);assert.equal(result.players['18'].all.goals,0);assert.equal(result.players['18'].all.assists,1);assert.equal(result.players['18'].fa.yellow,1);
 });
+
+const {parseGoalMinute,matchesGoalFilters} = await import('../player-statistics.mjs');
+test('half filters include first-half and second-half stoppage time correctly',()=>{
+ assert.deepEqual(parseGoalMinute('45+2′'),{minute:45,added:2,half:'first'});
+ assert.deepEqual(parseGoalMinute('46'),{minute:46,added:0,half:'second'});
+ assert.deepEqual(parseGoalMinute('90 + 4’'),{minute:90,added:4,half:'second'});
+ assert.equal(parseGoalMinute('—'),null);assert.equal(parseGoalMinute('91'),null);
+});
+test('goal filters combine player aliases/search text, matchday and half',()=>{
+ const goal={searchText:'Dane James Ingham DANE 23',matchday:1,half:'first'};
+ assert.equal(matchesGoalFilters(goal,{player:'dane',matchday:'1',half:'first'}),true);
+ assert.equal(matchesGoalFilters(goal,{player:'23',half:'all'}),true);
+ assert.equal(matchesGoalFilters(goal,{matchday:'2'}),false);
+ assert.equal(matchesGoalFilters(goal,{half:'second'}),false);
+ assert.equal(matchesGoalFilters(goal,{player:'Park'}),false);
+});
