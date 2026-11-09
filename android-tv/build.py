@@ -17,11 +17,11 @@ def main():
         destination=build/folder
         if destination.exists():shutil.rmtree(destination)
         destination.mkdir()
-    compiled=build/'resources.zip';unsigned=build/'resources.apk';aligned=build/'aligned.apk';output=build/'Sabah-FC-TV-v1.0.0.apk'
+    compiled=build/'resources.zip';unsigned=build/'resources.apk';aligned=build/'aligned.apk';output=build/'Sabah-FC-TV-v1.1.0.apk'
     for path in [compiled,unsigned,aligned,output]:
         if path.exists():path.unlink()
     run(tools/'aapt2','compile','--dir',ROOT/'res','-o',compiled)
-    run(tools/'aapt2','link','-o',unsigned,'-I',platform,'--manifest',ROOT/'AndroidManifest.xml','--java',build/'generated','-A',ROOT/'assets','--min-sdk-version','23','--target-sdk-version','35','--version-code','1','--version-name','1.0.0',compiled)
+    run(tools/'aapt2','link','-o',unsigned,'-I',platform,'--manifest',ROOT/'AndroidManifest.xml','--java',build/'generated','-A',ROOT/'assets','--min-sdk-version','23','--target-sdk-version','35','--version-code','2','--version-name','1.1.0',compiled)
     sources=[*ROOT.joinpath('src').rglob('*.java'),*build.joinpath('generated').rglob('*.java')]
     run('java','-jar',compiler,'-proc:none','-source','8','-target','8','-bootclasspath',platform,'-d',build/'classes',*sources)
     run('java','-cp',tools/'lib/d8.jar','com.android.tools.r8.D8','--lib',platform,'--min-api','23','--output',build/'dex',*build.joinpath('classes').rglob('*.class'))

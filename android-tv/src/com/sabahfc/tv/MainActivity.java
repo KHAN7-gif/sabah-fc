@@ -52,7 +52,7 @@ public final class MainActivity extends Activity {
         settings.setJavaScriptCanOpenWindowsAutomatically(false);
         settings.setSupportMultipleWindows(false); settings.setMediaPlaybackRequiresUserGesture(true);
         settings.setBuiltInZoomControls(false); settings.setDisplayZoomControls(false);
-        settings.setUserAgentString(settings.getUserAgentString() + " SabahFCTV/1.0");
+        settings.setUserAgentString(settings.getUserAgentString() + " SabahFCTV/1.1");
         progress = new ProgressBar(this,null,android.R.attr.progressBarStyleHorizontal);
         root.addView(progress,new FrameLayout.LayoutParams(-1,6));
         buildErrorPanel();
