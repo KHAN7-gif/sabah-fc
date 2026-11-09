@@ -1,1 +1,1 @@
-{"version":1,"include":["/api/admin/*"],"exclude":[]}
+{"version": 1, "include": ["/api/admin/*", "/api/notifications/*"], "exclude": []}

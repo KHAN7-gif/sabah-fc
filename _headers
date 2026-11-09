@@ -4,3 +4,10 @@
   Cache-Control: no-cache
 /index.html
   Cache-Control: no-cache
+
+/sw.js
+  Cache-Control: no-cache, max-age=0
+/manifest.webmanifest
+  Cache-Control: no-cache
+/fixtures.mjs
+  Cache-Control: no-cache

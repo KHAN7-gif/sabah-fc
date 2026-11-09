@@ -1,0 +1,11 @@
+{
+  "$schema": "https://raw.githubusercontent.com/cloudflare/workers-sdk/main/packages/wrangler/config-schema.json",
+  "name": "sabah-fc-notifications",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-11-09",
+  "workers_dev": false,
+  "ratelimits": [{"name": "SUBSCRIPTIONS_RATE", "namespace_id": "1001", "simple": {"limit": 10, "period": 60}}],
+  "triggers": {"crons": ["* * * * *"]},
+  "durable_objects": {"bindings": [{"name": "KICKOFF", "class_name": "KickoffNotifications"}]},
+  "migrations": [{"tag": "v1", "new_sqlite_classes": ["KickoffNotifications"]}]
+}

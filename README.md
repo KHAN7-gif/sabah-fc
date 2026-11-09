@@ -18,3 +18,9 @@ Tiada pengesahan pengguna sebenar atau pangkalan data bersama. Data contoh tidak
 ## Android TV / Google TV
 
 Aplikasi paparan TV dan APK pemasangan terus tersedia dalam [android-tv](android-tv/README.md). Kawalan remote disokong; data portal dimuatkan daripada Cloudflare.
+
+## Notifikasi kick-off telefon
+
+Butang **Notifikasi** membolehkan pengguna melanggan peringatan kick-off mengikut
+jadual admin. Pemasangan servis Cloudflare diperlukan untuk push ketika webapp
+ditutup. Ikuti [panduan pemasangan notifikasi](docs/kickoff-notifications.md).
