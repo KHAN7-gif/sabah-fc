@@ -412,3 +412,8 @@ main{padding:20px 14px 110px}.portal-page--matches .match-centre{padding:14px}
 .stats-leader-photo .stats-leader-fallback{position:absolute;inset:0;display:grid;place-items:center;z-index:0}
 .stats-rank-avatar{position:relative}
 .stats-rank-avatar .stats-thumb{position:absolute;inset:0;width:100%;height:100%;margin:0;border-radius:0;background:transparent;object-fit:contain;object-position:center}
+
+/* Three Goals: gambar pemain di sebelah nama */
+.stats-goal-row{grid-template-columns:3.5rem 48px minmax(0,1fr) auto minmax(0,.85fr)}
+.stats-goal-photo-wrap{position:relative;display:block;width:48px;height:52px;border-radius:9px;background:#e9eef9;overflow:hidden}
+.stats-goal-photo{position:absolute;inset:0;width:100%;height:100%;margin:0;border-radius:0;background:transparent;object-fit:contain;object-position:center}
