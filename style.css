@@ -526,3 +526,23 @@ h1,h2,h3{color:#f5f8ff}
 h1,h2,h3{color:#f5f8ff!important}
 .stats-category-tabs button,.stats-competition-tabs button{border-radius:999px}
 .mobile-bottom-nav{left:12px!important;right:12px!important;width:auto!important;max-width:none!important;transform:none!important;box-sizing:border-box}
+
+/* ===== Pembetulan lanjutan tema gelap biru ===== */
+/* Jadual: baris Sabah FC */
+.standing-table tbody tr.sabah-highlight,.standing-table tbody tr.sabah-highlight td{background:rgba(59,130,246,.22)!important;color:#fff!important}
+.standing-table tbody tr.sabah-highlight{box-shadow:inset 4px 0 0 #e11d48}
+.standing-table tbody tr.sabah-highlight strong,.standing-table tbody tr.sabah-highlight td{color:#fff!important}
+/* Label status perlawanan */
+.fixture-status{background:rgba(255,255,255,.12)!important;color:#dbe7ff!important;border:1px solid rgba(255,255,255,.16)}
+.fixture-status.is-upcoming{background:rgba(59,130,246,.22)!important;color:#bfdbfe!important}
+.fixture-status.is-live{background:#e11d48!important;color:#fff!important}
+.fixture-status.is-ft{background:rgba(255,255,255,.1)!important;color:#e6eefc!important}
+/* Tab Matches: teks aktif */
+.match-centre .competition-tab.active,.match-centre button[aria-selected="true"],.match-centre .tab-active{color:#fff!important}
+/* Navigasi bawah: kekalkan reka bentuk asal (bulatan merah pada ikon) */
+.mobile-bottom-nav button.active{background:transparent!important;color:#fff!important;box-shadow:none!important}
+/* Profil: kotak putih di belakang gambar dan teks watermark */
+.squad-profile--showcase .player-photo-hero,.squad-profile--showcase .profile-portrait-stage,.squad-profile--showcase .profile-portrait-stage>*{background:transparent!important;box-shadow:none!important}
+.squad-profile--showcase .profile-portrait-stage [class*="circle"],.squad-profile--showcase .profile-watermark-circle{background:rgba(255,255,255,.08)!important}
+.squad-profile--showcase .profile-portrait-caption,.squad-profile--showcase .profile-hero .profile-portrait-caption{color:#9fb2d4!important;opacity:1!important}
+.squad-profile--showcase .profile-hero [class*="caption"]{color:#9fb2d4!important}
