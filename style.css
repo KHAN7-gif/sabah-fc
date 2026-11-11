@@ -417,3 +417,50 @@ main{padding:20px 14px 110px}.portal-page--matches .match-centre{padding:14px}
 .stats-goal-row{grid-template-columns:3.5rem 48px minmax(0,1fr) auto minmax(0,.85fr)}
 .stats-goal-photo-wrap{position:relative;display:block;width:48px;height:52px;border-radius:9px;background:#e9eef9;overflow:hidden}
 .stats-goal-photo{position:absolute;inset:0;width:100%;height:100%;margin:0;border-radius:0;background:transparent;object-fit:contain;object-position:center}
+
+/* ===== Profil pemain: reka bentuk semula (tanpa perubahan data/markup) ===== */
+.squad-profile--showcase{--pf-ink:#0f2747;--pf-muted:#6b7a90;--pf-line:#e6ecf4;--pf-tile:#f5f8fc;--pf-red:#e11d48;--pf-blue:#1d4ed8;color:var(--pf-ink)}
+.squad-profile--showcase .profile-back{background:#fff;border:1px solid var(--pf-line);border-radius:999px;padding:9px 14px;font-size:12px;box-shadow:0 1px 2px #0f274708}
+.squad-profile--showcase .profile-hero{border-radius:28px;box-shadow:0 18px 40px -22px #0f274733;background:radial-gradient(120% 90% at 0% 0%,#ffffff 0,transparent 55%),linear-gradient(160deg,#e8effc 0,#c3d4f5 45%,#6f97d6 100%)}
+.squad-profile--showcase .profile-hero-body{gap:28px;padding:28px 28px 0}
+.squad-profile--showcase .profile-portrait-stage .player-photo-hero{height:400px}
+.squad-profile--showcase .profile-watermark{color:#ffffff99;font-size:clamp(150px,22vw,280px)}
+.squad-profile--showcase .profile-portrait-caption{font-size:9px;letter-spacing:.22em;color:#1e3a66b3}
+.squad-profile--showcase .profile-intro{padding:4px 0 28px}
+.squad-profile--showcase .profile-team{font-size:10px;letter-spacing:.2em;color:var(--pf-blue);background:#ffffffb3;border-radius:999px;padding:5px 10px;display:inline-block}
+.squad-profile--showcase .profile-intro h1{font-size:clamp(26px,4vw,40px);font-weight:800;letter-spacing:-.035em;line-height:1.05}
+.squad-profile--showcase .profile-display-number{color:var(--pf-red);font-weight:900;letter-spacing:-.06em}
+.squad-profile--showcase .profile-position{background:#ffffffcc;color:var(--pf-ink);border-radius:999px;padding:7px 12px;box-shadow:0 1px 0 #fff inset,0 6px 16px -10px #0f274766}
+.squad-profile--showcase .profile-club{background:#ffffffb3;border-radius:999px;padding:6px 12px 6px 6px;width:max-content;margin-top:12px}
+.squad-profile--showcase .profile-hero-summary{background:#0b1f3a;border-radius:22px;padding:20px 20px 18px;color:#fff;box-shadow:0 14px 30px -16px #0b1f3acc}
+.squad-profile--showcase .profile-summary-label{font-size:10px;letter-spacing:.2em;color:#9db4d9}
+.squad-profile--showcase .profile-summary-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:14px 0 14px}
+.squad-profile--showcase .profile-summary-grid>div{background:#ffffff12;border-radius:14px;padding:12px 8px;text-align:center}
+.squad-profile--showcase .profile-summary-grid strong{display:block;font-size:26px;font-weight:800;letter-spacing:-.03em;line-height:1}
+.squad-profile--showcase .profile-summary-grid span{display:block;margin-top:7px;font-size:10px;color:#c9d7ee}
+.squad-profile--showcase .profile-statistics-link{color:#fff;font-weight:700;font-size:12px;text-decoration:none;border-bottom:1px solid #ffffff66;padding-bottom:2px}
+.squad-profile--showcase .profile-actions{margin-top:16px}
+.squad-profile--showcase .profile-actions button{border-radius:999px;background:var(--pf-red);box-shadow:0 10px 20px -12px #e11d48cc}
+.squad-profile--showcase .profile-overview-heading{font-size:22px;font-weight:800;letter-spacing:-.03em;margin:30px 2px 4px}
+.squad-profile--showcase .profile-panel{border-radius:22px;border:1px solid var(--pf-line);box-shadow:0 1px 2px #0f274708,0 12px 28px -24px #0f274740;padding:22px;margin-top:14px}
+.squad-profile--showcase .profile-section-kicker{display:block;font-size:10px;letter-spacing:.2em;color:var(--pf-blue);font-weight:800;margin-bottom:6px}
+.squad-profile--showcase .profile-panel h2{font-size:20px;font-weight:800;letter-spacing:-.02em;margin:0 0 16px}
+.squad-profile--showcase .profile-fields{gap:10px}
+.squad-profile--showcase .profile-fields>div{background:var(--pf-tile);border:1px solid #edf2f8;border-radius:16px;padding:14px}
+.squad-profile--showcase .profile-fields small{font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--pf-muted)}
+.squad-profile--showcase .profile-fields strong{font-size:14px;font-weight:700;color:var(--pf-ink);line-height:1.3}
+.squad-profile--showcase .profile-stats-grid{gap:10px}
+.squad-profile--showcase .profile-stat{background:var(--pf-tile);border:1px solid #edf2f8;border-radius:18px;padding:18px 10px}
+.squad-profile--showcase .profile-stat strong{font-size:34px;font-weight:800;color:var(--pf-ink);letter-spacing:-.04em}
+.squad-profile--showcase .profile-stat span{font-size:9.5px;letter-spacing:.14em;color:var(--pf-muted)}
+.squad-profile--showcase .profile-note,.squad-profile--showcase .profile-disclaimer{color:var(--pf-muted)}
+.squad-profile--showcase .profile-disclaimer{text-align:center;font-size:11px;margin:22px 0 28px}
+@media(max-width:650px){
+.squad-profile--showcase .profile-hero-body{grid-template-columns:1fr;gap:4px;padding:18px 18px 0}
+.squad-profile--showcase .profile-portrait-stage .player-photo-hero{height:300px}
+.squad-profile--showcase .profile-hero-summary{margin-bottom:0}
+.squad-profile--showcase .profile-summary-grid strong{font-size:22px}
+.squad-profile--showcase .profile-stats-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.squad-profile--showcase .profile-panel{padding:18px;border-radius:20px}
+.squad-profile--showcase .profile-fields{grid-template-columns:1fr}
+}
