@@ -546,3 +546,16 @@ h1,h2,h3{color:#f5f8ff!important}
 .squad-profile--showcase .profile-portrait-stage [class*="circle"],.squad-profile--showcase .profile-watermark-circle{background:rgba(255,255,255,.08)!important}
 .squad-profile--showcase .profile-portrait-caption,.squad-profile--showcase .profile-hero .profile-portrait-caption{color:#9fb2d4!important;opacity:1!important}
 .squad-profile--showcase .profile-hero [class*="caption"]{color:#9fb2d4!important}
+
+/* ===== Tab Match Centre / butiran perlawanan: tema gelap biru ===== */
+.match-detail{background:linear-gradient(180deg,#0f2453 0%,#0a1a3d 70%)!important;color:#e6eefc!important;border-radius:28px 28px 0 0}
+.match-detail :where(h1,h2,h3,h4,p,strong,b,small,span,div,li,td,th,label){color:#e6eefc}
+.match-detail :where(small,.detail-status,.detail-note){color:#9fb2d4!important}
+.match-detail :where(div,section,article,li,td,th){background-color:transparent}
+.match-detail :where(.detail-summary,.detail-info-grid>div,.detail-highlights>div,.match-event-group,.match-event-list,.match-event-stats,.match-timeline,.match-video,.match-team-stats-clubs,.opening-goals,.opening-rank-group,.club-trophy-card){background:rgba(255,255,255,.06)!important;border:1px solid rgba(255,255,255,.12)!important;border-radius:18px}
+.match-detail :where(.match-event-stats>div,.match-timeline-minute){background:rgba(255,255,255,.08)!important}
+.detail-result,.detail-result>div{background:linear-gradient(160deg,rgba(255,255,255,.12),rgba(255,255,255,.04))!important;border:1px solid rgba(255,255,255,.14)!important;border-radius:22px;color:#fff!important}
+.detail-result b,.detail-result strong{color:#fff!important}
+.detail-tabs button,.event-editor-tabs button{background:rgba(255,255,255,.08)!important;color:#e6eefc!important;border:1px solid rgba(255,255,255,.12)}
+.detail-tabs button.active,.event-editor-tabs button.active{background:linear-gradient(135deg,#3b82f6,#22d3ee)!important;color:#fff!important}
+.detail-back{background:rgba(255,255,255,.12)!important;color:#fff!important}
