@@ -545,7 +545,7 @@
       "red": 0,
       "nickname": "HANAFIE",
       "photoUrl": "",
-      "country": "MY",
+      "country": "",
       "country2": ""
     },
     "3": {
@@ -559,7 +559,7 @@
       "red": 0,
       "nickname": "RAWILSON",
       "photoUrl": "",
-      "country": "MY",
+      "country": "",
       "country2": ""
     },
     "5": {
@@ -573,7 +573,7 @@
       "red": 0,
       "nickname": "KEKKONEN",
       "photoUrl": "",
-      "country": "MY",
+      "country": "",
       "country2": "PH"
     },
     "7": {
@@ -645,7 +645,7 @@
       "red": 0,
       "nickname": "DI RENZO",
       "photoUrl": "",
-      "country": "MY",
+      "country": "",
       "country2": "AR"
     },
     "8": {
@@ -659,7 +659,7 @@
       "red": 0,
       "nickname": "FARHAN",
       "photoUrl": "",
-      "country": "MY",
+      "country": "",
       "country2": ""
     },
     "9": {
@@ -673,7 +673,7 @@
       "red": 0,
       "nickname": "PARK J.B",
       "photoUrl": "",
-      "country": "MY",
+      "country": "",
       "country2": "KR"
     },
     "10": {
@@ -687,7 +687,7 @@
       "red": 0,
       "nickname": "CIFUENTES",
       "photoUrl": "",
-      "country": "MY",
+      "country": "",
       "country2": ""
     },
     "13": {
@@ -701,8 +701,8 @@
       "red": 0,
       "nickname": "DINESH",
       "photoUrl": "",
-      "country": "MY",
-      "country2": "MY"
+      "country": "",
+      "country2": ""
     },
     "14": {
       "number": "14",
@@ -729,7 +729,7 @@
       "red": 0,
       "nickname": "SHO",
       "photoUrl": "",
-      "country": "MY",
+      "country": "",
       "country2": "JP"
     },
     "18": {
@@ -743,7 +743,7 @@
       "red": 0,
       "nickname": "HALIM",
       "photoUrl": "",
-      "country": "MY",
+      "country": "",
       "country2": ""
     },
     "20": {
@@ -757,7 +757,7 @@
       "red": 0,
       "nickname": "DANEL",
       "photoUrl": "",
-      "country": "MY",
+      "country": "",
       "country2": ""
     },
     "21": {
@@ -771,7 +771,7 @@
       "red": 0,
       "nickname": "FAYADH",
       "photoUrl": "",
-      "country": "MY",
+      "country": "",
       "country2": ""
     },
     "22": {
@@ -813,7 +813,7 @@
       "red": 0,
       "nickname": " LOK",
       "photoUrl": "",
-      "country": "MY",
+      "country": "",
       "country2": ""
     },
     "31": {
@@ -827,7 +827,7 @@
       "red": 0,
       "nickname": "DAMIEN",
       "photoUrl": "",
-      "country": "MY",
+      "country": "",
       "country2": ""
     },
     "33": {
@@ -841,7 +841,7 @@
       "red": 0,
       "nickname": " DOMINIC",
       "photoUrl": "",
-      "country": "MY",
+      "country": "",
       "country2": ""
     },
     "34": {
@@ -855,7 +855,7 @@
       "red": 0,
       "nickname": "KADETE",
       "photoUrl": "",
-      "country": "MY",
+      "country": "",
       "country2": "ES"
     },
     "70": {
@@ -869,7 +869,7 @@
       "red": 0,
       "nickname": "FAKRUL",
       "photoUrl": "",
-      "country": "MY",
+      "country": "",
       "country2": ""
     },
     "72": {
@@ -883,7 +883,7 @@
       "red": 0,
       "nickname": "SHAHRULNIZAM",
       "photoUrl": "",
-      "country": "MY",
+      "country": "",
       "country2": ""
     },
     "76": {
@@ -897,7 +897,7 @@
       "red": 0,
       "nickname": "ROZACKLYE",
       "photoUrl": "",
-      "country": "MY",
+      "country": "",
       "country2": ""
     },
     "88": {
@@ -911,7 +911,7 @@
       "red": 0,
       "nickname": "RUSDI R.",
       "photoUrl": "",
-      "country": "MY",
+      "country": "",
       "country2": ""
     }
   },
