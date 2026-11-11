@@ -405,3 +405,10 @@ main{padding:20px 14px 110px}.portal-page--matches .match-centre{padding:14px}
 .notification-close{display:grid;place-items:center;width:36px;height:36px;border:0;border-radius:50%;background:#eef2f8;color:#153762;font-size:24px}
 .notification-kicker{font-size:10px;font-weight:850;letter-spacing:.14em;color:#d51e40;margin:24px 0 10px}.notification-dialog h2{font-size:29px;line-height:1.15;letter-spacing:-.04em;margin:0 0 14px}.notification-description{font-size:14px;line-height:1.7;color:#586b86}.notification-status{background:#f0f4fa;border:1px solid #e0e7f1;border-radius:14px;padding:15px;font-size:14px;line-height:1.6;min-height:78px}.notification-status[data-error=true]{background:#fff0f2;color:#9f1734;border-color:#f3d1d9}.notification-actions{display:flex;gap:10px;margin:20px 0}.notification-actions button{min-height:48px;width:100%;font-size:14px}.notification-actions button:disabled{opacity:.55;cursor:default}.notification-footnote{font-size:11px;line-height:1.7;color:#748299;margin:0}.notification-dialog [hidden]{display:none!important}
 @media(max-width:800px){.header-tools{position:absolute;right:15px;top:17px;gap:8px}.header-tools .header-season{display:none}.notification-launcher{padding:8px;min-height:38px}.notification-launcher span{display:none}.notification-dialog{padding:22px}}
+
+/* Statistik: gambar pemain diletakkan di tengah kotak */
+.stats-leader-photo{position:relative;overflow:hidden}
+.stats-leader-photo .stats-feature-photo{position:absolute;inset:0;width:100%;height:100%;margin:0;border-radius:0;background:transparent;object-fit:contain;object-position:center;z-index:1}
+.stats-leader-photo .stats-leader-fallback{position:absolute;inset:0;display:grid;place-items:center;z-index:0}
+.stats-rank-avatar{position:relative}
+.stats-rank-avatar .stats-thumb{position:absolute;inset:0;width:100%;height:100%;margin:0;border-radius:0;background:transparent;object-fit:contain;object-position:center}
