@@ -464,3 +464,23 @@ main{padding:20px 14px 110px}.portal-page--matches .match-centre{padding:14px}
 .squad-profile--showcase .profile-panel{padding:18px;border-radius:20px}
 .squad-profile--showcase .profile-fields{grid-template-columns:1fr}
 }
+
+/* ===== Halaman utama, Matches, Table & Stats: kemas kini gaya kad (CSS sahaja) ===== */
+:root{--pg-line:#e6ecf4;--pg-ink:#0f2747;--pg-muted:#6b7a90;--pg-shadow:0 1px 2px #0f274708,0 12px 28px -24px #0f274740}
+.portal-page-heading{font-weight:800;letter-spacing:-.035em;line-height:1.05;color:var(--pg-ink)}
+.portal-eyebrow{letter-spacing:.2em;font-weight:800}
+.panel.standing-panel,.schedule-card,.fixture-card,.stats-board,.home-calendar{border-radius:22px!important;border:1px solid var(--pg-line)!important;box-shadow:var(--pg-shadow)!important}
+.schedule-card,.fixture-card{padding:18px!important}
+.schedule-score,.fixture-score{font-weight:800!important;letter-spacing:-.03em}
+.schedule-club,.fixture-team strong,.fixture-teams strong{font-weight:700!important;color:var(--pg-ink)}
+.schedule-small,.fixture-venue,.schedule-ground,.fixture-meta{color:var(--pg-muted)!important}
+.standing-table-scroll{border-radius:16px;border:1px solid var(--pg-line);overflow:hidden}
+.standing-table thead th{background:#f5f8fc!important;font-size:10px!important;letter-spacing:.14em;color:var(--pg-muted)!important;font-weight:800!important}
+.standing-table tbody tr{transition:background .15s}
+.standing-table tbody tr:hover{background:#f7faff}
+.standing-points{font-weight:800!important;color:var(--pg-ink)}
+.stats-board-header{border-radius:22px 22px 0 0}
+.stats-leader{border-radius:20px!important;box-shadow:0 10px 24px -20px #0f274766!important}
+.stats-ranking-row{border-radius:14px}
+.portal-page-heading + p,.portal-page-heading ~ p{font-weight:400;letter-spacing:normal}
+.portal-eyebrow + h1 + p{font-weight:400;letter-spacing:normal;color:var(--pg-muted)}
