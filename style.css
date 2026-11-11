@@ -559,3 +559,6 @@ h1,h2,h3{color:#f5f8ff!important}
 .detail-tabs button,.event-editor-tabs button{background:rgba(255,255,255,.08)!important;color:#e6eefc!important;border:1px solid rgba(255,255,255,.12)}
 .detail-tabs button.active,.event-editor-tabs button.active{background:linear-gradient(135deg,#3b82f6,#22d3ee)!important;color:#fff!important}
 .detail-back{background:rgba(255,255,255,.12)!important;color:#fff!important}
+/* Latar belakang profil: sembunyikan siluet cerah di belakang gambar */
+.squad-profile--showcase .profile-portrait-placeholder{color:rgba(255,255,255,.07)!important;fill:rgba(255,255,255,.07)!important}
+.squad-profile--showcase .profile-watermark{color:rgba(255,255,255,.12)!important}
