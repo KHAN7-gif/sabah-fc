@@ -4,14 +4,18 @@
   "players": [
     {
       "name": "MOHAMAD RAMZI MUSTAKIM",
-      "number": 1,
+      "number": "1",
       "position": "GK",
       "nationality": "Malaysia",
-      "goals": "0",
-      "assists": "0",
-      "yellow": "0",
-      "red": "0",
-      "age": 27
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "age": 27,
+      "country": "MY",
+      "photoUrl": "",
+      "nickname": "RAMZI",
+      "country2": ""
     }
   ],
   "matches": [
@@ -530,7 +534,53 @@
   ],
   "about": "Portal komuniti Sabah FC. Bukan laman rasmi kelab.",
   "playerProfiles": {
+    "2": {
+      "name": "ABDUL HANAFIE BIN TOKYO ABDUL HASIM",
+      "number": "2",
+      "position": "DEF",
+      "age": 27,
+      "goals": 1,
+      "assists": 0,
+      "yellow": 2,
+      "red": 0,
+      "nickname": "HANAFIE",
+      "photoUrl": "",
+      "country": "MY",
+      "country2": ""
+    },
+    "3": {
+      "name": "RAWILSON BATUIL",
+      "number": "3",
+      "position": "DEF",
+      "age": 32,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "nickname": "RAWILSON",
+      "photoUrl": "",
+      "country": "MY",
+      "country2": ""
+    },
+    "5": {
+      "number": "5",
+      "name": "OSKARI JOHANNES KEKKONEN",
+      "position": "MID",
+      "age": 27,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 1,
+      "red": 0,
+      "nickname": "KEKKONEN",
+      "photoUrl": "",
+      "country": "",
+      "country2": ""
+    },
     "7": {
+      "number": "7",
+      "name": "GONZALO IGNACIO DI RENZO",
+      "position": "FOR",
+      "age": 30,
       "career": [
         {
           "club": "Sabah FC",
@@ -589,83 +639,140 @@
           "years": "1 Jan 2015 · From Lanús U20"
         }
       ],
-      "name": "GONZALO IGNACIO DI RENZO",
-      "number": 7,
-      "position": "FOR",
-      "age": 30
-    },
-    "2": {
-      "name": "ABDUL HANAFIE BIN TOKYO ABDUL HASIM",
-      "number": 2,
-      "position": "DEF",
-      "age": 27
-    },
-    "3": {
-      "name": "RAWILSON BATUIL",
-      "number": 3,
-      "position": "DEF",
-      "age": 32
-    },
-    "5": {
-      "name": "OSKARI JOHANNES KEKKONEN",
-      "number": 5,
-      "position": "MID",
-      "age": 27
+      "goals": 3,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "nickname": "DI RENZO",
+      "photoUrl": "",
+      "country": "",
+      "country2": ""
     },
     "8": {
+      "number": "8",
       "name": "MUHAMMAD FARHAN BIN ROSLAN",
-      "number": 8,
       "position": "MID",
-      "age": 29
+      "age": 29,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "nickname": "FARHAN",
+      "photoUrl": "",
+      "country": "",
+      "country2": ""
     },
     "9": {
+      "number": "9",
       "name": "JUNGBIN PARK",
-      "number": 9,
       "position": "MID",
-      "age": 32
+      "age": 32,
+      "goals": 2,
+      "assists": 0,
+      "yellow": 1,
+      "red": 0,
+      "nickname": "PARK J.B",
+      "photoUrl": "",
+      "country": "",
+      "country2": ""
     },
     "10": {
+      "number": "10",
       "name": "MIGUEL ANGEL GARRIDO CIFUENTES",
-      "number": 10,
       "position": "MID",
-      "age": 36
+      "age": 36,
+      "goals": 0,
+      "assists": 2,
+      "yellow": 0,
+      "red": 0,
+      "nickname": "CIFUENTES",
+      "photoUrl": "",
+      "country": "",
+      "country2": ""
     },
     "13": {
+      "number": "13",
       "name": "DINESH A/L RAJASINGAM",
-      "number": 13,
       "position": "DEF",
-      "age": 28
+      "age": 28,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 2,
+      "red": 0,
+      "nickname": "DINESH",
+      "photoUrl": "",
+      "country": "",
+      "country2": ""
     },
     "14": {
+      "number": "14",
       "name": "JOSE ANGEL ALONSO MARTIN",
-      "number": 14,
       "position": "DEF",
-      "age": 37
+      "age": 37,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "nickname": "JOSE ANGEL",
+      "photoUrl": "",
+      "country": "",
+      "country2": ""
     },
     "17": {
+      "number": "17",
       "name": "SHO YAMAMOTO",
-      "number": 17,
       "position": "MID",
-      "age": 29
+      "age": 29,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "nickname": "SHO",
+      "photoUrl": "",
+      "country": "",
+      "country2": ""
     },
     "18": {
       "name": "ABDUL HALIM BIN SAARI",
-      "number": 18,
+      "number": "18",
       "position": "MID",
-      "age": 31
+      "age": 31,
+      "goals": 1,
+      "assists": 0,
+      "yellow": 2,
+      "red": 0,
+      "nickname": "HALIM",
+      "photoUrl": "",
+      "country": "",
+      "country2": ""
     },
     "20": {
+      "number": "20",
       "name": "MOHD FADZRUL DANEL BIN MOHD NIZAM",
-      "number": 20,
       "position": "MID",
       "age": 27,
-      "assists": 1
+      "assists": 1,
+      "goals": 0,
+      "yellow": 3,
+      "red": 0,
+      "nickname": "DANEL",
+      "photoUrl": "",
+      "country": "",
+      "country2": ""
     },
     "21": {
+      "number": "21",
       "name": "MOHAMMAD FAYADH BIN MOHD ZULKIFLI AMIN",
-      "number": 21,
       "position": "MID",
-      "age": 28
+      "age": 28,
+      "goals": 0,
+      "assists": 3,
+      "yellow": 0,
+      "red": 0,
+      "nickname": "FAYADH",
+      "photoUrl": "",
+      "country": "",
+      "country2": ""
     },
     "22": {
       "name": "JUAN FLERE",
@@ -674,58 +781,130 @@
       "age": 28
     },
     "23": {
+      "number": "23",
       "name": "DANE JAMES INGHAM",
-      "number": 23,
       "position": "DEF",
-      "age": 27
+      "age": 27,
+      "goals": 2,
+      "assists": 0,
+      "yellow": 1,
+      "red": 0,
+      "nickname": "INGHAM",
+      "photoUrl": "",
+      "country": "",
+      "country2": ""
     },
     "28": {
+      "number": "28",
       "name": "DARREN YEE DENG LOK",
-      "number": 28,
       "position": "FOR",
-      "age": 35
+      "age": 35,
+      "goals": 1,
+      "assists": 1,
+      "yellow": 0,
+      "red": 0,
+      "nickname": " LOK",
+      "photoUrl": "",
+      "country": "",
+      "country2": ""
     },
     "31": {
+      "number": "31",
       "name": "DAMIEN CHIEN KHAI LIM",
-      "number": 31,
       "position": "GK",
-      "age": 29
+      "age": 29,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "nickname": "DAMIEN",
+      "photoUrl": "",
+      "country": "",
+      "country2": ""
     },
     "33": {
+      "number": "33",
       "name": "DOMINIC JUN JIN TAN",
-      "number": 33,
       "position": "DEF",
-      "age": 29
+      "age": 29,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "nickname": " DOMINIC",
+      "photoUrl": "",
+      "country": "",
+      "country2": ""
     },
     "34": {
+      "number": "34",
       "name": "ENRIQUE LOPEZ FERNANDEZ",
-      "number": 34,
       "position": "DEF",
-      "age": 32
+      "age": 32,
+      "goals": 1,
+      "assists": 0,
+      "yellow": 1,
+      "red": 0,
+      "nickname": "KADETE",
+      "photoUrl": "",
+      "country": "",
+      "country2": ""
     },
     "70": {
+      "number": "70",
       "name": "MUHAMMAD FAKRUL IMAN BIN NASZARI",
-      "number": 70,
       "position": "MID",
-      "age": 25
+      "age": 25,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "nickname": "FAKRUL",
+      "photoUrl": "",
+      "country": "",
+      "country2": ""
     },
     "72": {
+      "number": "72",
       "name": "MOHD SHAHRULNIZAM ABDULLAH",
-      "number": 72,
       "position": "DEF",
-      "age": 20
+      "age": 20,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "nickname": "SHAHRULNIZAM",
+      "photoUrl": "",
+      "country": "",
+      "country2": ""
     },
     "76": {
+      "number": "76",
       "name": "ROZACKLYE YANAM",
-      "number": 76,
       "position": "DEF",
-      "age": 25
+      "age": 25,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "nickname": "ROZACKLYE",
+      "photoUrl": "",
+      "country": "",
+      "country2": ""
     },
     "88": {
+      "number": "88",
       "name": "RUSDI BIN ROSLAN",
-      "number": 88,
       "position": "MID",
-      "age": 24
+      "age": 24,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "nickname": "RUSDI R.",
+      "photoUrl": "",
+      "country": "",
+      "country2": ""
     }
   },
   "updatedAt": "2026-11-08T18:47:55.126260Z"
