@@ -634,3 +634,7 @@ nav.squad-position-filters{position:static!important;bottom:auto!important;left:
 .fa-team.win b{color:#22d3ee}
 .fa-tie small{font-size:11px;color:#94a3b8;letter-spacing:.02em}
 .fa-note{font-size:12px;margin-top:14px}
+.fa-sabah{display:grid;gap:4px;margin:16px 0 4px;padding:14px;border-radius:14px;border:1px solid rgba(251,113,133,.45);background:rgba(225,29,72,.14)}
+.fa-sabah span{font-size:11px;letter-spacing:.12em;font-weight:800;color:#fda4af}
+.fa-sabah strong{font-size:16px;color:#fff}
+.fa-sabah small{font-size:12px;color:#e6eefc}
