@@ -614,3 +614,11 @@ nav.squad-position-filters{position:static!important;bottom:auto!important;left:
 
 /* Competition logos on Super League / FA Cup tabs */
 .comp-logo{width:18px;height:18px;object-fit:contain;vertical-align:middle;margin-right:6px;flex:none;display:inline-block}
+
+/* Table page: competition tabs */
+.standing-comp-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.standing-comp-tabs button{appearance:none;display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border:1px solid rgba(255,255,255,.14);border-radius:12px;background:rgba(255,255,255,.07);color:#e6eefc;font:inherit;font-size:13px;font-weight:750;cursor:pointer}
+.standing-comp-tabs button .comp-logo{margin-right:0}
+.standing-comp-tabs button.active{background:linear-gradient(135deg,#3b82f6,#22d3ee);border-color:transparent;color:#fff}
+.standing-soon{text-align:center;padding:36px 22px}
+.standing-soon h2{margin:10px 0 8px;font-size:26px}
