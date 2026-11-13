@@ -614,16 +614,3 @@ nav.squad-position-filters{position:static!important;bottom:auto!important;left:
 
 /* Competition logos on Super League / FA Cup tabs */
 .comp-logo{width:18px;height:18px;object-fit:contain;vertical-align:middle;margin-right:6px;flex:none;display:inline-block}
-
-/* Piala Malaysia: coming soon tab */
-.comp-soon{display:inline-flex;align-items:center;gap:6px;opacity:.75;cursor:default;pointer-events:none;color:#e6eefc}
-.comp-soon em{font-style:normal;font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:2px 7px;border-radius:999px;background:rgba(251,191,36,.18);color:#fde68a;border:1px solid rgba(251,191,36,.4);margin-left:2px}
-.home-comp-soon{padding:9px 14px;border-radius:12px;border:1px dashed rgba(255,255,255,.2);background:rgba(255,255,255,.04);font-size:13px;font-weight:700}
-
-/* Table page: competition tabs */
-.standing-comp-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px}
-.standing-comp-tabs button{appearance:none;display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border:1px solid rgba(255,255,255,.14);border-radius:12px;background:rgba(255,255,255,.07);color:#e6eefc;font:inherit;font-size:13px;font-weight:750;cursor:pointer}
-.standing-comp-tabs button .comp-logo{margin-right:0}
-.standing-comp-tabs button.active{background:linear-gradient(135deg,#3b82f6,#22d3ee);border-color:transparent;color:#fff}
-.standing-soon{text-align:center;padding:36px 22px}
-.standing-soon h2{margin:10px 0 8px;font-size:26px}
