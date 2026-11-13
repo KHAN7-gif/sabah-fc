@@ -605,3 +605,6 @@ h1,h2,h3{color:#f5f8ff!important}
 .notification-status[data-error=true]{background:rgba(225,29,72,.16);border-color:rgba(251,113,133,.45);color:#fecdd3}
 .notification-actions button:disabled{opacity:.8;color:#fff;background:linear-gradient(135deg,#3b82f6,#22d3ee);filter:saturate(.6)}
 .notification-actions button:not(:disabled){color:#fff}
+
+/* Notice boxes: dark glass with readable text */
+.notice,.panel .notice,p.notice{background:rgba(245,158,11,.12)!important;border:1px solid rgba(251,191,36,.35)!important;border-left:4px solid #fbbf24!important;color:#fde68a!important;box-shadow:none!important}
