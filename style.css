@@ -562,3 +562,17 @@ h1,h2,h3{color:#f5f8ff!important}
 /* Latar belakang profil: sembunyikan siluet cerah di belakang gambar */
 .squad-profile--showcase .profile-portrait-placeholder{color:rgba(255,255,255,.07)!important;fill:rgba(255,255,255,.07)!important}
 .squad-profile--showcase .profile-watermark{color:rgba(255,255,255,.12)!important}
+
+/* ===== Player Statistics: logo SVG watermark + jadual muat skrin iPhone ===== */
+.squad-profile--showcase .profile-complete-statistics{position:relative;overflow:hidden}
+.squad-profile--showcase .profile-complete-statistics::before{content:"";position:absolute;right:-70px;top:-50px;width:300px;height:300px;background:url("assets/logos/sabah-fc.svg") center/contain no-repeat;opacity:.07;pointer-events:none;z-index:0}
+.squad-profile--showcase .profile-complete-statistics>*{position:relative;z-index:1}
+.player-competition-breakdown{overflow:hidden}
+.player-competition-breakdown table{min-width:0!important;width:100%;table-layout:fixed;border-collapse:collapse}
+.player-competition-breakdown th,.player-competition-breakdown td{padding:10px 4px!important;font-size:12.5px;line-height:1.25;text-align:center;word-break:break-word}
+.player-competition-breakdown th:first-child,.player-competition-breakdown td:first-child{text-align:left;padding-left:12px!important;width:30%}
+.player-competition-breakdown thead th{font-size:11px;letter-spacing:.02em}
+@media(max-width:420px){
+.player-competition-breakdown th,.player-competition-breakdown td{font-size:11.5px;padding:9px 2px!important}
+.player-competition-breakdown th:first-child,.player-competition-breakdown td:first-child{width:28%;padding-left:10px!important}
+}
