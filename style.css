@@ -598,3 +598,10 @@ h1,h2,h3{color:#f5f8ff!important}
 /* Burger menu icons */
 .header-menu button{display:flex;align-items:center;gap:12px}
 .header-menu .menu-icon{width:20px;height:20px;flex:none}
+
+/* Notification dialog: readable on dark glass */
+.notification-dialog-icon{background:linear-gradient(135deg,#3b82f6,#22d3ee);color:#fff;box-shadow:0 10px 30px #3b82f655}
+.notification-status{color:#e6eefc;background:rgba(255,255,255,.07)}
+.notification-status[data-error=true]{background:rgba(225,29,72,.16);border-color:rgba(251,113,133,.45);color:#fecdd3}
+.notification-actions button:disabled{opacity:.8;color:#fff;background:linear-gradient(135deg,#3b82f6,#22d3ee);filter:saturate(.6)}
+.notification-actions button:not(:disabled){color:#fff}
