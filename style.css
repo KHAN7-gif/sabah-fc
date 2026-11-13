@@ -622,3 +622,15 @@ nav.squad-position-filters{position:static!important;bottom:auto!important;left:
 .standing-comp-tabs button.active{background:linear-gradient(135deg,#3b82f6,#22d3ee);border-color:transparent;color:#fff}
 .standing-soon{text-align:center;padding:36px 22px}
 .standing-soon h2{margin:10px 0 8px;font-size:26px}
+
+/* Piala FA bracket on Table page */
+.fa-bracket{padding:22px 18px}
+.fa-round-title{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#7dd3fc;margin:20px 0 10px}
+.fa-tie{display:grid;gap:6px;padding:12px;margin-bottom:10px;border:1px solid rgba(255,255,255,.14);border-radius:14px;background:rgba(255,255,255,.05)}
+.fa-team{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:650;color:#e6eefc}
+.fa-team span{flex:1;min-width:0}
+.fa-team b{font-size:16px;min-width:18px;text-align:right}
+.fa-team.win{color:#fff;font-weight:800}
+.fa-team.win b{color:#22d3ee}
+.fa-tie small{font-size:11px;color:#94a3b8;letter-spacing:.02em}
+.fa-note{font-size:12px;margin-top:14px}
