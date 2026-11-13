@@ -594,3 +594,7 @@ h1,h2,h3{color:#f5f8ff!important}
 .header-menu-btn span{width:20px}
 .header-menu{min-width:240px;padding:10px;gap:6px;border-radius:20px}
 .header-menu button{padding:16px 18px;font-size:19px;border-radius:14px}
+
+/* Burger menu icons */
+.header-menu button{display:flex;align-items:center;gap:12px}
+.header-menu .menu-icon{width:20px;height:20px;flex:none}
