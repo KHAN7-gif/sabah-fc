@@ -608,3 +608,6 @@ h1,h2,h3{color:#f5f8ff!important}
 
 /* Notice boxes: dark glass with readable text */
 .notice,.panel .notice,p.notice{background:rgba(245,158,11,.12)!important;border:1px solid rgba(251,191,36,.35)!important;border-left:4px solid #fbbf24!important;color:#fde68a!important;box-shadow:none!important}
+
+/* Player position filters: keep in page flow, not pinned to bottom like the site nav */
+nav.squad-position-filters{position:static!important;bottom:auto!important;left:auto!important;right:auto!important;z-index:auto!important;display:flex!important;flex-wrap:wrap;grid-template-columns:none!important;gap:8px;padding:4px 0!important;margin:0 0 18px!important;background:none!important;border:0!important;box-shadow:none!important;overflow:visible!important}
