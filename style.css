@@ -680,3 +680,8 @@ button:active,a.standing-official-link:active{transform:scale(.97)}
   button,a.standing-official-link{transition:none}
   button:active,a.standing-official-link:active{transform:none}
 }
+
+/* Table page tabs: same horizontal scroll row as the other pages */
+.standing-comp-tabs{display:flex;flex-wrap:nowrap;overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.standing-comp-tabs::-webkit-scrollbar{display:none}
+.standing-comp-tabs > *{flex:0 0 auto;scroll-snap-align:start;white-space:nowrap}
