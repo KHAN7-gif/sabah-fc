@@ -689,3 +689,26 @@ button:active,a.standing-official-link:active{transform:scale(.97)}
 /* Table legend: one abbreviation per line */
 .standing-legend{display:flex;flex-direction:column;gap:6px;margin:16px 0 0;font-size:12px;line-height:1.45;color:#94a3b8}
 .standing-legend span{min-width:0}
+
+/* Table: fit the league table on phones without sideways cut-off */
+@media (max-width:480px){
+.standing-table{table-layout:fixed;width:100%;min-width:0}
+.standing-table th,.standing-table td{padding-left:3px!important;padding-right:3px!important;font-size:12px!important}
+.standing-table th:nth-child(1),.standing-table td:nth-child(1){width:22px}
+.standing-table th:nth-child(2),.standing-table td:nth-child(2){width:auto}
+.standing-table th:nth-child(n+3),.standing-table td:nth-child(n+3){width:30px;text-align:center}
+.standing-table th:nth-child(11),.standing-table td:nth-child(11){display:none}
+.standing-table .standing-crest{width:26px!important;height:26px!important}
+.standing-table .standing-club{gap:6px}
+.standing-table .standing-club strong{font-size:12px;white-space:normal;line-height:1.2}
+}
+
+/* Phone table: keep club names clear of the numbers */
+@media (max-width:480px){
+.standing-table th:nth-child(7),.standing-table td:nth-child(7),
+.standing-table th:nth-child(8),.standing-table td:nth-child(8){display:none}
+.standing-table .standing-crest{width:22px!important;height:22px!important}
+.standing-table .standing-club{gap:5px}
+.standing-table .standing-club strong{font-size:12px;overflow-wrap:anywhere}
+.standing-legend span:nth-child(5),.standing-legend span:nth-child(6){display:none}
+}
