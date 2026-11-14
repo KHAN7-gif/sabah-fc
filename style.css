@@ -656,3 +656,27 @@ nav.squad-position-filters{position:static!important;bottom:auto!important;left:
 .fa-team.win b{color:#38bdf8}
 .fa-team.is-sabah span{color:#fda4af}
 .fa-team.is-sabah.win span{color:#fff}
+
+/* ---- Refinement pass: intentional scroll rows, press feedback, focus ---- */
+/* Competition tab rows scroll sideways on purpose instead of clipping text mid-word */
+.home-competition-tabs,
+.competition-tabs,
+.stats-competition-tabs{display:flex;flex-wrap:nowrap;overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.home-competition-tabs::-webkit-scrollbar,
+.competition-tabs::-webkit-scrollbar,
+.stats-competition-tabs::-webkit-scrollbar{display:none}
+.home-competition-tabs > *,
+.competition-tabs > *,
+.stats-competition-tabs > *{flex:0 0 auto;scroll-snap-align:start;white-space:nowrap}
+
+/* Press feedback on every tappable control */
+button,a.standing-official-link{transition:transform .14s ease,background-color .2s ease,box-shadow .2s ease}
+button:active,a.standing-official-link:active{transform:scale(.97)}
+
+/* One focus ring for the whole site, in the club red */
+:focus-visible{outline:2px solid #f43f5e;outline-offset:3px;border-radius:6px}
+
+@media (prefers-reduced-motion: reduce){
+  button,a.standing-official-link{transition:none}
+  button:active,a.standing-official-link:active{transform:none}
+}
