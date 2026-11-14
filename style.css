@@ -712,3 +712,13 @@ button:active,a.standing-official-link:active{transform:scale(.97)}
 .standing-table .standing-club strong{font-size:12px;overflow-wrap:anywhere}
 .standing-legend span:nth-child(5),.standing-legend span:nth-child(6){display:none}
 }
+
+/* Table sub-tabs (All / Home / Away) for Liga Super */
+.standing-scope-tabs{display:flex;gap:6px;margin:0 0 14px;padding:5px;border-radius:14px;background:rgba(255,255,255,.07);overflow-x:auto}
+.standing-scope-tabs button{flex:1 0 auto;border:0;background:transparent;color:#cbd5e1;font:inherit;font-size:13px;font-weight:700;padding:8px 14px;border-radius:10px;cursor:pointer}
+.standing-scope-tabs button.active{background:linear-gradient(135deg,#3b82f6,#22d3ee);color:#fff}
+.standing-scope-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.standing-scope-grid>div{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:10px 6px;text-align:center}
+.standing-scope-grid span{display:block;font-size:10px;letter-spacing:.12em;color:#94a3b8;font-weight:800}
+.standing-scope-grid strong{display:block;font-size:20px;color:#fff;margin-top:4px}
+.standing-scope-note{font-size:12px;margin:14px 0 0}
