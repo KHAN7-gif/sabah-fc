@@ -616,10 +616,6 @@ nav.squad-position-filters{position:static!important;bottom:auto!important;left:
 .comp-logo{width:18px;height:18px;object-fit:contain;vertical-align:middle;margin-right:6px;flex:none;display:inline-block}
 
 /* Table page: competition tabs */
-.standing-comp-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
-.standing-comp-tabs button{appearance:none;display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border:1px solid rgba(255,255,255,.14);border-radius:12px;background:rgba(255,255,255,.07);color:#e6eefc;font:inherit;font-size:13px;font-weight:750;cursor:pointer}
-.standing-comp-tabs button .comp-logo{margin-right:0}
-.standing-comp-tabs button.active{background:linear-gradient(135deg,#3b82f6,#22d3ee);border-color:transparent;color:#fff}
 .standing-soon{text-align:center;padding:36px 22px}
 .standing-soon h2{margin:10px 0 8px;font-size:26px}
 
@@ -682,6 +678,10 @@ button:active,a.standing-official-link:active{transform:scale(.97)}
 }
 
 /* Table page tabs: same horizontal scroll row as the other pages */
-.standing-comp-tabs{display:flex;flex-wrap:nowrap;overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+
+/* Table page tabs: same track and pill as the other pages */
+.standing-comp-tabs{display:flex;flex-wrap:nowrap;gap:6px;overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:none;-webkit-overflow-scrolling:touch;background:rgba(255,255,255,.07);border-radius:19px;padding:7px;margin:0 0 18px;max-width:100%}
 .standing-comp-tabs::-webkit-scrollbar{display:none}
-.standing-comp-tabs > *{flex:0 0 auto;scroll-snap-align:start;white-space:nowrap}
+.standing-comp-tabs button{flex:0 0 auto;scroll-snap-align:start;appearance:none;display:inline-flex;align-items:center;gap:8px;background:transparent;border:0;border-radius:13px;color:#e6eefc;font:inherit;font-size:14px;font-weight:750;line-height:1.35;padding:10px 14px;white-space:nowrap;cursor:pointer}
+.standing-comp-tabs button .comp-logo{margin-right:0}
+.standing-comp-tabs button.active{background:linear-gradient(135deg,#3b82f6,#22d3ee);color:#fff;box-shadow:0 6px 16px rgba(59,130,246,.3)}
