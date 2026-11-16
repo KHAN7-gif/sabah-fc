@@ -742,3 +742,19 @@ header .notification-launcher svg{margin:0}
 #app{max-width:768px}
 .mobile-bottom-nav{width:min(720px,calc(100vw - 48px))!important}
 }
+
+/* League Table: show every column (incl. Last 5) without sideways scroll on web/tablet */
+@media (min-width:801px){
+.standing-table{table-layout:fixed;width:100%;min-width:0}
+.standing-table th,.standing-table td{padding-left:5px!important;padding-right:5px!important;font-size:13px!important;white-space:nowrap}
+.standing-table th:nth-child(1),.standing-table td:nth-child(1){width:30px}
+.standing-table th:nth-child(2),.standing-table td:nth-child(2){width:auto;white-space:normal}
+.standing-table th:nth-child(n+3):nth-child(-n+10),.standing-table td:nth-child(n+3):nth-child(-n+10){width:40px;text-align:center}
+.standing-table th:nth-child(11),.standing-table td:nth-child(11){width:118px}
+.standing-table .standing-club{gap:8px}
+.standing-table .standing-crest{width:32px!important;height:32px!important}
+.standing-table .standing-club strong{font-size:13px;overflow-wrap:anywhere;white-space:normal;line-height:1.2}
+.standing-table .standing-form{min-width:0;gap:2px}
+.standing-table .standing-form-dot{width:17px;height:17px;font-size:10px}
+.standing-table-scroll{overflow-x:visible}
+}
