@@ -712,3 +712,6 @@ button:active,a.standing-official-link:active{transform:scale(.97)}
 .standing-table .standing-club strong{font-size:12px;overflow-wrap:anywhere}
 .standing-legend span:nth-child(5),.standing-legend span:nth-child(6){display:none}
 }
+
+/* Remove the text menu from the header (bottom nav and burger menu stay) */
+header nav[aria-label="Navigasi utama"]:not(.mobile-bottom-nav){display:none!important}
