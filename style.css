@@ -737,3 +737,8 @@ header .notification-launcher{font-size:0;gap:0;padding:10px}
 header .notification-launcher svg{margin:0}
 }
 @media (min-width:801px){.mobile-bottom-nav{margin:0 0 12px!important}}
+/* iPad portrait column width on web (768px) */
+@media (min-width:801px){
+#app{max-width:768px}
+.mobile-bottom-nav{width:min(720px,calc(100vw - 48px))!important}
+}
