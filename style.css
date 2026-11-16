@@ -715,3 +715,25 @@ button:active,a.standing-official-link:active{transform:scale(.97)}
 
 /* Remove the text menu from the header (bottom nav and burger menu stay) */
 header nav[aria-label="Navigasi utama"]:not(.mobile-bottom-nav){display:none!important}
+
+/* Web view uses the same phone layout as mobile: centred phone-width column */
+@media (min-width:801px){
+html,body{background:#06142c!important}
+#app{max-width:393px;margin:0 auto;min-height:100vh;background:var(--app-bg,#0b1f40);box-shadow:0 0 60px #0009}
+header{padding-left:18px!important;padding-right:18px!important}
+.mobile-bottom-nav{display:grid!important;position:fixed!important;top:auto!important;bottom:12px!important;left:50%!important;right:auto!important;z-index:60;transform:translateX(-50%)!important;width:min(369px,calc(100vw - 24px))!important;box-sizing:border-box}
+}
+
+/* Copy of the phone bottom-nav sizing for web view */
+@media (min-width:801px){.mobile-bottom-nav .mobile-tab{appearance:none;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-width:0;width:100%;margin:0;padding:2px 0 1px;border:0;border-radius:0;background:transparent;color:#e6eefc;line-height:1.15;overflow:hidden}.mobile-tab-icon{width:33px;height:33px;display:grid;place-items:center;border-radius:50%;flex-shrink:0}.mobile-tab-icon svg{width:19px;height:19px}.mobile-tab-label{display:block;width:100%;min-width:0;text-align:center;font-size:10px;font-weight:650;letter-spacing:-.1px;white-space:nowrap;overflow:hidden;text-overflow:clip}.mobile-bottom-nav .mobile-tab.active{color:#c92543;background:transparent}.mobile-bottom-nav .mobile-tab.active .mobile-tab-icon{background:#c92543;color:#fff;width:39px;height:39px}.mobile-bottom-nav .mobile-tab:focus-visible{outline:2px solid #c92543;outline-offset:-2px}main{margin-bottom:105px}footer{padding-bottom:115px}}
+@media (min-width:801px){
+.mobile-bottom-nav{grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:0;height:auto!important;border-radius:999px!important;padding:7px 10px!important;min-height:0!important}
+header .brand{min-width:0;flex:0 1 auto}
+header .header-tools{gap:6px;flex:0 0 auto}
+}
+@media (min-width:801px){
+header .header-season{display:none}
+header .notification-launcher{font-size:0;gap:0;padding:10px}
+header .notification-launcher svg{margin:0}
+}
+@media (min-width:801px){.mobile-bottom-nav{margin:0 0 12px!important}}
