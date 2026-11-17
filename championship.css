@@ -39,3 +39,21 @@ header nav button.active,header nav button:hover{color:white;background:linear-g
 #app header .notification-launcher svg{display:block;width:20px;height:20px;margin:0;flex:none}
 #app header .header-menu-btn{flex-direction:column;gap:4px}
 #app header .header-menu-btn span{width:20px;height:2px;flex:0 0 2px;margin:0}
+
+/* Pointer hover, keyboard focus and touch feedback share the club accent. */
+#app :is(button,a.standing-official-link,.schedule-card,.fixture-card,.squad-clickable){transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease,filter .18s ease}
+#app button:disabled{cursor:not-allowed;transform:none;filter:none}
+@media(hover:hover) and (pointer:fine){
+ #app button:not(:disabled):hover,#app a.standing-official-link:hover{transform:translateY(-2px);filter:brightness(1.15);box-shadow:0 5px 18px #3486ff35}
+ #app :is(.notification-launcher,.header-menu-btn):hover{border-color:#75b7ff!important;box-shadow:0 0 0 3px #3986ff1c,0 6px 20px #2564d944}
+ #app :is(.schedule-card,.fixture-card,.squad-clickable):hover{transform:translateY(-3px);border-color:#64adff!important;box-shadow:0 10px 28px #0005,0 0 0 1px #458fff35!important}
+ #app .standing-table tbody tr:hover{background:#317af526;box-shadow:inset 3px 0 #38f495}
+ #app .mobile-bottom-nav .mobile-tab:hover{transform:none}
+}
+#app :is(button,a.standing-official-link,.schedule-card,.fixture-card,.squad-clickable):focus-visible{outline:2px solid #38f495;outline-offset:3px;box-shadow:0 0 0 5px #38f49518!important}
+#app button:not(:disabled):active,#app :is(.schedule-card,.fixture-card,.squad-clickable):active{transform:scale(.98);filter:brightness(1.12)}
+/* Avoid hover positions sticking after a tap on touchscreens. */
+@media(hover:none){#app button:not(:active),#app :is(.schedule-card,.fixture-card,.squad-clickable):not(:active){transform:none}}
+@media(prefers-reduced-motion:reduce){
+ #app :is(button,a.standing-official-link,.schedule-card,.fixture-card,.squad-clickable){transition:none!important;transform:none!important}
+}
