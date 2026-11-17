@@ -48,3 +48,15 @@ body button:not(:disabled):active,#app button:not(:disabled):active{box-shadow:i
 #app .home-calendar .cal-crest{max-width:100%;width:clamp(24px,4vw,48px);height:auto;aspect-ratio:1;flex-basis:auto}
 #app .home-calendar .cal-date{max-width:100%}
 #app .schedule-title button{padding:8px 12px;min-height:36px}
+
+/* Compact, semantic adaptation of the supplied start-button structure. */
+#app .schedule-title .start-btn{--w:148px;--h:46px;--tr:15%;position:relative;isolation:isolate;display:inline-flex;align-items:center;justify-content:space-between;gap:14px;width:var(--w);max-width:100%;min-height:var(--h);padding:6px 7px 6px 17px;border-radius:999px;overflow:hidden;flex-shrink:0}
+#app .start-btn .text{position:relative;z-index:1;white-space:nowrap;font-weight:750}
+#app .start-btn .btn-icon{position:relative;z-index:1;display:grid;place-items:center;flex:0 0 32px;width:32px;height:32px;border-radius:50%;background:#e3f4ff1a;border:1px solid #e3f4ff33;transition:transform .25s ease,background .25s ease}
+#app .start-btn .svg{display:block;width:15px;height:15px}
+#app .start-btn .circle-overlay{pointer-events:none;position:absolute;z-index:0;right:7px;top:50%;width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#c2e8ff42,#72b9ff22);transform:translateY(-50%) scale(1);transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+@media(hover:hover) and (pointer:fine){#app .start-btn:hover .circle-overlay{transform:translateY(-50%) scale(10)}#app .start-btn:hover .btn-icon{transform:translateX(2px);background:#e3f4ff2b}}
+#app .start-btn:focus-visible .circle-overlay{transform:translateY(-50%) scale(10)}
+#app .start-btn:active .btn-icon{transform:translateX(2px)}
+@media(max-width:480px){#app .schedule-title .start-btn{--w:126px;--h:44px;gap:8px;padding-left:13px;font-size:12px}}
+@media(prefers-reduced-motion:reduce){#app .start-btn :is(.btn-icon,.circle-overlay){transition:none!important;transform:none!important}#app .start-btn .circle-overlay{top:7px}}
