@@ -1,0 +1,15 @@
+/* Subtle interaction feedback without changing the original visual theme. */
+#app button,.notification-dialog button,#app [data-open-match],#app [data-player-number]{transition:transform .18s ease,filter .18s ease,box-shadow .18s ease,border-color .18s ease}
+@media(hover:hover) and (pointer:fine){
+ #app button:not(:disabled):hover,.notification-dialog button:not(:disabled):hover{transform:translateY(-2px);filter:brightness(1.12);box-shadow:0 5px 16px #3486ff28}
+ #app :is([data-open-match],[data-player-number]):hover{transform:translateY(-2px);border-color:#80baff!important;box-shadow:0 7px 22px #0004,0 0 0 1px #71b1ff35}
+ #app .mobile-bottom-nav .mobile-tab:not(:disabled):hover{transform:none;filter:none;background:#ffffff28!important;box-shadow:inset 0 1px #ffffff70,0 3px 10px #0c29462b!important;border-color:#ffffff70!important}
+ #app .mobile-bottom-nav .mobile-tab .mobile-tab-icon{transition:transform .18s ease}
+ #app .mobile-bottom-nav .mobile-tab:hover .mobile-tab-icon{transform:translateY(-2px) scale(1.06)}
+}
+#app button:not(:disabled):active,.notification-dialog button:not(:disabled):active,#app :is([data-open-match],[data-player-number]):active{transform:scale(.98)}
+#app .mobile-bottom-nav .mobile-tab:not(:disabled):active{transform:scale(.96)}
+#app :is(button,[data-open-match],[data-player-number]):focus-visible,.notification-dialog button:focus-visible{outline:2px solid #91ceff;outline-offset:3px}
+#app .mobile-bottom-nav .mobile-tab:focus-visible{outline-offset:-3px}
+@media(hover:none){#app button:not(:active),.notification-dialog button:not(:active),#app :is([data-open-match],[data-player-number]):not(:active){transform:none}}
+@media(prefers-reduced-motion:reduce){#app button,.notification-dialog button,#app [data-open-match],#app [data-player-number],#app .mobile-bottom-nav .mobile-tab .mobile-tab-icon{transition:none!important;transform:none!important}}
