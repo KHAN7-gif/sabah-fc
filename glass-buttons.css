@@ -1,0 +1,50 @@
+/* Shared glass controls, including dialogs mounted outside the app root. */
+:root{--glass-fill:linear-gradient(155deg,rgba(230,243,255,.18),rgba(186,218,255,.055) 48%,rgba(205,229,255,.10));--glass-edge:rgba(208,231,255,.28);--glass-shadow:inset 0 1px 0 rgba(255,255,255,.3),inset 0 -1px 0 rgba(255,255,255,.045),0 4px 14px rgba(0,8,24,.22)}
+body button,
+#app button,
+#app header nav[aria-label="Navigasi utama"] button,
+#app .home-competition-tabs button,
+#app :is(.competition-tabs,.standing-comp-tabs,.stats-competition-tabs,.stats-category-tabs,.match-filters,.squad-position-filters,.header-menu) button,
+#app header :is(.notification-launcher,.header-menu-btn),
+#app .mobile-bottom-nav .mobile-tab{
+ background:var(--glass-fill)!important;border:1px solid var(--glass-edge)!important;color:#edf5ff!important;
+ border-radius:14px;box-shadow:var(--glass-shadow)!important;
+ -webkit-backdrop-filter:blur(18px) saturate(155%);backdrop-filter:blur(18px) saturate(155%);
+ background-clip:padding-box;text-shadow:0 1px 2px #0005;
+ transition:background .2s ease,border-color .2s ease,box-shadow .2s ease,transform .18s ease;
+}
+/* Tinted glass preserves selected tabs and primary action hierarchy. */
+body button.primary,
+#app button.primary,
+#app button:is(.active,[aria-pressed="true"],[aria-current="page"]),
+#app header nav[aria-label="Navigasi utama"] button.active,
+#app .home-competition-tabs button.active,
+#app :is(.competition-tabs,.standing-comp-tabs,.stats-competition-tabs,.stats-category-tabs,.match-filters,.squad-position-filters,.header-menu) button:is(.active,[aria-pressed="true"]),
+#app .mobile-bottom-nav .mobile-tab.active{
+ background:linear-gradient(145deg,rgba(151,206,255,.34),rgba(63,139,244,.21) 55%,rgba(135,189,255,.13))!important;
+ border-color:rgba(177,219,255,.62)!important;color:#fff!important;
+ box-shadow:inset 0 1px 0 #ffffff75,inset 0 -1px 0 #ffffff12,0 0 0 1px #8ac7ff12,0 5px 20px #1d72ce25!important;
+}
+body button.primary,#app button.primary{background:linear-gradient(145deg,#9bffe23b,#35d5b523 60%,#baffec18)!important;border-color:#a4fce67a!important;color:#d9fff3!important}
+#app .mobile-bottom-nav{gap:5px!important;background:linear-gradient(145deg,#18314be0,#0c192de8)!important;-webkit-backdrop-filter:blur(24px) saturate(150%);backdrop-filter:blur(24px) saturate(150%)}
+#app .mobile-bottom-nav .mobile-tab{padding:6px 0!important;border-radius:15px!important}
+#app .mobile-bottom-nav .mobile-tab .mobile-tab-icon{background:transparent!important;box-shadow:none;width:33px!important;height:33px!important}
+#app .mobile-bottom-nav .mobile-tab.active .mobile-tab-icon{color:#c5e9ff!important;background:transparent!important}
+#app .header-menu{background:linear-gradient(145deg,#1b3049f0,#0b192df5)!important;-webkit-backdrop-filter:blur(24px);backdrop-filter:blur(24px);padding:8px;gap:6px}
+#app .header-menu button{margin-bottom:5px}
+body button:disabled,#app button:disabled{opacity:.45;box-shadow:inset 0 1px #ffffff12!important;cursor:not-allowed}
+@media(hover:hover) and (pointer:fine){
+ body button:not(:disabled):hover,#app button:not(:disabled):hover{border-color:#d8edff99!important;box-shadow:inset 0 1px 0 #ffffff80,inset 0 -1px 0 #ffffff14,0 7px 23px #0004,0 0 15px #a5d5ff18!important;filter:brightness(1.12)}
+}
+body button:focus-visible,#app button:focus-visible{outline:2px solid #b4e4ff!important;outline-offset:3px}
+body button:not(:disabled):active,#app button:not(:disabled):active{box-shadow:inset 0 2px 8px #0003,inset 0 1px #ffffff20!important;filter:brightness(.96)}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){body button,#app button{background-color:#1b3047!important}}
+@media(prefers-reduced-transparency:reduce){body button,#app button{backdrop-filter:none;-webkit-backdrop-filter:none;background-color:#1b3047!important}}
+@media(prefers-reduced-motion:reduce){body button,#app button{transition:none!important;transform:none!important}}
+@media(forced-colors:active){body button,#app button{background:ButtonFace!important;color:ButtonText!important;border:1px solid ButtonText!important;box-shadow:none!important;text-shadow:none}}
+/* Keep calendar glass inside each grid cell, including narrow sidebar layouts. */
+#app .home-calendar .cal-day{width:100%;max-width:100%;min-width:0;aspect-ratio:auto;overflow:hidden}
+#app .home-calendar .cal-day:disabled{opacity:.75}
+#app .home-calendar .cal-crest{max-width:100%;width:clamp(24px,4vw,48px);height:auto;aspect-ratio:1;flex-basis:auto}
+#app .home-calendar .cal-date{max-width:100%}
+#app .schedule-title button{padding:8px 12px;min-height:36px}
