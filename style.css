@@ -776,18 +776,3 @@ body{background:transparent!important;min-height:100vh}
 @media (min-width:801px) and (max-width:900px){
 #app{margin:12px auto 24px;min-height:calc(100vh - 36px);border-radius:22px}
 }
-
-/* Tab Studio: galeri jersi */
-.studio{padding:16px}
-.studio-heading span{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;opacity:.7}
-.studio-heading h2{margin:4px 0 6px}
-.studio-rail{display:flex;gap:20px;overflow-x:auto;padding:24px 8px 12px;scroll-snap-type:x mandatory}
-.studio-hanger{flex:0 0 220px;scroll-snap-align:center;display:flex;flex-direction:column;align-items:center;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:0 12px 14px;position:relative;transition:transform .2s ease}
-.studio-hanger:hover{transform:translateY(-4px)}
-.studio-hook{width:2px;height:22px;background:#c9c9c9}
-.studio-shirt{width:180px;margin-top:-2px}
-.studio-shirt-svg{width:100%;height:auto;filter:drop-shadow(0 10px 14px rgba(0,0,0,.35))}
-.studio-info{text-align:center;margin-top:8px}
-.studio-info strong{display:block}
-.studio-info small{opacity:.7}
-.studio-info p{font-size:.85rem;margin:6px 0 0;opacity:.8}
