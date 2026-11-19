@@ -865,3 +865,78 @@ header nav[aria-label="Navigasi utama"]:not(.mobile-bottom-nav) {
   justify-self: start;
   margin-top: 8px;
 }
+
+.admin-login {
+  width: min(100%, 580px);
+  margin: clamp(16px, 4vw, 48px) auto;
+  padding: clamp(22px, 5vw, 44px);
+  border: 1px solid #3a5f92;
+  border-radius: 22px;
+  background: linear-gradient(150deg, #152e53, #0e213e);
+  color: #eff5ff;
+}
+
+.admin-login-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.admin-login-brand strong,
+.admin-login-brand span {
+  display: block;
+}
+
+.admin-login-brand .crest {
+  flex: 0 0 45px;
+}
+
+.admin-login-brand div > span {
+  margin-top: 4px;
+  color: #a6c9f4;
+  font-size: 11px;
+  letter-spacing: .12em;
+}
+
+.admin-login h1 {
+  margin: 26px 0 8px;
+  font-size: clamp(32px, 6vw, 52px);
+  line-height: 1.08;
+}
+
+.admin-login p {
+  margin: 0 0 22px;
+  color: #c7d8f0;
+  line-height: 1.55;
+}
+
+.admin-login-action,
+.admin-demo-action {
+  display: block;
+  width: 100%;
+  padding: 14px 12px;
+  border-radius: 10px;
+  color: #fff;
+  text-align: center;
+  font-weight: 750;
+}
+
+.admin-login-action {
+  background: #1767be;
+  text-decoration: none;
+}
+
+.admin-login-action:hover {
+  background: #1c72cb;
+}
+
+.admin-login .admin-login-note {
+  margin: 10px 0 0;
+  font-size: 13px;
+}
+
+.admin-demo-action {
+  margin-top: 16px;
+  border: 1px solid #4b6993;
+  background: transparent;
+}

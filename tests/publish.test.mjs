@@ -42,6 +42,17 @@ test('unconfigured endpoint fails closed without network access', async () => {
   assert.equal((await handleRequest({ request: await request(), env: {} }, fetcher)).status, 503);
   assert.equal(calls.length, 0);
 });
+test('returns to the editor only after a valid Cloudflare Access session', async () => {
+  const { fetcher } = mocks();
+  const url = 'https://sabah-fc.pages.dev/api/admin/session?login=editor';
+  const denied = await handleRequest({ request: new Request(url), env }, fetcher);
+  assert.equal(denied.status, 401);
+  const headers = { 'Cf-Access-Jwt-Assertion': await token() };
+  const allowed = await handleRequest({ request: new Request(url, { headers }), env }, fetcher);
+  assert.equal(allowed.status, 303);
+  assert.equal(allowed.headers.get('Location'), '/#admin');
+  assert.equal(allowed.headers.get('Cache-Control'), 'no-store');
+});
 test('requires a valid, unexpired admin JWT with the correct issuer and audience', async () => {
   for (const jwt of ['', await token({ exp: 1 }), await token({ aud: ['wrong'] }), await token({ iss: 'https://wrong.test' }), await token({ email: 'visitor@example.test' }), (await token()).slice(0, -10) + 'tampered']) {
     const { calls, fetcher } = mocks();

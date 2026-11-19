@@ -72,6 +72,9 @@ export async function handleRequest({ request, env }, fetcher = fetch) {
   const auth = await authorize(request, env, fetcher);
   if (auth.error) return auth.error;
   if (url.pathname === '/api/admin/session' && request.method === 'GET') {
+    if (url.searchParams.get('login') === 'editor') {
+      return new Response(null, { status: 303, headers: { Location: '/#admin', 'Cache-Control': 'no-store' } });
+    }
     if (url.searchParams.has('login')) return new Response('<!doctype html><html lang="ms"><meta charset="utf-8"><title>Sabah FC Admin</title><p>Log masuk admin berjaya. Tutup tab ini dan kembali ke laman Sabah FC, kemudian klik “Terbit sekarang”.</p></html>', { headers: { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store' } });
     return json({ authenticated: true });
   }
