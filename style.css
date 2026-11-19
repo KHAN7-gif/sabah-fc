@@ -1038,3 +1038,8 @@ header nav[aria-label="Navigasi utama"]:not(.mobile-bottom-nav) {
   text-align: center;
   font-size: 13px;
 }
+
+.schedule-ticket {
+  margin-top: 8px;
+  text-align: center;
+}
