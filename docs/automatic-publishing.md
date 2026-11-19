@@ -90,3 +90,22 @@ After a successful commit, the admin's local snapshot remains visible while the
 preceding static deployment is still being served.
 
 `node tests/portal-data-sync.test.mjs` verifies these revision-selection rules.
+
+## Borang log masuk pada Worker domain utama
+
+Di Cloudflare **Workers & Pages → sabah-fc (Worker) → Settings → Variables and Secrets**, tetapkan:
+
+| Nama | Jenis | Nilai |
+| --- | --- | --- |
+| `ADMIN_LOGIN_EMAIL` | Variable | Alamat e-mel admin yang dibenarkan |
+| `TURNSTILE_SITE_KEY` | Variable | Site key widget Turnstile untuk `sabahfc.esukan.app` |
+| `TURNSTILE_SECRET_KEY` | Secret | Secret widget yang sama |
+| `ADMIN_PASSWORD_HASH` | Secret | `garam.hash`, kedua-duanya Base64URL tanpa padding. Gunakan garam rawak 16 bait dan PBKDF2-SHA256, 100000 iterasi, output 32 bait |
+| `ADMIN_SESSION_SECRET` | Secret | Sekurang-kurangnya 32 bait rawak unik, dikodkan sebagai Base64URL |
+| `GITHUB_PUBLISH_TOKEN` | Secret | Token fine-grained seperti bahagian Cloudflare Pages di atas |
+
+Gunakan kata laluan panjang, rawak dan unik yang dijana oleh pengurus kata laluan.
+Urus nilai rahsia melalui tetapan Cloudflare. Simpan perubahan sebagai konfigurasi
+produksi. Worker membekalkan `ADMIN_LOGIN_RATE` melalui `wrangler.jsonc`. Selepas
+pemasangan, semak borang pada domain utama, uji log masuk, dan sahkan penerbitan.
+Akaun pada Cloudflare Pages masih boleh menggunakan aliran Cloudflare Access.

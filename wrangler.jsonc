@@ -13,6 +13,7 @@
     "binding": "ASSETS",
     "run_worker_first": ["/api/admin/*", "/api/notifications/*"]
   },
+  "ratelimits": [{ "name": "ADMIN_LOGIN_RATE", "namespace_id": "1002", "simple": { "limit": 5, "period": 60 } }],
   "routes": [
     { "pattern": "sabahfc.esukan.app", "custom_domain": true }
   ]

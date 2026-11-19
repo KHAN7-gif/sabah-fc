@@ -940,3 +940,77 @@ header nav[aria-label="Navigasi utama"]:not(.mobile-bottom-nav) {
   border: 1px solid #4b6993;
   background: transparent;
 }
+
+#adminLoginForm label {
+  display: block;
+  margin: 14px 0 6px;
+  color: #c5dcff;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+
+#adminLoginForm input {
+  display: block;
+  width: 100%;
+  min-height: 48px;
+  padding: 10px 12px;
+  border: 1px solid #839cc0;
+  border-radius: 10px;
+  background: #e7effc;
+  color: #101d33;
+}
+
+.admin-password-field {
+  position: relative;
+}
+
+#adminLoginForm .admin-password-field input {
+  padding-right: 104px;
+}
+
+.admin-password-field button {
+  position: absolute;
+  inset: 4px 4px 4px auto;
+  padding-inline: 10px;
+  border: 0;
+  border-radius: 7px;
+  background: #142e53;
+  color: #fff;
+}
+
+.admin-challenge {
+  display: grid;
+  align-items: center;
+  min-height: 76px;
+  margin: 14px 0 10px;
+  padding: 6px;
+  border-radius: 8px;
+  background: #e7effc;
+  color: #172a47;
+  text-align: center;
+  font-size: 13px;
+}
+
+.admin-login-action {
+  border: 0;
+}
+
+.admin-login-action:disabled {
+  opacity: .65;
+  cursor: default;
+}
+
+.admin-login .admin-login-help {
+  margin: 16px 0 8px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.admin-access-link {
+  display: block;
+  color: #b7d9ff;
+  text-align: center;
+  font-size: 13px;
+}

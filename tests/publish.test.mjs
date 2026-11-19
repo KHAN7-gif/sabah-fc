@@ -53,6 +53,39 @@ test('returns to the editor only after a valid Cloudflare Access session', async
   assert.equal(allowed.headers.get('Location'), '/#admin');
   assert.equal(allowed.headers.get('Cache-Control'), 'no-store');
 });
+test('password login requires Turnstile and issues a verified host-only session', async () => {
+  const password = 'test-password-for-local-verification';
+  const enc = new TextEncoder();
+  const salt = crypto.getRandomValues(new Uint8Array(16));
+  const key = await crypto.subtle.importKey('raw', enc.encode(password), 'PBKDF2', false, ['deriveBits']);
+  const hash = await crypto.subtle.deriveBits({ name: 'PBKDF2', salt, iterations: 100000, hash: 'SHA-256' }, key, 256);
+  const settings = {
+    ADMIN_LOGIN_EMAIL: 'test@example.test',
+    ADMIN_PASSWORD_HASH: Buffer.from(salt).toString('base64url') + '.' + Buffer.from(hash).toString('base64url'),
+    ADMIN_SESSION_SECRET: 'this-is-a-test-secret-at-least-43-characters-long',
+    ADMIN_LOGIN_RATE: { limit: async () => ({ success: true }) },
+    TURNSTILE_SITE_KEY: 'test-key',
+    TURNSTILE_SECRET_KEY: 'test-secret'
+  };
+  const origin = 'https://sabahfc.esukan.app';
+  const url = origin + '/api/admin/session';
+  const verify = async () => Response.json({ success: true, hostname: 'sabahfc.esukan.app', action: 'admin_login' });
+  const login = (pw, from = origin) => new Request(url, {
+    method: 'POST', headers: { Origin: from, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: settings.ADMIN_LOGIN_EMAIL, password: pw, challenge: 'test' })
+  });
+  assert.equal((await handleRequest({ request: login(password, 'https://other.example'), env: settings }, verify)).status, 403);
+  assert.equal((await handleRequest({ request: login(password), env: settings }, async () => Response.json({ success: false }))).status, 403);
+  assert.equal((await handleRequest({ request: login('wrong'), env: settings }, verify)).status, 401);
+  const response = await handleRequest({ request: login(password), env: settings }, verify);
+  assert.equal(response.status, 200);
+  const cookie = response.headers.get('set-cookie');
+  assert.match(cookie, /; Secure; HttpOnly; SameSite=Strict;/);
+  const session = token => handleRequest({ request: new Request(url, { headers: { Cookie: token } }), env: settings }, verify);
+  const pair = cookie.split(';')[0];
+  assert.equal((await (await session(pair)).json()).authenticated, true);
+  assert.equal((await (await session(pair + 'bad')).json()).authenticated, false);
+});
 test('requires a valid, unexpired admin JWT with the correct issuer and audience', async () => {
   for (const jwt of ['', await token({ exp: 1 }), await token({ aud: ['wrong'] }), await token({ iss: 'https://wrong.test' }), await token({ email: 'visitor@example.test' }), (await token()).slice(0, -10) + 'tampered']) {
     const { calls, fetcher } = mocks();

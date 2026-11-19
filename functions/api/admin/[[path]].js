@@ -9,6 +9,91 @@ const json = (body, status = 200) => new Response(JSON.stringify(body), {
 const decode = part => Uint8Array.from(atob(part.replace(/-/g, '+').replace(/_/g, '/')), c => c.charCodeAt(0));
 const decodeJSON = part => JSON.parse(new TextDecoder().decode(decode(part)));
 
+const textEncoder = new TextEncoder();
+const cookieName = '__Host-sabah-admin';
+const encode = bytes => btoa(String.fromCharCode(...bytes)).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+const passwordSettings = env => /^[\w-]{3,100}$/.test(env.TURNSTILE_SITE_KEY || '') &&
+  env.TURNSTILE_SECRET_KEY && env.ADMIN_LOGIN_EMAIL && /^[\w-]{22,64}\.[\w-]{43}$/.test(env.ADMIN_PASSWORD_HASH || '') &&
+  env.ADMIN_SESSION_SECRET?.length >= 43 && env.ADMIN_LOGIN_RATE;
+
+const sessionKey = env => crypto.subtle.importKey('raw', textEncoder.encode(env.ADMIN_SESSION_SECRET), {
+  name: 'HMAC', hash: 'SHA-256'
+}, false, ['sign', 'verify']);
+
+async function passwordSession(request, env) {
+  if (!passwordSettings(env)) return null;
+  const cookie = request.headers.get('Cookie')?.split('; ').find(part => part.startsWith(cookieName + '='));
+  const [payload, signature] = (cookie?.slice(cookieName.length + 1) || '').split('.');
+  if (!payload || !signature || payload.length > 1000 || !/^[\w-]{43}$/.test(signature)) return null;
+  try {
+    if (!await crypto.subtle.verify('HMAC', await sessionKey(env), decode(signature), textEncoder.encode(payload))) return null;
+    const claims = decodeJSON(payload);
+    if (claims.origin === new URL(request.url).origin && claims.email === env.ADMIN_LOGIN_EMAIL && claims.exp > Date.now()) return claims;
+  } catch { /* Invalid cookies cannot authorize access. */ }
+  return null;
+}
+
+async function passwordLogin(request, env, fetcher) {
+  if (!passwordSettings(env)) return json({ error: 'Log masuk kata laluan belum tersedia.' }, 503);
+  try {
+    const { success } = await env.ADMIN_LOGIN_RATE.limit({ key: request.headers.get('CF-Connecting-IP') || 'unknown' });
+    if (!success) return json({ error: 'Terlalu banyak percubaan. Cuba lagi sebentar.' }, 429);
+    const reader = request.body?.getReader();
+    if (!reader) return json({ error: 'Sila isi borang log masuk.' }, 400);
+    let input = '';
+    let size = 0;
+    const decoder = new TextDecoder();
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      size += value.byteLength;
+      if (size > 8192) {
+        await reader.cancel();
+        return json({ error: 'Permintaan terlalu besar.' }, 413);
+      }
+      input += decoder.decode(value, { stream: true });
+    }
+    let values;
+    try { values = JSON.parse(input + decoder.decode()); }
+    catch { return json({ error: 'Permintaan tidak sah.' }, 400); }
+    const { email, password, challenge } = values || {};
+    if (typeof email !== 'string' || email.length > 254 || typeof password !== 'string' || !password || password.length > 1024 ||
+        typeof challenge !== 'string' || !challenge || challenge.length > 2048) return json({ error: 'Lengkapkan borang dan pengesahan Turnstile.' }, 400);
+
+    const verify = await fetcher('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ secret: env.TURNSTILE_SECRET_KEY, response: challenge }),
+      signal: AbortSignal.timeout(6000)
+    });
+    const result = verify.ok ? await verify.json() : {};
+    const url = new URL(request.url);
+    if (!result.success || result.hostname !== url.hostname || result.action !== 'admin_login') {
+      return json({ error: 'Pengesahan Turnstile gagal. Cuba semula.' }, 403);
+    }
+    const [salt, expected] = env.ADMIN_PASSWORD_HASH.split('.');
+    const key = await crypto.subtle.importKey('raw', textEncoder.encode(password), 'PBKDF2', false, ['deriveBits']);
+    const actual = new Uint8Array(await crypto.subtle.deriveBits({
+      name: 'PBKDF2', hash: 'SHA-256', salt: decode(salt), iterations: 100000
+    }, key, 256));
+    let mismatch = 0;
+    const hash = decode(expected);
+    for (let i = 0; i < hash.length; i++) mismatch |= actual[i] ^ hash[i];
+    if (mismatch || email.trim().toLowerCase() !== env.ADMIN_LOGIN_EMAIL.trim().toLowerCase()) {
+      return json({ error: 'E-mel atau kata laluan tidak sah.' }, 401);
+    }
+    const duration = 4 * 60 * 60;
+    const payload = encode(textEncoder.encode(JSON.stringify({
+      email: env.ADMIN_LOGIN_EMAIL, origin: url.origin, exp: Date.now() + duration * 1000
+    })));
+    const signature = encode(new Uint8Array(await crypto.subtle.sign('HMAC', await sessionKey(env), textEncoder.encode(payload))));
+    const response = json({ authenticated: true });
+    response.headers.set('Set-Cookie', `${cookieName}=${payload}.${signature}; Path=/; Secure; HttpOnly; SameSite=Strict; Max-Age=${duration}`);
+    return response;
+  } catch {
+    return json({ error: 'Log masuk tidak tersedia. Cuba lagi.' }, 503);
+  }
+}
+
 // Verify Access signatures here as well as at the edge. An unprotected route must fail closed.
 async function authorize(request, env, fetcher) {
   const team = env.CF_ACCESS_TEAM_DOMAIN || '';
@@ -69,8 +154,18 @@ export async function handleRequest({ request, env }, fetcher = fetch) {
   if (!['GET', 'POST'].includes(request.method)) return json({ error: 'Method not allowed' }, 405);
   if (request.method === 'POST' && (request.headers.get('Origin') !== url.origin ||
       !request.headers.get('Content-Type')?.startsWith('application/json'))) return json({ error: 'Permintaan tidak sah.' }, 403);
-  const auth = await authorize(request, env, fetcher);
-  if (auth.error) return auth.error;
+  const sessionRoute = url.pathname === '/api/admin/session';
+  if (sessionRoute && request.method === 'POST') return passwordLogin(request, env, fetcher);
+  const session = await passwordSession(request, env);
+  if (!session) {
+    const access = await authorize(request, env, fetcher);
+    if (access.error) {
+      if (sessionRoute && !url.searchParams.has('login') && passwordSettings(env)) {
+        return json({ authenticated: false, turnstileSiteKey: env.TURNSTILE_SITE_KEY });
+      }
+      return access.error;
+    }
+  }
   if (url.pathname === '/api/admin/session' && request.method === 'GET') {
     if (url.searchParams.get('login') === 'editor') {
       return new Response(null, { status: 303, headers: { Location: '/#admin', 'Cache-Control': 'no-store' } });
