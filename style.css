@@ -690,89 +690,128 @@ button:active,a.standing-official-link:active{transform:scale(.97)}
 .standing-legend{display:flex;flex-direction:column;gap:6px;margin:16px 0 0;font-size:12px;line-height:1.45;color:#94a3b8}
 .standing-legend span{min-width:0}
 
-/* Table: fit the league table on phones without sideways cut-off */
-@media (max-width:480px){
-.standing-table{table-layout:fixed;width:100%;min-width:0}
-.standing-table th,.standing-table td{padding-left:3px!important;padding-right:3px!important;font-size:12px!important}
-.standing-table th:nth-child(1),.standing-table td:nth-child(1){width:22px}
-.standing-table th:nth-child(2),.standing-table td:nth-child(2){width:auto}
-.standing-table th:nth-child(n+3),.standing-table td:nth-child(n+3){width:30px;text-align:center}
-.standing-table th:nth-child(11),.standing-table td:nth-child(11){display:none}
-.standing-table .standing-crest{width:26px!important;height:26px!important}
-.standing-table .standing-club{gap:6px}
-.standing-table .standing-club strong{font-size:12px;white-space:normal;line-height:1.2}
+/* Keep the full league table available at every viewport width. */
+.standing-table-scroll {
+  max-width: 100%;
+  overflow-x: auto;
 }
 
-/* Phone table: keep club names clear of the numbers */
-@media (max-width:480px){
-.standing-table th:nth-child(7),.standing-table td:nth-child(7),
-.standing-table th:nth-child(8),.standing-table td:nth-child(8){display:none}
-.standing-table .standing-crest{width:22px!important;height:22px!important}
-.standing-table .standing-club{gap:5px}
-.standing-table .standing-club strong{font-size:12px;overflow-wrap:anywhere}
-.standing-legend span:nth-child(5),.standing-legend span:nth-child(6){display:none}
+.standing-table {
+  width: 100%;
+  min-width: 680px;
 }
 
-/* Remove the text menu from the header (bottom nav and burger menu stay) */
-header nav[aria-label="Navigasi utama"]:not(.mobile-bottom-nav){display:none!important}
-
-/* Web view uses the same phone layout as mobile: centred phone-width column */
-@media (min-width:801px){
-html,body{background:#06142c!important}
-#app{max-width:393px;margin:0 auto;min-height:100vh;background:var(--app-bg,#0b1f40);box-shadow:0 0 60px #0009}
-header{padding-left:18px!important;padding-right:18px!important}
-.mobile-bottom-nav{display:grid!important;position:fixed!important;top:auto!important;bottom:12px!important;left:50%!important;right:auto!important;z-index:60;transform:translateX(-50%)!important;width:min(369px,calc(100vw - 24px))!important;box-sizing:border-box}
+.standing-table .standing-club strong {
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
-/* Copy of the phone bottom-nav sizing for web view */
-@media (min-width:801px){.mobile-bottom-nav .mobile-tab{appearance:none;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-width:0;width:100%;margin:0;padding:2px 0 1px;border:0;border-radius:0;background:transparent;color:#e6eefc;line-height:1.15;overflow:hidden}.mobile-tab-icon{width:33px;height:33px;display:grid;place-items:center;border-radius:50%;flex-shrink:0}.mobile-tab-icon svg{width:19px;height:19px}.mobile-tab-label{display:block;width:100%;min-width:0;text-align:center;font-size:10px;font-weight:650;letter-spacing:-.1px;white-space:nowrap;overflow:hidden;text-overflow:clip}.mobile-bottom-nav .mobile-tab.active{color:#c92543;background:transparent}.mobile-bottom-nav .mobile-tab.active .mobile-tab-icon{background:#c92543;color:#fff;width:39px;height:39px}.mobile-bottom-nav .mobile-tab:focus-visible{outline:2px solid #c92543;outline-offset:-2px}main{margin-bottom:105px}footer{padding-bottom:115px}}
-@media (min-width:801px){
-.mobile-bottom-nav{grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:0;height:auto!important;border-radius:999px!important;padding:7px 10px!important;min-height:0!important}
-header .brand{min-width:0;flex:0 1 auto}
-header .header-tools{gap:6px;flex:0 0 auto}
-}
-@media (min-width:801px){
-header .header-season{display:none}
-header .notification-launcher{font-size:0;gap:0;padding:10px}
-header .notification-launcher svg{margin:0}
-}
-@media (min-width:801px){.mobile-bottom-nav{margin:0 0 12px!important}}
-/* iPad portrait column width on web (768px) */
-@media (min-width:801px){
-#app{max-width:768px}
-.mobile-bottom-nav{width:min(720px,calc(100vw - 48px))!important}
+header nav[aria-label="Navigasi utama"]:not(.mobile-bottom-nav) {
+  display: none;
 }
 
-/* League Table: show every column (incl. Last 5) without sideways scroll on web/tablet */
-@media (min-width:801px){
-.standing-table{table-layout:fixed;width:100%;min-width:0}
-.standing-table th,.standing-table td{padding-left:5px!important;padding-right:5px!important;font-size:13px!important;white-space:nowrap}
-.standing-table th:nth-child(1),.standing-table td:nth-child(1){width:30px}
-.standing-table th:nth-child(2),.standing-table td:nth-child(2){width:auto;white-space:normal}
-.standing-table th:nth-child(n+3):nth-child(-n+10),.standing-table td:nth-child(n+3):nth-child(-n+10){width:40px;text-align:center}
-.standing-table th:nth-child(11),.standing-table td:nth-child(11){width:118px}
-.standing-table .standing-club{gap:8px}
-.standing-table .standing-crest{width:32px!important;height:32px!important}
-.standing-table .standing-club strong{font-size:13px;overflow-wrap:anywhere;white-space:normal;line-height:1.2}
-.standing-table .standing-form{min-width:0;gap:2px}
-.standing-table .standing-form-dot{width:17px;height:17px;font-size:10px}
-.standing-table-scroll{overflow-x:visible}
+#app {
+  min-height: 100dvh;
 }
 
-/* Web polish: framed tablet/phone column on a soft club-blue backdrop */
-@media (min-width:801px){
-html{background:radial-gradient(1100px 620px at 50% -10%,#1d4ed833,transparent 60%),radial-gradient(800px 500px at 50% 110%,#e11d4822,transparent 60%),#050f24!important}
-body{background:transparent!important;min-height:100vh}
-#app{margin:28px auto 36px;min-height:calc(100vh - 64px);border-radius:28px;border:1px solid rgba(147,197,253,.14);overflow:hidden;background:linear-gradient(180deg,#0c2249 0%,#081a3a 100%);box-shadow:0 30px 80px -20px #000d,0 0 0 8px rgba(255,255,255,.03)}
-#app header{border-bottom:1px solid rgba(147,197,253,.12)}
-.mobile-bottom-nav{box-shadow:0 18px 40px -12px #000e,inset 0 1px 0 rgba(255,255,255,.08)!important}
+#app > main {
+  width: 100%;
+  min-width: 0;
+  margin: 0 auto;
+  padding: clamp(16px, 3vw, 38px) clamp(12px, 3vw, 44px) 0;
 }
 
-/* Responsive web: frame fluidly on narrow desktop/tablet windows */
-@media (min-width:801px){
-#app{max-width:min(768px,calc(100vw - 32px))}
-.mobile-bottom-nav{width:min(720px,calc(100vw - 48px))!important}
+#app > header .brand {
+  min-width: 0;
 }
-@media (min-width:801px) and (max-width:900px){
-#app{margin:12px auto 24px;min-height:calc(100vh - 36px);border-radius:22px}
+
+#app > header .header-tools {
+  position: static;
+  gap: clamp(6px, 1.2vw, 14px);
+}
+
+#app .header-menu {
+  max-width: calc(100vw - 32px);
+  max-height: min(65dvh, 480px);
+  overflow-y: auto;
+}
+
+@media (max-width: 480px) {
+  #app > header {
+    padding-inline: 12px;
+    gap: 8px;
+  }
+
+  #app > header .brand {
+    gap: 8px;
+  }
+
+  #app > header .brand strong {
+    font-size: clamp(15px, 4.6vw, 21px);
+  }
+
+  #app > header .brand small {
+    font-size: 11px;
+  }
+
+  #app > header .notification-launcher {
+    min-width: 44px;
+    min-height: 44px;
+    justify-content: center;
+  }
+
+  .match-stat-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .match-record-player strong,
+  .match-timeline .match-record-player strong {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 801px) {
+  html {
+    background: radial-gradient(ellipse at 50% 0%, #112c57, #050f24 72%);
+  }
+
+  #app {
+    width: min(1320px, calc(100% - 48px));
+    min-height: calc(100dvh - 48px);
+    margin: 24px auto;
+    border: 1px solid rgba(147, 197, 253, .18);
+    border-radius: 24px;
+    background: linear-gradient(180deg, #0c2249, #081a3a);
+    box-shadow: 0 24px 64px #0006;
+  }
+
+  #app > header {
+    padding-inline: clamp(24px, 3vw, 44px);
+    border-radius: 23px 23px 0 0;
+  }
+
+  .home-calendar .cal-day,
+  .home-calendar .cal-blank {
+    aspect-ratio: auto;
+    min-height: clamp(68px, 7vw, 96px);
+  }
+}
+
+@media (min-width: 801px) and (max-width: 950px) {
+  #app {
+    width: calc(100% - 24px);
+    min-height: calc(100dvh - 24px);
+    margin-block: 12px;
+  }
+}
+
+@media (min-width: 1001px) {
+  .fixture-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .fixture-list > :only-child {
+    grid-column: 1 / -1;
+  }
 }
