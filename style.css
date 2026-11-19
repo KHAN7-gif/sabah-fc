@@ -849,8 +849,8 @@ header nav[aria-label="Navigasi utama"]:not(.mobile-bottom-nav) {
   min-height: 44px;
   padding: 8px 12px;
   border-radius: 8px;
-  background: #8eeaff;
-  color: #0b2344;
+  background: #c92543;
+  color: #fff;
   font-size: 13px;
   font-weight: 800;
   text-decoration: none;
@@ -858,7 +858,7 @@ header nav[aria-label="Navigasi utama"]:not(.mobile-bottom-nav) {
 }
 
 .match-ticket-link:hover {
-  background: #bdffff;
+  background: #a91d37;
 }
 
 .fixture-card > .match-ticket-link {
