@@ -96,25 +96,24 @@ let adminTurnstileWidget;
 
 function adminLoginView() {
   const enabled = Boolean(adminTurnstileSiteKey);
-  const accessLogin = 'https://sabah-fc.pages.dev/api/admin/session?login=editor';
+  const disabled = enabled ? '' : ' disabled';
   return '<section class="admin-login" aria-labelledby="admin-login-title">'+
     '<div class="admin-login-brand">'+clubLogo('Sabah FC','crest')+
     '<div><strong>SABAH FC</strong><span>PORTAL ADMIN</span></div></div>'+
     '<h1 id="admin-login-title">LOG MASUK</h1>'+
     '<p>Hanya akaun admin yang diluluskan boleh mengubah rekod pertandingan.</p>'+
-    '<a class="admin-login-action" href="'+accessLogin+'">Log Masuk dengan E-mel Google</a>'+
-    '<p class="admin-login-note">Gunakan e-mel Google yang diluluskan pada skrin Cloudflare Access.</p>'+
-    (enabled ? '<form id="adminLoginForm" method="post" action="/api/admin/session">'+
+    '<form id="adminLoginForm" method="post" action="/api/admin/session">'+
     '<label for="adminLoginEmail">E-Mel Admin</label>'+
-    '<input id="adminLoginEmail" name="email" type="email" autocomplete="username" maxlength="254" required>'+
+    '<input id="adminLoginEmail" name="email" type="email" autocomplete="username" maxlength="254" required'+disabled+'>'+
     '<label for="adminLoginPassword">Kata Laluan</label>'+
-    '<div class="admin-password-field"><input id="adminLoginPassword" name="password" type="password" autocomplete="current-password" maxlength="1024" required>'+
-    '<button type="button" data-admin-password aria-controls="adminLoginPassword">Papar</button></div>'+
-    '<div class="admin-challenge"><div data-admin-turnstile></div></div>'+
-    '<p class="admin-login-note" data-admin-login-status role="status"></p>'+
-    '<button class="admin-login-action" type="submit" disabled>LOG MASUK DENGAN KATA LALUAN</button>'+
+    '<div class="admin-password-field"><input id="adminLoginPassword" name="password" type="password" autocomplete="current-password" maxlength="1024" required'+disabled+'>'+
+    '<button type="button" data-admin-password aria-controls="adminLoginPassword"'+disabled+'>Papar</button></div>'+
+    (enabled ? '<div class="admin-challenge"><div data-admin-turnstile></div></div>' : '')+
+    '<p class="admin-login-note" data-admin-login-status role="status">'+(enabled ? '' :
+      adminAccessState === 'checking' ? 'Menyemak tetapan log masuk…' : 'Log masuk belum diaktifkan pada pelayan.')+'</p>'+
+    '<button class="admin-login-action" type="submit" disabled>LOG MASUK</button>'+
     '</form>'+
-    '<p class="admin-login-help">Lupa kata laluan? Hubungi pentadbir untuk menetapkan semula akses.</p>' : '')+
+    '<p class="admin-login-help">Lupa kata laluan? Hubungi pentadbir untuk menetapkan semula akses.</p>'+
     '<button type="button" class="admin-demo-action" data-admin-demo>Buka editor demo tempatan</button>'+
     '</section>';
 }
