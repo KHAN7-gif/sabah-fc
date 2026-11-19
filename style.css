@@ -861,9 +861,33 @@ header nav[aria-label="Navigasi utama"]:not(.mobile-bottom-nav) {
   background: #a91d37;
 }
 
-.fixture-card > .match-ticket-link {
-  justify-self: start;
-  margin-top: 8px;
+.matches-view-nav {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: min(100%, 320px);
+  gap: 5px;
+  margin: 0 0 14px;
+  padding: 5px;
+  border: 1px solid rgba(255, 255, 255, .16);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, .07);
+}
+
+.matches-view-nav button {
+  min-height: 44px;
+  padding: 8px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  background: transparent;
+  color: #dbe8ff;
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.matches-view-nav button[aria-pressed="true"] {
+  border-color: #6397dc;
+  background: #1b467f;
+  color: #fff;
 }
 
 .admin-login {
