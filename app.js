@@ -96,7 +96,6 @@ let adminTurnstileWidget;
 
 function adminLoginView() {
   const enabled = Boolean(adminTurnstileSiteKey);
-  const disabled = enabled ? '' : ' disabled';
   return '<section class="admin-login" aria-labelledby="admin-login-title">'+
     '<div class="admin-login-brand">'+clubLogo('Sabah FC','crest')+
     '<div><strong>SABAH FC</strong><span>PORTAL ADMIN</span></div></div>'+
@@ -104,10 +103,10 @@ function adminLoginView() {
     '<p>Hanya akaun admin yang diluluskan boleh mengubah rekod pertandingan.</p>'+
     '<form id="adminLoginForm" method="post" action="/api/admin/session">'+
     '<label for="adminLoginEmail">E-Mel Admin</label>'+
-    '<input id="adminLoginEmail" name="email" type="email" autocomplete="username" maxlength="254" required'+disabled+'>'+
+    '<input id="adminLoginEmail" name="email" type="email" autocomplete="username" maxlength="254" required>'+
     '<label for="adminLoginPassword">Kata Laluan</label>'+
-    '<div class="admin-password-field"><input id="adminLoginPassword" name="password" type="password" autocomplete="current-password" maxlength="1024" required'+disabled+'>'+
-    '<button type="button" data-admin-password aria-controls="adminLoginPassword"'+disabled+'>Papar</button></div>'+
+    '<div class="admin-password-field"><input id="adminLoginPassword" name="password" type="password" autocomplete="current-password" maxlength="1024" required>'+
+    '<button type="button" data-admin-password aria-controls="adminLoginPassword">Papar</button></div>'+
     (enabled ? '<div class="admin-challenge"><div data-admin-turnstile></div></div>' : '')+
     '<p class="admin-login-note" data-admin-login-status role="status">'+(enabled ? '' :
       adminAccessState === 'checking' ? 'Menyemak tetapan log masuk…' : 'Log masuk belum diaktifkan pada pelayan.')+'</p>'+
@@ -126,7 +125,7 @@ function verifyAdminEditorSession() {
 
 function wireAdminLogin() {
   const form = document.getElementById('adminLoginForm');
-  if (!form || !adminTurnstileSiteKey) return;
+  if (!form) return;
   const password = form.elements.password;
   const show = form.querySelector('[data-admin-password]');
   const submit = form.querySelector('[type="submit"]');
@@ -163,6 +162,7 @@ function wireAdminLogin() {
       }
     }
   };
+  if (!adminTurnstileSiteKey) return;
   adminTurnstileScript ||= new Promise((resolve,reject)=>{
     const script=document.createElement('script');
     script.src='https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
@@ -197,7 +197,14 @@ function checkAdminAccess() {
     if (adminAccessState === 'verified' && !adminDemoOpen) {
       verifyAdminEditorSession();
     }
-    if (page === 'admin' && !adminDemoOpen) render();
+    if (page === 'admin' && !adminDemoOpen) {
+      if (adminAccessState === 'verified' || adminTurnstileSiteKey) {
+        render();
+      } else {
+        const status = document.querySelector('[data-admin-login-status]');
+        if (status) status.textContent = 'Log masuk belum diaktifkan pada pelayan.';
+      }
+    }
   })().finally(() => { adminAccessCheck = null; });
 }
 
