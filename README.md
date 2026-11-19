@@ -12,6 +12,12 @@ Portal komuniti Sabah FC (tidak rasmi) untuk musim 2026/2027.
 ## Penerbitan
 GitHub Pages: Settings > Pages > Deploy from a branch > main > /(root).
 
+Cloudflare Workers: sambungkan projek Worker `sabah-fc` kepada repositori ini
+dengan cawangan produksi `main`, direktori akar repositori dan arahan deploy
+`npx --yes wrangler@4.47.0 deploy`. Tiada arahan binaan berasingan diperlukan.
+Wrangler menyediakan aset awam dan mendaftarkan `sabahfc.esukan.app` sebagai
+Custom Domain dalam zon Cloudflare `esukan.app`.
+
 ## Penting
 Tiada pengesahan pengguna sebenar atau pangkalan data bersama. Data contoh tidak boleh dianggap rasmi. Jangan simpan kata laluan dalam fail frontend.
 

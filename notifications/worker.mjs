@@ -4,7 +4,7 @@ import {validSubscription,sendPush} from './web-push.mjs';
 const SITE='https://sabah-fc.pages.dev/';
 const DATA='https://raw.githubusercontent.com/KHAN7-gif/sabah-fc/main/published-data.json';
 const json=(value,status=200)=>new Response(JSON.stringify(value),{status,headers:{'Content-Type':'application/json','Cache-Control':'no-store'}});
-const origins=new Set(['https://sabah-fc.pages.dev','https://khan7-gif.github.io']);
+const origins=new Set(['https://sabah-fc.pages.dev','https://khan7-gif.github.io','https://sabahfc.esukan.app','https://sabah-fc.apengtakahashi.workers.dev']);
 const configured=env=>!!(env.VAPID_PUBLIC_KEY&&env.VAPID_PRIVATE_KEY&&env.KICKOFF);
 const idFor=async endpoint=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(endpoint))),b=>b.toString(16).padStart(2,'0')).join('');
 export default {

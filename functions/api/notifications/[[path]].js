@@ -1,4 +1,4 @@
-const ALLOWED=new Set(['https://sabah-fc.pages.dev','https://khan7-gif.github.io']);
+const ALLOWED=new Set(['https://sabah-fc.pages.dev','https://khan7-gif.github.io','https://sabahfc.esukan.app','https://sabah-fc.apengtakahashi.workers.dev']);
 export async function handleNotifications({request,env}){
   const url=new URL(request.url),origin=request.headers.get('Origin')||url.origin;
   const headers={'Content-Type':'application/json','Cache-Control':'no-store','Vary':'Origin'};
