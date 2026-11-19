@@ -1,6 +1,6 @@
 # Sabah FC Fan Portal
 
-Portal komuniti Sabah FC (tidak rasmi) untuk musim 2026/2027.
+Portal komuniti Sabah FC (tidak rasmi) untuk musim 2026/2027. Portal memaparkan rekod sebenar perlawanan, kedudukan liga serta maklumat dan statistik pemain.
 
 ## Fungsi
 - Home, Matches, Standing, Stats, Players, About
@@ -19,7 +19,7 @@ Wrangler menyediakan aset awam dan mendaftarkan `sabahfc.esukan.app` sebagai
 Custom Domain dalam zon Cloudflare `esukan.app`.
 
 ## Penting
-Tiada pengesahan pengguna sebenar atau pangkalan data bersama. Data contoh tidak boleh dianggap rasmi. Jangan simpan kata laluan dalam fail frontend.
+Penerbitan rekod memerlukan akses admin. Lihat [panduan penerbitan](docs/automatic-publishing.md) untuk konfigurasi Cloudflare. Jangan simpan kata laluan dalam fail frontend.
 
 ## Android TV / Google TV
 
