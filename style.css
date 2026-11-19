@@ -1032,12 +1032,10 @@ header nav[aria-label="Navigasi utama"]:not(.mobile-bottom-nav) {
   font-size: 13px;
 }
 
-.admin-access-link {
-  display: block;
-  color: #b7d9ff;
-  text-align: center;
-  font-size: 13px;
+#adminLoginForm {
+  margin-top: 24px;
 }
+
 
 .schedule-ticket {
   margin-top: 8px;
