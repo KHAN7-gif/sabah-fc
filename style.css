@@ -1081,3 +1081,10 @@ header nav[aria-label="Navigasi utama"]:not(.mobile-bottom-nav) {
 .minutes-bar{height:9px;border-radius:6px;background:#344c70;overflow:hidden}.minutes-bar>span{display:block;height:100%;background:linear-gradient(90deg,#2d94ff,#48d3ec);border-radius:6px}
 .minutes-game-bottom{margin-top:14px;font-size:14px;color:#c2d5ed;flex-wrap:wrap}.minutes-game-bottom>div{display:flex;align-items:center;gap:12px}.minutes-game-bottom button{background:none;color:#83d3ff;border:0;padding:8px 0;font:inherit;text-decoration:underline;cursor:pointer}.minutes-empty{padding:30px 0}.minutes-empty p{color:#bfd1eb}
 @media(max-width:650px){.playing-time-panel{padding:16px}.minutes-summary{grid-template-columns:1fr;padding:18px;gap:12px}.minutes-metrics{border-top:1px solid #3a5376;padding-top:20px}.minutes-metric strong{font-size:24px}.minutes-game{padding:15px}.minutes-game-main{align-items:flex-start;gap:10px}.minutes-opponent strong{font-size:16px}.minutes-duration{font-size:24px}.minutes-game-bottom>div{flex-wrap:wrap}.minutes-game-league{font-size:12px}.player-profile-tabs button{flex:1;padding:12px 8px}}
+
+/* Compact language switch in the header */
+.language-switch{display:inline-flex;align-items:center;border:1px solid #567296;border-radius:10px;padding:3px;gap:2px;background:#10264a;flex-shrink:0}
+.language-switch button{min-width:34px;min-height:38px;padding:6px;border:0;border-radius:7px;background:transparent;color:#d6e7ff;font:700 14px system-ui;cursor:pointer}
+.language-switch button[aria-pressed="true"]{background:#e52950;color:#fff}
+.language-switch button:focus-visible{outline:2px solid #fff;outline-offset:2px}
+@media(max-width:650px){header .header-tools{gap:6px}header .header-season{display:none}header .brand{min-width:0}header .brand>div{min-width:0}header .brand strong{font-size:clamp(16px,4vw,22px)}header .brand small{font-size:10px;letter-spacing:.02em}.language-switch button{min-width:30px;min-height:36px;font-size:12px}}
