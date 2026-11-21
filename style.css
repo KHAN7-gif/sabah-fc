@@ -1009,8 +1009,11 @@ header nav[aria-label="Navigasi utama"]:not(.mobile-bottom-nav) {
 
 
 .schedule-ticket {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
   margin-top: 8px;
-  text-align: center;
 }
 
 .match-live-link {
