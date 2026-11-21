@@ -8,12 +8,15 @@ const select=extra=>selectPortalData({published,localData,localProfiles,metadata
 test('public viewers use published data rather than stale legacy browser storage',()=>{
  const state=select();assert.equal(state.data.players[0].name,'New player');assert.equal(state.profiles[7].nickname,'NEW');assert.equal(state.preserveLocal,true);
 });
-test('only an admin with a draft based on the current revision can resume it',()=>{
- const metadata={pending:true,baseRevision:'new'};
- assert.equal(select({admin:true,metadata}).data.players[0].name,'Old player');
- assert.equal(select({metadata}).data.players[0].name,'New player');
- const stale=select({admin:true,metadata:{pending:true,baseRevision:'old'}});
- assert.equal(stale.data.players[0].name,'New player');assert.equal(stale.preserveLocal,true);assert.equal(stale.pending,false);
+test('pending edits resume after closing the browser or a remote revision change',()=>{
+ for (const admin of [true,false]) for (const baseRevision of ['new','old']) {
+  const state=select({admin,metadata:{pending:true,baseRevision}});
+  assert.equal(state.data.players[0].name,'Old player');
+  assert.equal(state.profiles[7].nickname,'OLD');
+  assert.equal(state.pending,true);assert.equal(state.baseRevision,baseRevision);
+ }
+ const offline=select({published:null,metadata:{pending:true,baseRevision:'old'}});
+ assert.equal(offline.pending,true);assert.equal(offline.baseRevision,'old');
 });
 test('admin keeps a committed local snapshot while deployment still serves the preceding revision',()=>{
  const state=select({admin:true,metadata:{pending:false,baseRevision:'committed',previousRevision:'new'}});
@@ -24,3 +27,4 @@ test('source objects are not mutated; unavailable public data falls back to loca
  const state=select();state.data.players[0].name='Modified';assert.equal(published.players[0].name,'New player');
  assert.equal(select({published:null}).data.players[0].name,'Old player');
 });
+

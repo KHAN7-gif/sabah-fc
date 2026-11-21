@@ -6,7 +6,7 @@ export function validSnapshot(value) {
 }
 export function selectPortalData({ published, localData, localProfiles, metadata, admin, fallback }) {
   const remote = validSnapshot(published);
-  const draft = remote && admin && metadata?.pending === true && metadata.baseRevision === published.revision;
+  const draft = isObject(localData) && metadata?.pending === true;
   const deploying = remote && admin && metadata?.pending === false && metadata.previousRevision === published.revision &&
     typeof metadata.baseRevision === 'string' && metadata.baseRevision !== published.revision;
   const useLocal = !remote || draft || deploying;
@@ -19,3 +19,4 @@ export function selectPortalData({ published, localData, localProfiles, metadata
     preserveLocal: remote && !useLocal && (isObject(localData) || isObject(localProfiles))
   };
 }
+
