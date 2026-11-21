@@ -1027,3 +1027,13 @@ header nav[aria-label="Navigasi utama"]:not(.mobile-bottom-nav) {
   text-decoration: none;
   font-weight: 750;
 }
+
+.schedule-ticket a {
+  gap: 7px;
+}
+
+.schedule-ticket svg {
+  width: 18px;
+  height: 18px;
+  flex: none;
+}
