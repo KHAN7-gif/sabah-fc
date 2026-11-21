@@ -1060,3 +1060,24 @@ header nav[aria-label="Navigasi utama"]:not(.mobile-bottom-nav) {
 .standing-table .outcome-w{color:#42d78c;font-weight:800}
 .standing-table .outcome-d{color:#aab2bf;font-weight:800}
 .standing-table .outcome-l{color:#ff6875;font-weight:800}
+
+/* Playing time: player profile */
+.player-profile-tabs{display:flex;gap:8px;margin:24px 0;border-bottom:1px solid #496187;padding-bottom:10px}
+.player-profile-tabs button,.minutes-filters button{border:1px solid #486286;background:#132a50;color:#dce9ff;padding:12px 18px;border-radius:10px;font:inherit;font-weight:700;cursor:pointer}
+.player-profile-tabs [aria-selected="true"],.minutes-filters [aria-pressed="true"]{background:#e52950;border-color:#e52950;color:white}
+.playing-time-panel{border:1px solid #40597e;background:linear-gradient(145deg,#152f58,#0c1b35);padding:28px;border-radius:24px;color:#edf4ff}
+.minutes-heading,.minutes-log-heading,.minutes-game-top,.minutes-game-main,.minutes-game-bottom{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.minutes-heading h2{margin:8px 0 0;font-size:30px}.minutes-season{border:1px solid #58739a;border-radius:8px;padding:8px}
+.minutes-filters{display:flex;gap:8px;flex-wrap:wrap;margin:24px 0}.minutes-filters button{font-size:14px;padding:9px 14px}
+.minutes-summary{display:grid;grid-template-columns:1fr 1.3fr;gap:24px;padding:24px;background:#0b1d38;border-radius:18px;border-left:4px solid #e52950}
+.minutes-total>span{font-size:14px;letter-spacing:.08em;color:#b2c8e8}.minutes-total>strong{display:block;font-size:clamp(38px,6vw,60px);line-height:1.2;font-variant-numeric:tabular-nums;margin:12px 0}
+.minutes-total strong small,.minutes-duration small{font-size:14px;font-weight:400;color:#a9bfdf;margin-left:8px}.minutes-total p{font-size:14px;color:#b2c8e8}
+.minutes-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;align-items:center}.minutes-metric strong{display:block;font-size:28px;font-variant-numeric:tabular-nums}.minutes-metric span{display:block;font-size:14px;color:#b8cbe6;margin-top:8px}
+.minutes-log-heading{margin:28px 0 16px}.minutes-log-heading h3{margin:0}.minutes-log-heading>span{font-size:14px;color:#acc4e5}
+.minutes-game-log{display:grid;gap:14px}.minutes-game{padding:20px;border:1px solid #3d567c;border-radius:16px;background:#172e51}
+.minutes-game-top{font-size:14px;color:#b9cde9;flex-wrap:wrap}.minutes-matchday{color:#ff9db1;font-weight:800}.minutes-game-league{display:flex;align-items:center;gap:7px}.minutes-game-league .comp-logo{width:20px;height:24px;object-fit:contain}
+.minutes-game-main{margin:20px 0}.minutes-opponent{display:flex;align-items:center;gap:12px;min-width:0}.minutes-opponent>div{min-width:0}.minutes-opponent strong{font-size:18px}.minutes-opponent small{display:block;font-size:14px;color:#b9cde9;margin-top:6px}
+.minutes-crest{width:42px;height:42px;flex:0 0 42px}.minutes-duration{font-size:30px;font-variant-numeric:tabular-nums;white-space:nowrap}.minutes-duration small{display:block;margin:0;text-align:right}
+.minutes-bar{height:9px;border-radius:6px;background:#344c70;overflow:hidden}.minutes-bar>span{display:block;height:100%;background:linear-gradient(90deg,#2d94ff,#48d3ec);border-radius:6px}
+.minutes-game-bottom{margin-top:14px;font-size:14px;color:#c2d5ed;flex-wrap:wrap}.minutes-game-bottom>div{display:flex;align-items:center;gap:12px}.minutes-game-bottom button{background:none;color:#83d3ff;border:0;padding:8px 0;font:inherit;text-decoration:underline;cursor:pointer}.minutes-empty{padding:30px 0}.minutes-empty p{color:#bfd1eb}
+@media(max-width:650px){.playing-time-panel{padding:16px}.minutes-summary{grid-template-columns:1fr;padding:18px;gap:12px}.minutes-metrics{border-top:1px solid #3a5376;padding-top:20px}.minutes-metric strong{font-size:24px}.minutes-game{padding:15px}.minutes-game-main{align-items:flex-start;gap:10px}.minutes-opponent strong{font-size:16px}.minutes-duration{font-size:24px}.minutes-game-bottom>div{flex-wrap:wrap}.minutes-game-league{font-size:12px}.player-profile-tabs button{flex:1;padding:12px 8px}}
