@@ -43,3 +43,16 @@ test('goal filters combine player aliases/search text, matchday and half',()=>{
  assert.equal(matchesGoalFilters(goal,{half:'second'}),false);
  assert.equal(matchesGoalFilters(goal,{player:'Park'}),false);
 });
+
+
+const {rankGoalContributions}=await import('../player-statistics.mjs');
+test('G+A ranks only Sabah contributions and respects competition filters and goal tiebreaker',()=>{
+ const squad=[{key:'a',name:'A'},{key:'b',name:'B'},{key:'c',name:'C'}];
+ const matches=[match(1,'league',[event('assist','A'),event('assist','A'),event('goal','B'),event('assist','B'),event('goal','C','Opponent')]),match(2,'fa',[event('goal','A')])];
+ const totals=calculatePlayerStats(squad,matches), roster=squad.map(p=>({...p,rosterKey:p.key}));
+ const league=rankGoalContributions(roster,totals,'league');
+ assert.deepEqual(league.map(x=>[x.p.name,x.goals,x.assists,x.value]),[['B',1,1,2],['A',0,2,2]]);
+ assert.equal(rankGoalContributions(roster,totals,'all')[0].p.name,'A');
+ assert.deepEqual(rankGoalContributions(roster,totals,'fa').map(x=>x.value),[1]);
+ assert.deepEqual(rankGoalContributions(roster,totals,'malaysia'),[]);
+});
