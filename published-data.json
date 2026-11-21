@@ -1,6 +1,4 @@
 {
-  "schemaVersion": 1,
-  "revision": "remove-seven-star-city-1795282896363",
   "players": [
     {
       "name": "MOHAMAD RAMZI MUSTAKIM",
@@ -518,6 +516,22 @@
         }
       ],
       "refIndex": 0
+    },
+    {
+      "competition": "league",
+      "home": "Kelantan Red Warrior FC",
+      "away": "Sabah FC",
+      "date": "2026-11-21",
+      "time": "21:00",
+      "venue": "Stadium Sultan Mohammad IV",
+      "round": 7,
+      "status": "FULL TIME",
+      "homeScore": 2,
+      "awayScore": 1,
+      "videoUrl": "https://youtu.be/Mwn14Ev1K4I",
+      "events": [],
+      "source": "Rujukan jadual MFL dan keputusan silang semak; tertakluk pindaan",
+      "refIndex": 6
     }
   ],
   "teams": [
@@ -533,6 +547,8 @@
     }
   ],
   "about": "Portal komuniti Sabah FC. Bukan laman rasmi kelab.",
+  "schemaVersion": 1,
+  "revision": "import-1795283571278",
   "playerProfiles": {
     "2": {
       "name": "ABDUL HANAFIE BIN TOKYO ABDUL HASIM",
@@ -915,5 +931,5 @@
       "country2": ""
     }
   },
-  "updatedAt": "2026-11-21T17:41:36.363Z"
+  "updatedAt": "2026-11-21T17:52:51.278Z"
 }
