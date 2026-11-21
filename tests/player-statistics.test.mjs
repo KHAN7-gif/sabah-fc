@@ -56,3 +56,9 @@ test('G+A ranks only Sabah contributions and respects competition filters and go
  assert.deepEqual(rankGoalContributions(roster,totals,'fa').map(x=>x.value),[1]);
  assert.deepEqual(rankGoalContributions(roster,totals,'malaysia'),[]);
 });
+
+test('G+A ranking prioritizes goals then assists regardless of combined total',()=>{
+ const roster=['A','B','C'].map(name=>({name,rosterKey:name}));
+ const totals={players:{A:{all:{goals:2,assists:0}},B:{all:{goals:1,assists:5}},C:{all:{goals:2,assists:1}}}};
+ assert.deepEqual(rankGoalContributions(roster,totals).map(x=>[x.p.name,x.value]),[['C',3],['A',2],['B',6]]);
+});

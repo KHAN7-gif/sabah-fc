@@ -56,5 +56,5 @@ export function rankGoalContributions(roster, totals, competition = 'all') {
     const stats = totals.players[p.rosterKey]?.[competition];
     const goals = Number(stats?.goals || 0), assists = Number(stats?.assists || 0);
     return { p, goals, assists, value: goals + assists };
-  }).filter(row => row.value > 0).sort((a,b) => b.value-a.value || b.goals-a.goals || String(a.p.name).localeCompare(String(b.p.name)));
+  }).filter(row => row.value > 0).sort((a,b) => b.goals-a.goals || b.assists-a.assists || String(a.p.name).localeCompare(String(b.p.name)));
 }
