@@ -1012,3 +1012,15 @@ header nav[aria-label="Navigasi utama"]:not(.mobile-bottom-nav) {
   margin-top: 8px;
   text-align: center;
 }
+
+.match-live-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 10px 16px;
+  border-radius: 9px;
+  background: #1767be;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 750;
+}
