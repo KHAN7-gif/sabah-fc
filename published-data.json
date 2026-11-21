@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": "ec1d4ffd-45ce-48d3-a918-184f3a7a31a1",
+  "revision": "b14ae54a-6dec-4d12-bffc-840a1c90aef0",
   "players": [
     {
       "name": "MOHAMAD RAMZI MUSTAKIM",
@@ -517,7 +517,38 @@
           "team": "Sabah FC"
         }
       ],
-      "refIndex": 0
+      "refIndex": 0,
+      "matchStats": {
+        "possession": [
+          70,
+          30
+        ],
+        "shots": [
+          13,
+          5
+        ],
+        "shotsOnTarget": [
+          5,
+          2
+        ],
+        "shotsOffTarget": [
+          8,
+          3
+        ],
+        "corners": [
+          10,
+          3
+        ],
+        "offsides": [
+          2,
+          1
+        ],
+        "yellowCards": [
+          3,
+          2
+        ]
+      },
+      "statsNote": "Statistik penuh perlawanan berdasarkan tangkap layar yang dibekalkan pengguna: Sabah FC di kiri, Star City FC di kanan."
     }
   ],
   "teams": [
@@ -915,5 +946,5 @@
       "country2": ""
     }
   },
-  "updatedAt": "2026-11-08T18:47:55.126260Z"
+  "updatedAt": "2026-11-21T17:31:27.445329+00:00"
 }

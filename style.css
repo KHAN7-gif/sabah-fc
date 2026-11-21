@@ -1037,3 +1037,11 @@ header nav[aria-label="Navigasi utama"]:not(.mobile-bottom-nav) {
   height: 18px;
   flex: none;
 }
+
+
+/* Team comparison in Match Centre */
+.match-team-stats h4{margin:0 0 18px;font-size:20px}
+.match-team-stat{display:grid;grid-template-columns:minmax(24px,1fr) minmax(0,4fr) minmax(24px,1fr);gap:8px;text-align:center}
+.match-team-stat>b:first-child{text-align:left}.match-team-stat>b:nth-child(3){text-align:right}
+.team-stat-bar{grid-column:1/-1;display:flex;gap:4px;height:8px;border-radius:4px;overflow:hidden;background:#263c60}
+.team-stat-bar i:first-child{background:#e52e49}.team-stat-bar i:last-child{background:#dce8fb}
