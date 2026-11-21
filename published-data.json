@@ -312,9 +312,42 @@
       "time": "",
       "venue": "",
       "status": "FULL TIME",
-      "source": "Rujukan jadual MFL dan keputusan silang semak; tertakluk pindaan",
+      "source": "Tangkap layar perlawanan Sabah FC–DPMM yang dibekalkan pengguna (IMG_2273.png). Nama pemain DPMM dikekalkan seperti dalam gambar; nama pemain Sabah dipadankan dengan profil portal. Assist dan kad merah tidak ditunjukkan dalam gambar.",
       "refIndex": 3,
-      "videoUrl": "https://youtu.be/TSLfQQb5OUg"
+      "videoUrl": "https://youtu.be/TSLfQQb5OUg",
+      "events": [
+        {
+          "type": "goal",
+          "minute": "12′",
+          "player": "Abban E.",
+          "team": "DPMM FC"
+        },
+        {
+          "type": "goal",
+          "minute": "25′",
+          "player": "GONZALO IGNACIO DI RENZO",
+          "team": "Sabah FC"
+        },
+        {
+          "type": "yellow",
+          "minute": "41′",
+          "player": "ABDUL HALIM BIN SAARI",
+          "team": "Sabah FC"
+        },
+        {
+          "type": "yellow",
+          "minute": "58′",
+          "player": "Aspegren F.",
+          "team": "DPMM FC"
+        },
+        {
+          "type": "goal",
+          "minute": "65′",
+          "player": "Murray J.",
+          "team": "DPMM FC"
+        }
+      ],
+      "competition": "league"
     },
     {
       "round": 5,
@@ -615,7 +648,7 @@
   ],
   "about": "Portal komuniti Sabah FC. Bukan laman rasmi kelab.",
   "schemaVersion": 1,
-  "revision": "kelantan-events-1795283840136",
+  "revision": "dpmm-events-1795284416183",
   "playerProfiles": {
     "2": {
       "name": "ABDUL HANAFIE BIN TOKYO ABDUL HASIM",
@@ -998,5 +1031,5 @@
       "country2": ""
     }
   },
-  "updatedAt": "2026-11-21T17:57:20.136Z"
+  "updatedAt": "2026-11-21T18:06:56.183Z"
 }
