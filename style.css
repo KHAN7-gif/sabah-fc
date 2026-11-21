@@ -1045,3 +1045,18 @@ header nav[aria-label="Navigasi utama"]:not(.mobile-bottom-nav) {
 .match-team-stat>b:first-child{text-align:left}.match-team-stat>b:nth-child(3){text-align:right}
 .team-stat-bar{grid-column:1/-1;display:flex;gap:4px;height:8px;border-radius:4px;overflow:hidden;background:#263c60}
 .team-stat-bar i:first-child{background:#e52e49}.team-stat-bar i:last-child{background:#dce8fb}
+
+/* Player match history and shared result colours */
+.history-club,.history-league{display:flex;align-items:center;gap:8px;min-width:170px}
+.history-club+.history-club{margin-top:8px}
+.history-club .history-crest{width:28px;height:28px;flex:0 0 28px}
+.history-league{min-width:155px;max-width:210px;font-size:12px}
+.history-league .comp-logo{width:28px;height:32px;object-fit:contain;flex:0 0 28px}
+.history-status{display:block;font-size:10px;margin-top:5px}
+.history-card-icon{display:inline-flex;width:18px;height:22px;vertical-align:middle}
+.history-card-icon svg{width:100%;height:100%}
+.history-event{display:flex;align-items:center;gap:6px;white-space:nowrap;margin:4px 0}
+.player-match-history .standing-form-dot{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:6px;font-weight:800;color:#fff}
+.standing-table .outcome-w{color:#42d78c;font-weight:800}
+.standing-table .outcome-d{color:#aab2bf;font-weight:800}
+.standing-table .outcome-l{color:#ff6875;font-weight:800}
