@@ -35,3 +35,10 @@ test('FA Cup includes every starter and substitute, isolates competitions and le
  assert.equal(playingTimeSummary(farhan).pending,1);
  assert.equal(playingTimeSummary(farhan).seconds,66*60);
 });
+
+test('ranking flags partially unverified time without counting it in the total',()=>{
+ const [farhan]=rankPlayingTime([{name:'MUHAMMAD FARHAN BIN ROSLAN'}],'fa');
+ assert.equal(farhan.pending,1);
+ assert.equal(farhan.value,66);
+ assert.equal(rankPlayingTime([{name:'MUHAMMAD FARHAN BIN ROSLAN'}],'league')[0].pending,0);
+});

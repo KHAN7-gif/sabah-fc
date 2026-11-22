@@ -195,9 +195,9 @@ export function playingTimeSummary(records) {
 
 export function rankPlayingTime(players, competition='all') {
  return players.map(p=>{
-  const records=playingTimeRecords(p).filter(r=>r.seconds>0&&(competition==='all'||r.competition===competition));
+  const records=playingTimeRecords(p).filter(r=>(r.seconds>0||r.appeared)&&(competition==='all'||r.competition===competition));
   const seconds=playingTimeSummary(records).seconds;
-  return {p,seconds,value:Number(durationLabel(seconds))};
+  return {p,seconds,pending:records.filter(r=>r.seconds==null).length,value:Number(durationLabel(seconds))};
  }).filter(row=>row.seconds>0)
   .sort((a,b)=>b.seconds-a.seconds||String(a.p.name).localeCompare(String(b.p.name)));
 }
