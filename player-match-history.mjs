@@ -40,5 +40,5 @@ export function playerMatchHistory(key, roster, matches) {
     row.stats = stats;
     row.seconds = record.seconds;
   }
-  return rows.sort((a,b)=>String(b.match.date||'').localeCompare(String(a.match.date||'')) || String(b.match.time||'').localeCompare(String(a.match.time||'')));
+  return rows.filter(row=>row.seconds!==0).sort((a,b)=>String(b.match.date||'').localeCompare(String(a.match.date||'')) || String(b.match.time||'').localeCompare(String(a.match.time||'')));
 }
