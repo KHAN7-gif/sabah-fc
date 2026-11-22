@@ -190,3 +190,12 @@ export function playingTimeSummary(records) {
  const seconds=records.reduce((sum,r)=>sum+r.seconds,0);
  return {seconds,appearances:records.length,fullMatches:records.filter(r=>r.seconds>=5400).length,average:records.length?Math.round(seconds/records.length):0};
 }
+
+export function rankPlayingTime(players, competition='all') {
+ return players.map(p=>{
+  const records=playingTimeRecords(p).filter(r=>r.seconds>0&&(competition==='all'||r.competition===competition));
+  const seconds=playingTimeSummary(records).seconds;
+  return {p,seconds,value:Number(durationLabel(seconds))};
+ }).filter(row=>row.seconds>0)
+  .sort((a,b)=>b.seconds-a.seconds||String(a.p.name).localeCompare(String(b.p.name)));
+}
