@@ -1,3 +1,39 @@
+const dineshRecords = [
+ {date:'2026-11-21',opponent:'Kelantan Red Warrior FC',round:7,competition:'league',seconds:2700,goals:0,assists:0,yellow:0,red:0},
+ {date:'2026-10-31',opponent:'Terengganu FC',round:6,competition:'league',seconds:3734,goals:0,assists:0,yellow:0,red:0},
+ {date:'2026-09-13',opponent:'DPMM FC',round:4,competition:'league',seconds:4460,goals:0,assists:0,yellow:0,red:0},
+ {date:'2026-09-05',opponent:'Kuching City FC',round:3,competition:'league',seconds:4668,goals:0,assists:0,yellow:0,red:0},
+ {date:'2026-08-28',opponent:'Penang FC',round:2,competition:'league',seconds:1831,goals:0,assists:0,yellow:1,red:0},
+ {date:'2026-08-24',opponent:'Star City FC',round:1,competition:'league',seconds:2700,goals:0,assists:0,yellow:1,red:0}
+];
+const joseRecords = [
+ {date:'2026-11-21',opponent:'Kelantan Red Warrior FC',round:7,competition:'league',seconds:5400,goals:1,assists:0,yellow:1,red:0},
+ {date:'2026-10-31',opponent:'Terengganu FC',round:6,competition:'league',seconds:5400,goals:0,assists:0,yellow:0,red:0},
+ {date:'2026-10-17',opponent:'Negeri Sembilan FC',round:5,competition:'league',seconds:5400,goals:0,assists:0,yellow:0,red:0},
+ {date:'2026-09-13',opponent:'DPMM FC',round:4,competition:'league',seconds:5400,goals:0,assists:0,yellow:0,red:0},
+ {date:'2026-09-05',opponent:'Kuching City FC',round:3,competition:'league',seconds:5400,goals:0,assists:0,yellow:0,red:0},
+ {date:'2026-08-28',opponent:'Penang FC',round:2,competition:'league',seconds:1438,goals:0,assists:0,yellow:0,red:0}
+];
+const shoRecords = [
+ {date:'2026-11-21',opponent:'Kelantan Red Warrior FC',round:7,competition:'league',seconds:3150,goals:0,assists:1,yellow:0,red:0},
+ {date:'2026-10-31',opponent:'Terengganu FC',round:6,competition:'league',seconds:782,goals:0,assists:0,yellow:0,red:0},
+ {date:'2026-10-17',opponent:'Negeri Sembilan FC',round:5,competition:'league',seconds:5400,goals:0,assists:0,yellow:1,red:0},
+ {date:'2026-09-13',opponent:'DPMM FC',round:4,competition:'league',seconds:2700,goals:0,assists:0,yellow:0,red:0}
+];
+const halimRecords = [
+ {date:'2026-09-13',opponent:'DPMM FC',round:4,competition:'league',seconds:3976,goals:0,assists:0,yellow:1,red:0},
+ {date:'2026-08-28',opponent:'Penang FC',round:2,competition:'league',seconds:0,goals:0,assists:0,yellow:0,red:0},
+ {date:'2026-08-24',opponent:'Star City FC',round:1,competition:'league',seconds:4382,goals:0,assists:0,yellow:1,red:0}
+];
+const fayadhRecords = [
+ {date:'2026-11-21',opponent:'Kelantan Red Warrior FC',round:7,competition:'league',seconds:747,goals:0,assists:0,yellow:0,red:0},
+ {date:'2026-10-31',opponent:'Terengganu FC',round:6,competition:'league',seconds:1665,goals:0,assists:0,yellow:0,red:0},
+ {date:'2026-10-17',opponent:'Negeri Sembilan FC',round:5,competition:'league',seconds:4569,goals:0,assists:0,yellow:0,red:0},
+ {date:'2026-09-13',opponent:'DPMM FC',round:4,competition:'league',seconds:5400,goals:0,assists:0,yellow:0,red:0},
+ {date:'2026-09-05',opponent:'Kuching City FC',round:3,competition:'league',seconds:4166,goals:0,assists:0,yellow:0,red:0},
+ {date:'2026-08-28',opponent:'Penang FC',round:2,competition:'league',seconds:3568,goals:0,assists:1,yellow:0,red:0},
+ {date:'2026-08-24',opponent:'Star City FC',round:1,competition:'league',seconds:5400,goals:0,assists:2,yellow:0,red:0}
+];
 const farhanRecords = [
  {date:'2026-11-21',opponent:'Kelantan Red Warrior FC',round:7,competition:'league',seconds:2700,goals:0,assists:0,yellow:0,red:0},
  {date:'2026-10-31',opponent:'Terengganu FC',round:6,competition:'league',seconds:0,goals:0,assists:0,yellow:0,red:0},
@@ -62,73 +98,13 @@ const rawilsonRecords = [
  {date:'2026-08-28',opponent:'Penang FC',round:2,competition:'league',seconds:0,goals:0,assists:0,yellow:0,red:0},
  {date:'2026-08-24',opponent:'Star City FC',round:1,competition:'league',seconds:4719,goals:0,assists:0,yellow:0,red:0}
 ];
-const danelRecords=[
-  {
-    "date": "2026-11-21",
-    "opponent": "Kelantan Red Warrior FC",
-    "round": 7,
-    "competition": "league",
-    "seconds": 2220,
-    "goals": 0,
-    "assists": 0,
-    "yellow": 0,
-    "red": 0
-  },
-  {
-    "date": "2026-10-31",
-    "opponent": "Terengganu FC",
-    "round": 6,
-    "competition": "league",
-    "seconds": 5400,
-    "goals": 0,
-    "assists": 0,
-    "yellow": 1,
-    "red": 0
-  },
-  {
-    "date": "2026-10-17",
-    "opponent": "Negeri Sembilan FC",
-    "round": 5,
-    "competition": "league",
-    "seconds": 5400,
-    "goals": 0,
-    "assists": 0,
-    "yellow": 0,
-    "red": 0
-  },
-  {
-    "date": "2026-09-05",
-    "opponent": "Kuching City FC",
-    "round": 3,
-    "competition": "league",
-    "seconds": 4140,
-    "goals": 0,
-    "assists": 0,
-    "yellow": 1,
-    "red": 0
-  },
-  {
-    "date": "2026-08-28",
-    "opponent": "Penang FC",
-    "round": 2,
-    "competition": "league",
-    "seconds": 5400,
-    "goals": 0,
-    "assists": 0,
-    "yellow": 0,
-    "red": 0
-  },
-  {
-    "date": "2026-08-24",
-    "opponent": "Star City FC",
-    "round": 1,
-    "competition": "league",
-    "seconds": 5400,
-    "goals": 0,
-    "assists": 1,
-    "yellow": 0,
-    "red": 0
-  }
+const danelRecords = [
+ {date:'2026-11-21',opponent:'Kelantan Red Warrior FC',round:7,competition:'league',seconds:2249,goals:0,assists:0,yellow:0,red:0},
+ {date:'2026-10-31',opponent:'Terengganu FC',round:6,competition:'league',seconds:5400,goals:0,assists:0,yellow:1,red:0},
+ {date:'2026-10-17',opponent:'Negeri Sembilan FC',round:5,competition:'league',seconds:5400,goals:0,assists:0,yellow:0,red:0},
+ {date:'2026-09-05',opponent:'Kuching City FC',round:3,competition:'league',seconds:4166,goals:0,assists:0,yellow:1,red:0},
+ {date:'2026-08-28',opponent:'Penang FC',round:2,competition:'league',seconds:5400,goals:0,assists:0,yellow:0,red:0},
+ {date:'2026-08-24',opponent:'Star City FC',round:1,competition:'league',seconds:5400,goals:0,assists:1,yellow:0,red:0}
 ];
 const enriqueRecords = [
  {date:'2026-10-31',opponent:'Terengganu FC',round:6,competition:'league',seconds:5400,goals:1,assists:0,yellow:1},
@@ -140,7 +116,7 @@ const enriqueRecords = [
 export const durationLabel = seconds => String(Math.round(seconds/60));
 export function playingTimeRecords(player) {
  const name=String(player.name||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toUpperCase().replace(/[^A-Z]/g,'');
- const records=name==='MUHAMMADFARHANBINROSLAN'?farhanRecords:name==='JUNGBINPARK'?jungbinRecords:name==='MIGUELANGELGARRIDOCIFUENTES'?miguelRecords:name==='MOHAMADRAMZIMUSTAKIM'?ramziRecords:name==='ABDULHANAFIEBINTOKYOABDULHASIM'?hanafieRecords:name==='OSKARIJOHANNESKEKKONEN'?oskariRecords:name==='GONZALOIGNACIODIRENZO'?gonzaloRecords:name==='RAWILSONBATUIL'?rawilsonRecords:name.includes('ENRIQUELOPEZ')?enriqueRecords:/FADZRULDAN(?:E|IE)L/.test(name)&&name.includes('MOHDNIZAM')?danelRecords:[];
+ const records=name==='DINESHALRAJASINGAM'?dineshRecords:name==='JOSEANGELALONSOMARTIN'?joseRecords:name==='SHOYAMAMOTO'?shoRecords:name==='ABDULHALIMBINSAARI'?halimRecords:name==='MOHAMMADFAYADHBINMOHDZULKIFLIAMIN'?fayadhRecords:name==='MUHAMMADFARHANBINROSLAN'?farhanRecords:name==='JUNGBINPARK'?jungbinRecords:name==='MIGUELANGELGARRIDOCIFUENTES'?miguelRecords:name==='MOHAMADRAMZIMUSTAKIM'?ramziRecords:name==='ABDULHANAFIEBINTOKYOABDULHASIM'?hanafieRecords:name==='OSKARIJOHANNESKEKKONEN'?oskariRecords:name==='GONZALOIGNACIODIRENZO'?gonzaloRecords:name==='RAWILSONBATUIL'?rawilsonRecords:name.includes('ENRIQUELOPEZ')?enriqueRecords:/FADZRULDAN(?:E|IE)L/.test(name)&&name.includes('MOHDNIZAM')?danelRecords:[];
  return records.map(r=>({...r}));
 }
 export function playingTimeSummary(records) {
