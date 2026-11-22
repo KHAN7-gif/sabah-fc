@@ -19,14 +19,14 @@ test('Game Log hides zero minutes, merges recorded totals once and preserves mat
  const squad=[{key:'22',name:'JUAN FLERE'},{key:'28',name:'DARREN YEE DENG LOK'}];
  const match={...fixture('2026-10-31',[event('assist','DARREN YEE DENG LOK')]),away:'Terengganu FC',round:6};
  const rows=playerMatchHistory('28',squad,[match,match]);
- assert.equal(rows.length,7);
+ assert.equal(rows.length,8);
  const recorded=rows.find(row=>row.match.date===match.date);
  assert.equal(recorded.seconds,4734);
  assert.equal(recorded.stats.assists,1);
  assert.equal(recorded.events.length,1);
  assert.equal(recorded.match.homeScore,1);
  const juan=playerMatchHistory('22',squad,[]);
- assert.equal(juan.length,4);
+ assert.equal(juan.length,6);
  assert.equal(juan.find(row=>row.match.date==='2026-10-17'),undefined);
  assert.equal(juan[0].match.homeScore,undefined);
  assert.equal(juan[0].match.status,'RECORDED');
@@ -37,7 +37,7 @@ test('Game Log overrides conflicting totals and keeps obscured cards unknown',()
  const match={...fixture('2026-08-28',[event('goal',squad[0].name)]),away:'Penang FC'};
  const rows=playerMatchHistory('8',squad,[match]);
  const penang=rows.find(row=>row.match.date===match.date);
- assert.equal(rows.length,4);
+ assert.equal(rows.length,6);
  assert.equal(penang.stats.goals,0);
  assert.equal(penang.stats.yellow,null);
  assert.deepEqual(penang.events,[]);
@@ -49,7 +49,7 @@ test('zero-minute records suppress conflicting events and leave unused players w
  const match={...fixture('2026-10-17',[event('yellow','JUAN FLERE')]),away:'Negeri Sembilan FC'};
  assert.deepEqual(playerMatchHistory('1',squad,[match]),[]);
  const rows=playerMatchHistory('22',squad,[match]);
- assert.equal(rows.length,4);
+ assert.equal(rows.length,6);
  assert.ok(rows.every(row=>row.seconds>0));
  assert.equal(rows.find(row=>row.match.date===match.date),undefined);
 });

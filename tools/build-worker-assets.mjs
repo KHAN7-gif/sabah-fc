@@ -19,6 +19,7 @@ const publicFiles = [
   'player-statistics.mjs',
   'player-match-history.mjs',
   'player-playing-time.mjs',
+  'fa-playing-time.mjs',
   'portal-language.mjs',
   'portal-data-sync.mjs',
   'published-data.json',

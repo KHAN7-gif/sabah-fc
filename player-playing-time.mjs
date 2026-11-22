@@ -1,3 +1,4 @@
+import {faPlayingTime} from './fa-playing-time.mjs';
 const rusdiRecords = [
  {date:'2026-10-31',opponent:'Terengganu FC',round:6,competition:'league',seconds:0,goals:0,assists:0,yellow:0,red:0},
  {date:'2026-10-17',opponent:'Negeri Sembilan FC',round:5,competition:'league',seconds:0,goals:0,assists:0,yellow:0,red:0},
@@ -184,11 +185,12 @@ export const durationLabel = seconds => String(Math.round(seconds/60));
 export function playingTimeRecords(player) {
  const name=String(player.name||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toUpperCase().replace(/[^A-Z]/g,'');
  const records=name==='RUSDIBINROSLAN'?rusdiRecords:name==='ROZACKLYEYANAM'?rozacklyeRecords:name==='MOHDSHAHRULNIZAMABDULLAH'?shahrulnizamRecords:name==='MUHAMMADFAKRULIMANBINNASZARI'?fakrulRecords:name==='DOMINICJUNJINTAN'?dominicRecords:name==='JUANFLERE'?juanRecords:name==='DANEJAMESINGHAM'?daneRecords:name==='DARRENYEEDENGLOK'?darrenRecords:name==='DAMIENCHIENKHAILIM'?damienRecords:name==='DINESHALRAJASINGAM'?dineshRecords:name==='JOSEANGELALONSOMARTIN'?joseRecords:name==='SHOYAMAMOTO'?shoRecords:name==='ABDULHALIMBINSAARI'?halimRecords:name==='MOHAMMADFAYADHBINMOHDZULKIFLIAMIN'?fayadhRecords:name==='MUHAMMADFARHANBINROSLAN'?farhanRecords:name==='JUNGBINPARK'?jungbinRecords:name==='MIGUELANGELGARRIDOCIFUENTES'?miguelRecords:name==='MOHAMADRAMZIMUSTAKIM'?ramziRecords:name==='ABDULHANAFIEBINTOKYOABDULHASIM'?hanafieRecords:name==='OSKARIJOHANNESKEKKONEN'?oskariRecords:name==='GONZALOIGNACIODIRENZO'?gonzaloRecords:name==='RAWILSONBATUIL'?rawilsonRecords:name.includes('ENRIQUELOPEZ')?enriqueRecords:/FADZRULDAN(?:E|IE)L/.test(name)&&name.includes('MOHDNIZAM')?danelRecords:[];
- return records.map(r=>({...r}));
+ const fa=Object.entries(faPlayingTime).find(([fullName])=>fullName.replace(/[^A-Z]/g,'')===name)?.[1]||[];
+ return [...records,...fa].map(r=>({...r}));
 }
 export function playingTimeSummary(records) {
- const seconds=records.reduce((sum,r)=>sum+r.seconds,0);
- return {seconds,appearances:records.length,fullMatches:records.filter(r=>r.seconds>=5400).length,average:records.length?Math.round(seconds/records.length):0};
+ const seconds=records.reduce((sum,r)=>sum+(r.seconds??0),0);
+ return {seconds,appearances:records.length,fullMatches:records.filter(r=>r.seconds>=5400).length,pending:records.filter(r=>r.seconds==null).length,average:records.filter(r=>r.seconds!=null).length?Math.round(seconds/records.filter(r=>r.seconds!=null).length):0};
 }
 
 export function rankPlayingTime(players, competition='all') {

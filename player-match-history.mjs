@@ -32,13 +32,14 @@ export function playerMatchHistory(key, roster, matches) {
       rows.push(row);
     }
     // Game Log totals describe this player, without duplicating match events.
-    const stats = Object.fromEntries(['goals','assists','yellow','red'].map(key=>[key,record[key]??null]));
+    const stats = record.competition==='fa'?row.stats:Object.fromEntries(['goals','assists','yellow','red'].map(key=>[key,record[key]??null]));
     row.events = row.events.filter(event=>{
       const statKey = {goal:'goals',assist:'assists',yellow:'yellow',red:'red'}[event.type];
       return statKey && row.stats[statKey]===stats[statKey];
     });
     row.stats = stats;
     row.seconds = record.seconds;
+    row.minutesNote = record.minutesNote;
   }
   return rows.filter(row=>row.seconds!==0).sort((a,b)=>String(b.match.date||'').localeCompare(String(a.match.date||'')) || String(b.match.time||'').localeCompare(String(a.match.time||'')));
 }
