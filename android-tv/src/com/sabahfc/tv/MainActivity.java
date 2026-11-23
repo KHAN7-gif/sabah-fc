@@ -28,7 +28,7 @@ import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 
 public final class MainActivity extends Activity {
-    private static final String HOME = "https://sabah-fc.pages.dev/";
+    private static final String HOME = "https://khan7-gif.github.io/sabah-fc/";
     private WebView web;
     private FrameLayout root;
     private LinearLayout errorPanel;
@@ -96,7 +96,7 @@ public final class MainActivity extends Activity {
         web.setFocusable(true); web.setFocusableInTouchMode(true); web.requestFocus();
         web.loadUrl(HOME);
     }
-    private boolean isPortal(Uri uri) { return "https".equals(uri.getScheme()) && "sabah-fc.pages.dev".equals(uri.getHost()); }
+    private boolean isPortal(Uri uri) { return "https".equals(uri.getScheme()) && "khan7-gif.github.io".equals(uri.getHost()) && uri.getPath() != null && uri.getPath().startsWith("/sabah-fc/"); }
     private void openExternal(Uri uri) {
         if (!"https".equals(uri.getScheme())) { Toast.makeText(this,"Pautan tidak disokong",Toast.LENGTH_SHORT).show(); return; }
         try { startActivity(new Intent(Intent.ACTION_VIEW,uri)); }

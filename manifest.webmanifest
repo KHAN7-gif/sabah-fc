@@ -1,6 +1,6 @@
 {
   "id": "./", "name": "Sabah FC Fan Portal", "short_name": "Sabah FC",
-  "lang": "ms", "description": "Jadual, pemain dan notifikasi kick-off Sabah FC.",
+  "lang": "en", "description": "Sabah FC fixtures, players and statistics.",
   "start_url": "./", "scope": "./", "display": "standalone",
   "background_color": "#f4f7fb", "theme_color": "#102c56",
   "icons": [

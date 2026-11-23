@@ -1,28 +1,13 @@
 # Sabah FC TV — Android TV / Google TV
 
-A small Java Android TV application that displays the public Sabah FC portal at
-`https://sabah-fc.pages.dev/`. Website/data updates appear through the existing
-portal refresh mechanism after Cloudflare has deployed them; no APK reinstall is
-needed for those web updates. Internet and a working Android System WebView are
-required. The TV layout uses a dark, Apple TV inspired interface with a fixed left
-sidebar for Home, Matches, Table, Stats, Players, About and Admin. Admin publishing
-still requires the portal's existing authentication; use a web browser for setup.
-The regular website layout is unchanged.
+The Android TV source opens https://khan7-gif.github.io/sabah-fc/.
+Portal updates appear after GitHub Pages finishes deployment. Admin edits are
+local and must be exported to GitHub to publish.
 
-## Install on your TV
-
-1. Download `releases/Sabah-FC-TV-v1.1.0.apk` to your phone or computer.
-2. Transfer it to Android TV/Google TV using USB or a TV file-transfer app.
-3. On the TV, open the APK with a file manager and allow installation for that
-   file manager if Android asks. Select Install.
-4. Open **Sabah FC TV** from the TV applications list.
-
-Version 1.1.0 (version code 2) uses the same signing certificate as 1.0.0 and can
-be installed as an update. This sidebar redesign is bundled in the APK, so install
-the new APK once; subsequent portal data refreshes continue automatically.
-
-The APK supports Android 6/API 23 and later with a modern System WebView, and has
-no native architecture-specific libraries (ARM/x86, 32/64-bit).
+Build a new APK from the updated source using `tools/bootstrap.py` and
+`build.py`; older downloadable APKs using the retired host have been removed.
+A previously installed APK must be replaced with a newly built version to use
+the new host. An existing signing key is required to update an installed app.
 
 ## Remote controls
 
