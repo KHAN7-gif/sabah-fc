@@ -109,3 +109,17 @@ Urus nilai rahsia melalui tetapan Cloudflare. Simpan perubahan sebagai konfigura
 produksi. Worker membekalkan `ADMIN_LOGIN_RATE` melalui `wrangler.jsonc`. Selepas
 pemasangan, semak borang pada domain utama, uji log masuk, dan sahkan penerbitan.
 Akaun pada Cloudflare Pages masih boleh menggunakan aliran Cloudflare Access.
+
+## Manual Worker deployment to sabahfc.esukan.app
+
+Run GitHub Actions → **Deploy Sabah FC webapp** → **Run workflow** on `main`.
+The workflow uses repository secrets `CLOUDFLARE_API_TOKEN` and
+`CLOUDFLARE_ACCOUNT_ID`. The token needs permission to deploy Workers and manage
+custom domains for the `esukan.app` zone. Existing Worker secrets must be set in
+Cloudflare as described above. The Turnstile widget must allow
+`sabahfc.esukan.app`; its public site key and secret must belong to the same widget.
+The workflow does not create or replace administrator passwords or Turnstile secrets.
+
+`python tests/admin-turnstile-browser.py` checks widget-load recovery, expiry and
+failed-login handling at phone and desktop widths using a mocked widget. It does
+not establish that live Turnstile configuration or production sign-in works.

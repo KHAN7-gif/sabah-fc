@@ -1103,3 +1103,13 @@ header nav[aria-label="Navigasi utama"]:not(.mobile-bottom-nav) {
 .stats-pending{display:block;max-width:115px;font-size:10px;font-weight:500;line-height:1.4;color:#f8d78a;white-space:normal}
 .stats-ranking-row:has(.stats-pending){grid-template-columns:26px 50px minmax(0,1fr) minmax(65px,100px)}
 .minutes-source{font-size:12px;color:#86dfff;text-underline-offset:3px}
+
+.admin-challenge{padding:14px;border:1px solid rgba(255,255,255,.2);border-radius:14px;min-width:0}
+.admin-challenge-heading{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px;margin-bottom:12px;font-size:13px}
+.admin-challenge-heading span{font-size:11px;color:#bdcee7}
+.admin-challenge-retry{margin-top:12px;min-height:44px}
+.admin-login [hidden]{display:none!important}
+.admin-login-note[data-state=success]{color:#86efac}
+.admin-login-note[data-state=error]{color:#fda4af}
+.admin-login-action:disabled{cursor:not-allowed;opacity:.55}
+.admin-login input:focus-visible,.admin-login button:focus-visible{outline:3px solid #22d3ee;outline-offset:3px}
